@@ -46,38 +46,7 @@ export default defineConfig({
       label: '中文',
       lang: 'zh-CN',
       title: "合约交易终极指南",
-      description: "全面的合约交易、期货和衍生品常见问题和教育资源",
-      themeConfig: {
-        nav: [
-          { text: '首页', link: '/zh/' },
-          { text: '基础知识', link: '/zh/basics/' },
-          { text: '风险管理', link: '/zh/risk-management/' },
-          { text: '高级策略', link: '/zh/advanced-strategies/' },
-          { text: '常见问题', link: '/zh/faq/' }
-        ],
-        sidebar: {
-          '/zh/basics/': [
-            {
-              text: '基础知识',
-              items: [
-                { text: '什么是合约交易', link: '/zh/basics/what-is-contract-trading' },
-                { text: '合约类型', link: '/zh/basics/contract-types' },
-                { text: '杠杆和保证金', link: '/zh/basics/leverage-and-margin' }
-              ]
-            }
-          ],
-          '/zh/risk-management/': [
-            {
-              text: '风险管理',
-              items: [
-                { text: '风险管理基础', link: '/zh/risk-management/basics' },
-                { text: '止损策略', link: '/zh/risk-management/stop-loss' },
-                { text: '仓位管理', link: '/zh/risk-management/position-sizing' }
-              ]
-            }
-          ]
-        }
-      }
+      description: "全面的合约交易、期货和衍生品常见问题和教育资源"
     },
     es: {
       label: 'Español',
@@ -89,7 +58,6 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: 'https://cdn.jsdelivr.net/npm/lucide@latest/dist/icons/trending-up.svg',
     
     nav: [
       { text: 'Home', link: '/' },
@@ -108,6 +76,7 @@ export default defineConfig({
     ],
 
     sidebar: {
+      // English sidebars
       '/basics/': [
         {
           text: 'Getting Started',
@@ -164,6 +133,97 @@ export default defineConfig({
             { text: 'Technical Questions', link: '/faq/technical' },
             { text: 'Trading Questions', link: '/faq/trading' },
             { text: 'Platform Questions', link: '/faq/platform' }
+          ]
+        }
+      ],
+      
+      // Chinese sidebars
+      '/zh/basics/': [
+        {
+          text: '基础知识',
+          items: [
+            { text: '什么是合约交易', link: '/zh/basics/what-is-contract-trading' },
+            { text: '合约类型', link: '/zh/basics/contract-types' },
+            { text: '理解杠杆', link: '/zh/basics/understanding-leverage' },
+            { text: '杠杆和保证金', link: '/zh/basics/leverage-and-margin' },
+            { text: '保证金概念', link: '/zh/basics/margin-concepts' },
+            { text: '交易术语', link: '/zh/basics/trading-terminology' }
+          ]
+        }
+      ],
+      '/zh/risk-management/': [
+        {
+          text: '风险管理',
+          items: [
+            { text: '风险管理基础', link: '/zh/risk-management/' },
+            { text: '止损策略', link: '/zh/risk-management/stop-loss' },
+            { text: '仓位管理', link: '/zh/risk-management/position-sizing' },
+            { text: '风险回报比', link: '/zh/risk-management/risk-reward' }
+          ]
+        }
+      ],
+      '/zh/tools/': [
+        {
+          text: '交易工具',
+          items: [
+            { text: '工具概览', link: '/zh/tools/' },
+            { text: '计算器', link: '/zh/tools/calculator' }
+          ]
+        }
+      ],
+      '/zh/faq/': [
+        {
+          text: '常见问题',
+          items: [
+            { text: '常见问题', link: '/zh/faq/' },
+            { text: '一般问题', link: '/zh/faq/general' },
+            { text: '技术问题', link: '/zh/faq/technical' },
+            { text: '交易问题', link: '/zh/faq/trading' },
+            { text: '平台问题', link: '/zh/faq/platform' },
+            { text: '策略问题', link: '/zh/faq/strategies' }
+          ]
+        }
+      ],
+      
+      // Spanish sidebars
+      '/es/basics/': [
+        {
+          text: 'Fundamentos',
+          items: [
+            { text: '¿Qué es el Trading de Contratos?', link: '/es/basics/what-is-contract-trading' },
+            { text: 'Tipos de Contratos', link: '/es/basics/contract-types' },
+            { text: 'Apalancamiento y Margen', link: '/es/basics/leverage-and-margin' }
+          ]
+        }
+      ],
+      '/es/risk-management/': [
+        {
+          text: 'Gestión de Riesgos',
+          items: [
+            { text: 'Fundamentos', link: '/es/risk-management/' },
+            { text: 'Estrategias de Stop Loss', link: '/es/risk-management/stop-loss' },
+            { text: 'Dimensionamiento de Posiciones', link: '/es/risk-management/position-sizing' }
+          ]
+        }
+      ],
+      '/es/tools/': [
+        {
+          text: 'Herramientas',
+          items: [
+            { text: 'Herramientas Avanzadas', link: '/es/tools/advanced' }
+          ]
+        }
+      ],
+      '/es/faq/': [
+        {
+          text: 'Preguntas Frecuentes',
+          items: [
+            { text: 'Preguntas Generales', link: '/es/faq/general' },
+            { text: 'Preguntas Avanzadas', link: '/es/faq/advanced' },
+            { text: 'Plataformas', link: '/es/faq/platforms' },
+            { text: 'Estrategias', link: '/es/faq/strategies' },
+            { text: 'Regulación', link: '/es/faq/regulation' },
+            { text: 'Análisis Técnico', link: '/es/faq/technical' }
           ]
         }
       ]
