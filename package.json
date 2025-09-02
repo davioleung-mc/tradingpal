@@ -22,8 +22,8 @@
   "author": "Contract Trading Team",
   "license": "MIT",
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.31",
-    "@vitejs/plugin-vue": "^4.5.2",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vitepress": "^1.6.4",
     "vue": "^3.3.8"
   },
   "dependencies": {
