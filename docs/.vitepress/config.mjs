@@ -4,7 +4,20 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
-  base: '/contract-faq/', // Add this line for GitHub Pages
+  base: '/contract-faq/',
+  head: [
+    ['link', { rel: 'icon', href: '/contract-faq/favicon.ico' }]
+  ],
+  vite: {
+    // Vite config options
+    build: {
+      minify: 'terser',
+      cssMinify: true
+    },
+    ssr: {
+      noExternal: ['vitepress']
+    }
+  }, // Add this line for GitHub Pages
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
