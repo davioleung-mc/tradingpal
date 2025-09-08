@@ -5,8 +5,6 @@ export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
   base: '/contract-faq/',
-  outDir: './dist',
-  srcDir: './docs',
   cleanUrls: true,
   appearance: true,
   themeConfig: {

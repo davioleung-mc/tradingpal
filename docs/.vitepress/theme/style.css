@@ -1,0 +1,20 @@
+/* Custom styles for VitePress theme */
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+}
+
+.VPNav {
+  width: 100%;
+}
+
+.VPNavBar .title {
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .VPNavBar .title {
+    font-size: 0.8em;
+  }
+}
