@@ -7,6 +7,10 @@ export default defineConfig({
   base: '/contract-faq/',
   lang: 'en-US',
   lastUpdated: true,
+  head: [
+    ['link', { rel: 'icon', href: '/contract-faq/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/contract-faq/favicon.svg' }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
