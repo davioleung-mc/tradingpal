@@ -1,15 +1,19 @@
 // .vitepress/theme/index.js
 // https://vitepress.dev/guide/custom-theme
 import { h } from 'vue'
-import DefaultTheme from 'vitepress/theme'
+import Theme from 'vitepress/theme'
 import './custom.css'
 
+// Import VitePress default theme styles
+import 'vitepress/dist/client/theme-default/styles/vars.css'
+import 'vitepress/dist/client/theme-default/styles/base.css'
+import 'vitepress/dist/client/theme-default/styles/utils.css'
+import 'vitepress/dist/client/theme-default/styles/components/custom-block.css'
+import 'vitepress/dist/client/theme-default/styles/components/vp-code.css'
+
 export default {
-  extends: DefaultTheme,
-  enhanceApp({ app, router }) {
-    // Add any app-level enhancements
-  },
-  setup() {
-    // Handle any theme setup
+  ...Theme,
+  enhanceApp({ app }) {
+    // Register global components if needed
   }
 }
