@@ -1,6 +1,10 @@
 // .vitepress/theme/index.js
-// .vitepress/theme/index.js
 import DefaultTheme from 'vitepress/theme'
-import './style.css'
 
-export default DefaultTheme
+/** @type {import('vitepress').Theme} */
+export default {
+  extends: DefaultTheme,
+  enhanceApp({ app }) {
+    // register your custom global components
+  }
+}

@@ -5,11 +5,10 @@ export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
   base: '/contract-faq/',
-  lastUpdated: true,
+  outDir: './dist',
+  srcDir: './docs',
   cleanUrls: true,
-  head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
-  ],
+  appearance: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
