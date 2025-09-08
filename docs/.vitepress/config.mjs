@@ -5,27 +5,11 @@ export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
   base: '/contract-faq/',
+  lastUpdated: true,
+  cleanUrls: true,
   head: [
-    ['link', { rel: 'icon', type: 'image/x-icon', href: '/contract-faq/favicon.ico' }],
-    ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  vite: {
-    build: {
-      assetsInlineLimit: 4096,
-      rollupOptions: {
-        output: {
-          assetFileNames: 'assets/[name].[ext]'
-        }
-      }
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `@import "docs/.vitepress/theme/custom.css";`
-        }
-      }
-    }
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
