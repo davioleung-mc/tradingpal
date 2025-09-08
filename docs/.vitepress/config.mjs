@@ -5,8 +5,8 @@ export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
   base: '/contract-faq/',
-  cleanUrls: true,
-  appearance: true,
+  lang: 'en-US',
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
