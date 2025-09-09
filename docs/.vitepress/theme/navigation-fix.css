@@ -1,0 +1,51 @@
+/* VitePress Navigation Purple Background Fix */
+
+/* High priority navigation element background removal */
+html body .VPNav .VPNavBar .VPNavBarMenuLink {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .VPNavBarMenuLink:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .VPFlyout .button {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .VPNavBarTranslations {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .VPNavBarAppearance {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .DocSearch-Button {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body .VPNav .VPNavBar .DocSearch-Button:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Override brand color backgrounds */
+html body [class*="VPNav"] [class*="brand"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+html body [data-v-] button {
+  background: transparent !important;
+}
+
+html body .VPNavBar button:hover {
+  background: transparent !important;
+}

@@ -43,3 +43,49 @@
 .VPFlyout, .VPDropdownMenu {
   z-index: 100 !important;
 }
+
+/* Fix purple background on navigation elements */
+.VPNavBar button,
+.VPNavBarMenuLink,
+.VPFlyout .button,
+.VPNavScreenMenuLink,
+.VPNavScreenMenuGroupLink {
+  background: transparent !important;
+}
+
+/* Ensure dropdown items don't have brand background */
+.VPMenu .item,
+.VPNavScreenMenuGroup .items .item {
+  background: transparent !important;
+}
+
+/* Additional specific navigation fixes */
+.VPNavBar .VPNavBarMenuLink:hover,
+.VPNavBar .VPNavBarMenuLink.active {
+  background: transparent !important;
+}
+
+.VPFlyout .VPMenu .VPMenuLink,
+.VPFlyout .VPMenu .VPMenuGroup .VPMenuLink {
+  background: transparent !important;
+}
+
+/* Fix any remaining navigation button backgrounds */
+.VPNavBar .content-body button:hover,
+.VPNavBar .content-body button.active,
+.VPNavBar .content-body .VPButton:hover {
+  background: transparent !important;
+}
+
+/* Ensure search button doesn't get purple background */
+.VPNavBarSearch button,
+.DocSearch-Button:hover {
+  background: transparent !important;
+}
+
+/* Fix language selector and appearance toggle */
+.VPNavBarTranslations button,
+.VPNavBarAppearance button,
+.VPSwitchAppearance button {
+  background: transparent !important;
+}
