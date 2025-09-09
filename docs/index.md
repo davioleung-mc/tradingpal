@@ -1,12 +1,12 @@
 ---
 layout: home
 
-title: The Ultimate Guide to Contract Trading
-titleTemplate: Comprehensive FAQ & Educational Resources
+title: Hypercontract
+titleTemplate: Contract Trading Guide
 
 hero:
-  name: "Contract Trading"
-  text: "Ultimate Guide"
+  name: "Hypercontract"
+  text: "Contract Trading Guide"
   tagline: "Master the art of contract trading with our comprehensive FAQ and educational resources"
   image:
     src: /hero-image.png
