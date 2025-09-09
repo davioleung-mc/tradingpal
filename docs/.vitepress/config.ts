@@ -5,10 +5,13 @@ export default defineConfig({
   title: "The Ultimate Guide to Contract Trading",
   description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives",
   
+  // GitHub Pages base URL
+  base: '/contract-faq/',
+  
   // SEO and meta configuration
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/contract-faq/favicon.svg' }],
+    ['link', { rel: 'alternate icon', href: '/contract-faq/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en' }],
