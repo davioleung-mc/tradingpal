@@ -18,3 +18,28 @@
     font-size: 0.8em;
   }
 }
+
+/* Fix for language selector and dropdown styling */
+.VPNavBarTranslations {
+  background: transparent !important;
+}
+
+.VPNavBarTranslations .VPFlyout {
+  background: var(--vp-c-bg) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+}
+
+.VPFlyout .items {
+  background: var(--vp-c-bg) !important;
+}
+
+/* Ensure consistent dropdown styling */
+.VPDropdownMenu {
+  background: var(--vp-c-bg) !important;
+  border: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Fix any potential z-index issues */
+.VPFlyout, .VPDropdownMenu {
+  z-index: 100 !important;
+}
