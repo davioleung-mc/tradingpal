@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Contract Trading Guide",
   description: "The Ultimate Guide to Contract Trading",
-  base: '/contract-faq/',
   lang: 'en-US',
   lastUpdated: true,
   vite: {
@@ -13,8 +12,8 @@ export default defineConfig({
     }
   },
   head: [
-    ['link', { rel: 'icon', href: '/contract-faq/favicon.ico' }],
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/contract-faq/favicon.svg' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
