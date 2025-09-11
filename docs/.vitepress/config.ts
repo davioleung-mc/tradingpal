@@ -23,9 +23,9 @@ export default defineConfig({
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "The Ultimate Guide to Contract Trading",
-      "description": "Comprehensive FAQ and educational resources for contract trading",
-      "url": "https://your-domain.com"
+      "name": "TradingPal",
+      "description": "Comprehensive educational resources for contract trading with YMYL compliance",
+      "url": "https://davioleung-mc.github.io/tradingpal/"
     })]
   ],
 
@@ -34,7 +34,7 @@ export default defineConfig({
   
   // Sitemap generation
   sitemap: {
-    hostname: 'https://your-domain.com'
+    hostname: 'https://davioleung-mc.github.io/tradingpal/'
   },
 
   // Internationalization
@@ -42,20 +42,20 @@ export default defineConfig({
     root: {
       label: 'English',
       lang: 'en',
-      title: "The Ultimate Guide to Contract Trading",
-      description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives"
+      title: "TradingPal",
+      description: "Professional contract trading education with comprehensive risk management"
     },
     zh: {
       label: '中文',
       lang: 'zh-CN',
-      title: "合约交易终极指南",
-      description: "全面的合约交易、期货和衍生品常见问题和教育资源"
+      title: "TradingPal",
+      description: "专业合约交易教育与风险管理指南"
     },
     es: {
       label: 'Español',
       lang: 'es',
-      title: "La Guía Definitiva del Trading de Contratos",
-      description: "FAQ integral y recursos educativos para trading de contratos, futuros y derivados"
+      title: "TradingPal",
+      description: "Educación profesional en trading de contratos con gestión de riesgos"
     }
   },
 
@@ -75,6 +75,11 @@ export default defineConfig({
           { text: 'Risk Calculator', link: '/tools/risk-calculator' },
           { text: 'Glossary', link: '/tools/glossary' }
         ]
+      },
+      { 
+        text: '⚠️ Disclaimer', 
+        link: '/disclaimer',
+        activeMatch: '/disclaimer'
       }
     ],
 
@@ -233,9 +238,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-repo/contract-faq' },
-      { icon: 'twitter', link: 'https://twitter.com/your-handle' },
-      { icon: 'discord', link: 'https://discord.gg/your-server' }
+      { icon: 'github', link: 'https://github.com/davioleung-mc/tradingpal' }
     ],
 
     search: {
@@ -263,12 +266,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/your-repo/contract-faq/edit/main/docs/:path'
+      pattern: 'https://github.com/davioleung-mc/tradingpal/edit/main/docs/:path'
     },
 
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2025 Contract Trading Ultimate Guide'
+      message: '⚠️ Educational Content Only - Not Financial Advice | <a href="/disclaimer">Risk Disclaimer</a> | <a href="https://github.com/davioleung-mc/tradingpal">Open Source</a>',
+      copyright: 'Copyright © 2025 TradingPal - Professional Trading Education with YMYL Compliance'
     }
   },
 
