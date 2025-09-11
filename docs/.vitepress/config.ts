@@ -10,8 +10,8 @@ export default defineConfig({
   
   // SEO and meta configuration
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/contract-faq/favicon.svg' }],
-    ['link', { rel: 'alternate icon', href: '/contract-faq/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/tradingpal/favicon.svg' }],
+    ['link', { rel: 'alternate icon', href: '/tradingpal/favicon.ico' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en' }],
