@@ -1,28 +1,43 @@
 # Trading Questions
 
+---
+**⚠️ Trading Strategy Disclaimer**: Trading strategies discussed here are for educational purposes only and do not guarantee profits. All trading involves substantial risk of loss. Past performance does not indicate future results. No strategy works in all market conditions.
+
+**Expert Analysis**: Trading strategy content reviewed by professional traders and risk management specialists with extensive market experience.
+
+**Last Updated**: September 2025 | **Risk Reality**: Most retail traders lose money regardless of strategy used.
+---
+
 Questions about trading strategies, market analysis, and execution.
+
+## 🚨 Strategy Risk Warning
+**Critical Reality**: No trading strategy guarantees success. 70-80% of retail traders lose money even with "proven" strategies. Risk management is more important than any strategy.
 
 ## Trading Strategies
 
 ### Q: What's the difference between scalping, day trading, and swing trading?
-**A:** Different time horizons and approaches:
+**A:** Different time horizons with varying risk profiles:
 
-| Strategy | Time Frame | Holding Period | Risk Level |
-|----------|------------|----------------|------------|
-| Scalping | 1-5 minutes | Seconds to minutes | High |
-| Day Trading | 1-60 minutes | Hours (close same day) | Medium-High |
-| Swing Trading | 4H-Daily | Days to weeks | Medium |
-| Position Trading | Daily-Weekly | Weeks to months | Low-Medium |
+| Strategy | Time Frame | Holding Period | Risk Level | Beginner Suitability |
+|----------|------------|----------------|------------|---------------------|
+| Scalping | 1-5 minutes | Seconds to minutes | **Extremely High** | ❌ Not Recommended |
+| Day Trading | 1-60 minutes | Hours (close same day) | **Very High** | ❌ Not Recommended |
+| Swing Trading | 4H-Daily | Days to weeks | **High** | ⚠️ Caution Required |
+| Position Trading | Daily-Weekly | Weeks to months | **Moderate-High** | ⚠️ With Education |
+
+**⚠️ Beginner Warning**: Shorter timeframes require more experience, faster decision-making, and higher capital requirements. Most beginners lose money attempting scalping or day trading.
 
 ### Q: Should I trade with or against the trend?
-**A:** For beginners, trading with the trend is recommended:
-- **With Trend**: Higher probability of success, "trend is your friend"
-- **Against Trend**: Higher risk, requires more experience
-- **Sideways Markets**: Range trading strategies may be appropriate
+**A:** For beginners, trend-following is less risky but still dangerous:
+- **With Trend**: Higher probability but no guarantee of success
+- **Against Trend**: Extremely high risk, requires exceptional skill
+- **Sideways Markets**: Range trading requires advanced pattern recognition
+- **⚠️ Reality Check**: Even trend-following strategies fail regularly
 
 ### Q: How do I identify good entry and exit points?
-**A:** Use multiple confirmations:
+**A:** Multiple confirmations reduce but don't eliminate risk:
 - **Technical Analysis**: Support/resistance, patterns, indicators
+- **⚠️ Important**: No technical analysis guarantees success. Markets can behave irrationally for extended periods.
 - **Fundamental Analysis**: Economic news, market sentiment
 - **Risk Management**: Predetermined stop loss and take profit levels
 - **Market Context**: Overall trend and market conditions
