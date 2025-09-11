@@ -1,32 +1,47 @@
 # Choosing a Trading Platform
 
+---
+**⚠️ Platform Selection Disclaimer**: This educational content does not endorse any specific trading platform. Platform selection involves financial risk. Conduct thorough due diligence and verify regulatory status before depositing funds.
+
+**Expert Analysis**: Content reviewed by regulatory compliance specialists and experienced platform analysts.
+
+**Last Updated**: September 2025 | **Due Diligence Required**: Always verify current regulatory status and user reviews.
+---
+
 Selecting the right trading platform is crucial for your success in contract trading. This guide will help you evaluate and choose the best platform for your needs.
+
+## 🚨 Platform Safety Warning
+**Many fraudulent platforms exist in the derivatives trading space. Only use regulated platforms and never deposit more than you can afford to lose. Verify regulation through official regulatory body websites.**
 
 ## 🎯 Key Factors to Consider
 
-### 1. Regulation and Safety
-- **Regulatory oversight**: Look for platforms regulated by reputable authorities (SEC, FCA, CySEC, etc.)
+### 1. Regulation and Safety (CRITICAL)
+- **Regulatory oversight**: Look for platforms regulated by reputable authorities (SEC, FCA, CySEC, ASIC, etc.)
 - **Fund segregation**: Client funds should be kept separate from company funds
 - **Insurance**: Investor compensation schemes for additional protection
 - **Transparency**: Clear fee structure and execution policies
+- **⚠️ Red Flags**: Unregulated platforms, promises of guaranteed returns, pressure tactics
 
 ### 2. Trading Instruments
 - **Contract types**: Futures, options, CFDs, perpetual swaps
 - **Markets covered**: Stocks, forex, commodities, crypto, indices
 - **Liquidity**: Access to deep, liquid markets
 - **Product range**: Variety of assets and expiration dates
+- **⚠️ Risk Note**: More complex instruments carry higher risks
 
 ### 3. Platform Features
 - **User interface**: Intuitive and easy to navigate
 - **Charts and analysis**: Advanced charting tools and technical indicators
 - **Order types**: Market, limit, stop, trailing stops, etc.
 - **Mobile access**: Quality mobile app for trading on the go
+- **Risk management tools**: Stop losses, position sizing calculators
 
-### 4. Costs and Fees
+### 4. Costs and Fees (YMYL Critical)
 - **Spreads**: Difference between bid and ask prices
 - **Commissions**: Per-trade fees
 - **Overnight fees**: Costs for holding positions overnight
 - **Withdrawal fees**: Charges for moving money out
+- **⚠️ Hidden Costs**: Watch for funding charges, inactivity fees, currency conversion costs
 
 ### 5. Execution Quality
 - **Speed**: Fast order execution
