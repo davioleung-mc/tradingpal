@@ -2,11 +2,11 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Hypercontract",
+  title: "TradingPal",
   description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives",
   
   // GitHub Pages base URL
-  base: '/contract-faq/',
+  base: '/tradingpal/',
   
   // SEO and meta configuration
   head: [
@@ -15,7 +15,7 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en' }],
-    ['meta', { name: 'og:site_name', content: 'Hypercontract' }],
+    ['meta', { name: 'og:site_name', content: 'TradingPal' }],
     ['meta', { name: 'og:image', content: 'https://your-domain.com/hero-image.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:image', content: 'https://your-domain.com/hero-image.png' }],

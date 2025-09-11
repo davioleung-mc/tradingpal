@@ -1,4 +1,4 @@
-# Hypercontract Constitution
+# TradingPal Constitution
 
 ## Core Principles
 

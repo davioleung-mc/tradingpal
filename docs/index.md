@@ -1,11 +1,11 @@
 ---
 layout: home
 
-title: Hypercontract
+title: TradingPal
 titleTemplate: Contract Trading Guide
 
 hero:
-  name: "Hypercontract"
+  name: "TradingPal"
   text: "Contract Trading Guide"
   tagline: "Master the art of contract trading with our comprehensive FAQ and educational resources"
   image:

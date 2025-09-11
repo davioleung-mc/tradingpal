@@ -1,4 +1,4 @@
-# Hypercontract
+# TradingPal
 
 A comprehensive, multilingual FAQ and educational resource for contract trading built with VitePress and enhanced with GitHub Copilot spec-driven development.
 
