@@ -1,6 +1,6 @@
-# Contract Trading Ultimate Guide
+# Hypercontract
 
-A comprehensive, multilingual FAQ and educational resource for contract trading built with VitePress.
+A comprehensive, multilingual FAQ and educational resource for contract trading built with VitePress and enhanced with GitHub Copilot spec-driven development.
 
 ## 🌟 Features
 
@@ -10,6 +10,16 @@ A comprehensive, multilingual FAQ and educational resource for contract trading 
 - **🔧 Interactive Tools**: Built-in calculators for position sizing, risk management
 - **📱 Responsive Design**: Works perfectly on all devices
 - **🎯 User-Friendly**: Clean, modern interface with excellent navigation
+- **🤖 Spec-Driven Development**: Enhanced with GitHub Copilot spec-kit for AI-powered development
+
+## 🚧 Spec-Driven Development
+
+This project uses GitHub Copilot's spec-kit for structured, AI-assisted development:
+
+- Use `/specify` to create detailed feature specifications
+- Use `/plan` to generate development plans
+- Use `/tasks` to break down work into actionable tasks
+- Review `memory/constitution.md` for project principles
 
 ## 🚀 Quick Start
 

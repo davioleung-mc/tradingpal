@@ -1,22 +1,15 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Hypercontract Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Content-First Education
+Every feature must serve educational value; Content must be accurate, comprehensive, and accessible; No feature without clear learning outcome; Multilingual support is essential for global accessibility.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. VitePress Standards
+All documentation follows VitePress conventions; Markdown-first approach for content; Static site generation for performance; SEO optimization is mandatory for discoverability.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. User Experience (NON-NEGOTIABLE)
+Mobile-first responsive design required; Fast loading times (<3s) mandatory; Clear navigation structure; Accessibility standards (WCAG) must be met; User feedback integration required.
 
 ### [PRINCIPLE_4_NAME]
 <!-- Example: IV. Integration Testing -->
