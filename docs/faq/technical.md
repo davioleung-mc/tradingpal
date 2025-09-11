@@ -1,15 +1,25 @@
 # Technical Questions
 
+---
+**⚠️ Technical Disclaimer**: Technical analysis and trading tools do not guarantee trading success. All trading involves substantial risk. This content is educational only and not financial advice.
+
+**Expert Review**: Technical content verified by trading technology specialists and platform analysts.
+
+**Last Updated**: September 2025
+---
+
 Technical questions about trading platforms, analysis, and tools.
 
 ## Platform & Technical Setup
 
 ### Q: What are the minimum system requirements for contract trading?
 **A:** Basic requirements include:
-- **Computer**: Modern computer with stable internet (minimum 10 Mbps)
+- **Computer**: Modern computer with stable internet (minimum 10 Mbps recommended)
 - **Operating System**: Windows 10+, macOS 10.14+, or modern Linux
 - **Browser**: Chrome, Firefox, Safari, or Edge (latest versions)
 - **Mobile**: iOS 12+ or Android 8+ for mobile trading
+
+**⚠️ Connectivity Risk**: Poor internet connection can lead to execution delays and potential losses during volatile markets.
 
 ### Q: Do I need special software or can I trade through web browsers?
 **A:** Most modern platforms offer both options:
@@ -17,6 +27,8 @@ Technical questions about trading platforms, analysis, and tools.
 - **Desktop Apps**: More advanced features and faster execution
 - **Mobile Apps**: Trade on-the-go with full functionality
 - **APIs**: For algorithmic trading (advanced users)
+
+**⚠️ Platform Risk**: Always have backup access methods. Platform outages during market volatility can prevent closing positions.
 
 ### Q: How do I set up charts and technical indicators?
 **A:** Most platforms provide:
