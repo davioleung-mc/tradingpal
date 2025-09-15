@@ -37,209 +37,340 @@ export default defineConfig({
     hostname: 'https://davioleung-mc.github.io/tradingpal/'
   },
 
-  // Internationalization
-  locales: {
-    root: {
-      label: 'English',
-      lang: 'en',
-      title: "TradingPal",
-      description: "Professional contract trading education with comprehensive risk management"
-    },
-    zh: {
-      label: '中文',
-      lang: 'zh-CN',
-      title: "TradingPal",
-      description: "专业合约交易教育与风险管理指南"
-    },
-    es: {
-      label: 'Español',
-      lang: 'es',
-      title: "TradingPal",
-      description: "Educación profesional en trading de contratos con gestión de riesgos"
-    }
-  },
+    // Internationalization - temporarily disabled
+    // locales: {
+    //   root: {
+    //     label: 'English',
+    //     lang: 'en',
+    //     title: "TradingPal",
+    //     description: "Professional contract trading education with comprehensive risk management"
+    //   },
+    //   zh: {
+    //     label: '中文',
+    //     lang: 'zh-CN',
+    //     title: "TradingPal",
+    //     description: "专业合约交易教育与风险管理指南"
+    //   },
+    //   es: {
+    //     label: 'Español',
+    //     lang: 'es',
+    //     title: "TradingPal",
+    //     description: "Educación profesional en trading de contratos con gestión de riesgos"
+    //   }
+    // },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Basics', link: '/basics/' },
-      { text: 'Risk Management', link: '/risk-management/' },
-      { text: 'Advanced Strategies', link: '/advanced-strategies/' },
-      { text: 'FAQ', link: '/faq/' },
       { 
-        text: 'Tools', 
+        text: 'Insights', 
         items: [
-          { text: 'Calculator', link: '/tools/calculator' },
-          { text: 'Risk Calculator', link: '/tools/risk-calculator' },
-          { text: 'Glossary', link: '/tools/glossary' }
+          { text: 'Market Analysis', link: '/insights/market-analysis/' },
+          { text: 'Trading Strategy', link: '/insights/trading-strategy/' }
         ]
       },
       { 
-        text: '⚠️ Disclaimer', 
-        link: '/disclaimer',
-        activeMatch: '/disclaimer'
+        text: 'Resources', 
+        items: [
+          { text: 'Personal Finance Tips', link: '/resources/personal-finance-tips/' },
+          { text: 'Tutorials', link: '/resources/tutorials/' },
+          { text: 'Useful Links', link: '/resources/useful-links/' }
+        ]
       }
     ],
 
     sidebar: {
-      // English sidebars
-      '/basics/': [
+      // English sidebars - New Structure
+      '/insights/': [
         {
-          text: 'Getting Started',
+          text: 'Market Analysis',
           items: [
-            { text: 'What is Contract Trading?', link: '/basics/what-is-contract-trading' },
-            { text: 'Types of Contracts', link: '/basics/contract-types' },
-            { text: 'Leverage and Margin', link: '/basics/leverage-and-margin' },
-            { text: 'Key Terminology', link: '/basics/terminology' }
+            { text: 'Market Analysis Overview', link: '/insights/market-analysis/' }
           ]
         },
         {
-          text: 'Platform Basics',
+          text: 'Trading Strategy',
           items: [
-            { text: 'Choosing a Platform', link: '/basics/choosing-platform' },
-            { text: 'Account Setup', link: '/basics/account-setup' },
-            { text: 'Interface Overview', link: '/basics/interface' }
+            { text: 'Trading Strategy Overview', link: '/insights/trading-strategy/' },
+            { text: 'Advanced Strategies', link: '/insights/trading-strategy/advanced/' }
           ]
         }
       ],
-      '/risk-management/': [
+      '/resources/': [
         {
-          text: 'Risk Management Fundamentals',
+          text: 'Personal Finance Tips',
           items: [
-            { text: 'Risk Management Basics', link: '/risk-management/basics' },
-            { text: 'Stop Loss Strategies', link: '/risk-management/stop-loss' },
-            { text: 'Position Sizing', link: '/risk-management/position-sizing' },
-            { text: 'Risk-Reward Ratio', link: '/risk-management/risk-reward' }
+            { text: 'Personal Finance Overview', link: '/resources/personal-finance-tips/' },
+            { text: 'Risk Management', link: '/resources/personal-finance-tips/risk-management/' }
           ]
         },
         {
-          text: 'Advanced Risk Control',
+          text: 'Tutorials',
           items: [
-            { text: 'Portfolio Diversification', link: '/risk-management/diversification' },
-            { text: 'Hedging Strategies', link: '/risk-management/hedging' },
-            { text: 'Market Risk Assessment', link: '/risk-management/market-risk' }
+            { text: 'Tutorials Overview', link: '/resources/tutorials/' },
+            { text: 'Basics', link: '/resources/tutorials/basics/' },
+            { text: 'FAQ', link: '/resources/tutorials/faq/' }
           ]
-        }
-      ],
-      '/advanced-strategies/': [
+        },
         {
-          text: 'Trading Strategies',
+          text: 'Useful Links',
           items: [
-            { text: 'Scalping', link: '/advanced-strategies/scalping' },
-            { text: 'Swing Trading', link: '/advanced-strategies/swing-trading' },
-            { text: 'Arbitrage', link: '/advanced-strategies/arbitrage' }
-          ]
-        }
-      ],
-      '/faq/': [
-        {
-          text: 'Frequently Asked Questions',
-          items: [
-            { text: 'General Questions', link: '/faq/general' },
-            { text: 'Technical Questions', link: '/faq/technical' },
-            { text: 'Trading Questions', link: '/faq/trading' },
-            { text: 'Platform Questions', link: '/faq/platform' }
+            { text: 'Useful Links Overview', link: '/resources/useful-links/' },
+            { text: 'Tools', link: '/resources/useful-links/tools/' }
           ]
         }
       ],
       
-      // Chinese sidebars
-      '/zh/basics/': [
+      // Detailed sidebars for specific sections
+      '/insights/market-analysis/': [
+        {
+          text: 'Market Analysis',
+          items: [
+            { text: 'Overview', link: '/insights/market-analysis/' }
+          ]
+        }
+      ],
+      '/insights/trading-strategy/': [
+        {
+          text: 'Trading Strategy',
+          items: [
+            { text: 'Overview', link: '/insights/trading-strategy/' },
+            { text: 'Advanced Strategies', link: '/insights/trading-strategy/advanced/' }
+          ]
+        }
+      ],
+      '/resources/personal-finance-tips/': [
+        {
+          text: 'Personal Finance Tips',
+          items: [
+            { text: 'Overview', link: '/resources/personal-finance-tips/' },
+            { text: 'Risk Management Basics', link: '/resources/personal-finance-tips/risk-management/basics' },
+            { text: 'Position Sizing', link: '/resources/personal-finance-tips/risk-management/position-sizing' },
+            { text: 'Risk-Reward Ratio', link: '/resources/personal-finance-tips/risk-management/risk-reward' },
+            { text: 'Stop Loss Strategies', link: '/resources/personal-finance-tips/risk-management/stop-loss' }
+          ]
+        }
+      ],
+      '/resources/tutorials/': [
+        {
+          text: 'Tutorials',
+          items: [
+            { text: 'Overview', link: '/resources/tutorials/' }
+          ]
+        },
+        {
+          text: 'Basics',
+          items: [
+            { text: 'What is Contract Trading?', link: '/resources/tutorials/basics/what-is-contract-trading' },
+            { text: 'Types of Contracts', link: '/resources/tutorials/basics/contract-types' },
+            { text: 'Leverage and Margin', link: '/resources/tutorials/basics/leverage-and-margin' },
+            { text: 'Choosing a Platform', link: '/resources/tutorials/basics/choosing-platform' }
+          ]
+        },
+        {
+          text: 'FAQ',
+          items: [
+            { text: 'General Questions', link: '/resources/tutorials/faq/general' },
+            { text: 'Technical Questions', link: '/resources/tutorials/faq/technical' },
+            { text: 'Trading Questions', link: '/resources/tutorials/faq/trading' },
+            { text: 'Platform Questions', link: '/resources/tutorials/faq/platform' }
+          ]
+        }
+      ],
+      '/resources/useful-links/': [
+        {
+          text: 'Useful Links',
+          items: [
+            { text: 'Overview', link: '/resources/useful-links/' }
+          ]
+        },
+        {
+          text: 'Tools',
+          items: [
+            { text: 'Calculator', link: '/resources/useful-links/tools/calculator' },
+            { text: 'Risk Calculator', link: '/resources/useful-links/tools/risk-calculator' },
+            { text: 'Glossary', link: '/resources/useful-links/tools/glossary' }
+          ]
+        }
+      ],
+      
+      // Chinese sidebars - New Structure
+      '/zh/insights/': [
+        {
+          text: '市场分析',
+          items: [
+            { text: '市场分析概览', link: '/zh/insights/market-analysis/' }
+          ]
+        },
+        {
+          text: '交易策略',
+          items: [
+            { text: '交易策略概览', link: '/zh/insights/trading-strategy/' },
+            { text: '高级策略', link: '/zh/insights/trading-strategy/advanced/' }
+          ]
+        }
+      ],
+      '/zh/resources/': [
+        {
+          text: '个人理财建议',
+          items: [
+            { text: '个人理财概览', link: '/zh/resources/personal-finance-tips/' },
+            { text: '风险管理', link: '/zh/resources/personal-finance-tips/risk-management/' }
+          ]
+        },
+        {
+          text: '教程',
+          items: [
+            { text: '教程概览', link: '/zh/resources/tutorials/' },
+            { text: '基础知识', link: '/zh/resources/tutorials/basics/' },
+            { text: '常见问题', link: '/zh/resources/tutorials/faq/' }
+          ]
+        },
+        {
+          text: '实用链接',
+          items: [
+            { text: '实用链接概览', link: '/zh/resources/useful-links/' },
+            { text: '工具', link: '/zh/resources/useful-links/tools/' }
+          ]
+        }
+      ],
+      '/zh/resources/tutorials/basics/': [
         {
           text: '基础知识',
           items: [
-            { text: '什么是合约交易', link: '/zh/basics/what-is-contract-trading' },
-            { text: '合约类型', link: '/zh/basics/contract-types' },
-            { text: '理解杠杆', link: '/zh/basics/understanding-leverage' },
-            { text: '杠杆和保证金', link: '/zh/basics/leverage-and-margin' },
-            { text: '保证金概念', link: '/zh/basics/margin-concepts' },
-            { text: '交易术语', link: '/zh/basics/trading-terminology' }
+            { text: '什么是合约交易', link: '/zh/resources/tutorials/basics/what-is-contract-trading' },
+            { text: '合约类型', link: '/zh/resources/tutorials/basics/contract-types' },
+            { text: '理解杠杆', link: '/zh/resources/tutorials/basics/understanding-leverage' },
+            { text: '杠杆和保证金', link: '/zh/resources/tutorials/basics/leverage-and-margin' },
+            { text: '保证金概念', link: '/zh/resources/tutorials/basics/margin-concepts' },
+            { text: '交易术语', link: '/zh/resources/tutorials/basics/trading-terminology' }
           ]
         }
       ],
-      '/zh/risk-management/': [
+      '/zh/resources/personal-finance-tips/risk-management/': [
         {
           text: '风险管理',
           items: [
-            { text: '风险管理基础', link: '/zh/risk-management/' },
-            { text: '止损策略', link: '/zh/risk-management/stop-loss' },
-            { text: '仓位管理', link: '/zh/risk-management/position-sizing' },
-            { text: '风险回报比', link: '/zh/risk-management/risk-reward' }
+            { text: '风险管理基础', link: '/zh/resources/personal-finance-tips/risk-management/basics' },
+            { text: '止损策略', link: '/zh/resources/personal-finance-tips/risk-management/stop-loss' },
+            { text: '仓位管理', link: '/zh/resources/personal-finance-tips/risk-management/position-sizing' },
+            { text: '风险回报比', link: '/zh/resources/personal-finance-tips/risk-management/risk-reward' }
           ]
         }
       ],
-      '/zh/tools/': [
+      '/zh/resources/useful-links/tools/': [
         {
           text: '交易工具',
           items: [
-            { text: '工具概览', link: '/zh/tools/' },
-            { text: '计算器', link: '/zh/tools/calculator' }
+            { text: '工具概览', link: '/zh/resources/useful-links/tools/' },
+            { text: '计算器', link: '/zh/resources/useful-links/tools/calculator' }
           ]
         }
       ],
-      '/zh/faq/': [
+      '/zh/resources/tutorials/faq/': [
         {
           text: '常见问题',
           items: [
-            { text: '常见问题', link: '/zh/faq/' },
-            { text: '一般问题', link: '/zh/faq/general' },
-            { text: '技术问题', link: '/zh/faq/technical' },
-            { text: '交易问题', link: '/zh/faq/trading' },
-            { text: '平台问题', link: '/zh/faq/platform' },
-            { text: '策略问题', link: '/zh/faq/strategies' }
+            { text: '常见问题', link: '/zh/resources/tutorials/faq/' },
+            { text: '一般问题', link: '/zh/resources/tutorials/faq/general' },
+            { text: '技术问题', link: '/zh/resources/tutorials/faq/technical' },
+            { text: '交易问题', link: '/zh/resources/tutorials/faq/trading' },
+            { text: '平台问题', link: '/zh/resources/tutorials/faq/platform' },
+            { text: '策略问题', link: '/zh/resources/tutorials/faq/strategies' }
           ]
         }
       ],
       
-      // Spanish sidebars
-      '/es/basics/': [
+      // Spanish sidebars - New Structure
+      '/es/insights/': [
+        {
+          text: 'Análisis de Mercado',
+          items: [
+            { text: 'Visión General de Análisis', link: '/es/insights/market-analysis/' }
+          ]
+        },
+        {
+          text: 'Estrategia de Trading',
+          items: [
+            { text: 'Visión General de Estrategias', link: '/es/insights/trading-strategy/' },
+            { text: 'Estrategias Avanzadas', link: '/es/insights/trading-strategy/advanced/' }
+          ]
+        }
+      ],
+      '/es/resources/': [
+        {
+          text: 'Consejos de Finanzas Personales',
+          items: [
+            { text: 'Visión General de Finanzas', link: '/es/resources/personal-finance-tips/' },
+            { text: 'Gestión de Riesgos', link: '/es/resources/personal-finance-tips/risk-management/' }
+          ]
+        },
+        {
+          text: 'Tutoriales',
+          items: [
+            { text: 'Visión General de Tutoriales', link: '/es/resources/tutorials/' },
+            { text: 'Fundamentos', link: '/es/resources/tutorials/basics/' },
+            { text: 'Preguntas Frecuentes', link: '/es/resources/tutorials/faq/' }
+          ]
+        },
+        {
+          text: 'Enlaces Útiles',
+          items: [
+            { text: 'Visión General de Enlaces', link: '/es/resources/useful-links/' },
+            { text: 'Herramientas', link: '/es/resources/useful-links/tools/' }
+          ]
+        }
+      ],
+      '/es/resources/tutorials/basics/': [
         {
           text: 'Fundamentos',
           items: [
-            { text: '¿Qué es el Trading de Contratos?', link: '/es/basics/what-is-contract-trading' },
-            { text: 'Tipos de Contratos', link: '/es/basics/contract-types' },
-            { text: 'Apalancamiento y Margen', link: '/es/basics/leverage-and-margin' }
+            { text: '¿Qué es el Trading de Contratos?', link: '/es/resources/tutorials/basics/what-is-contract-trading' },
+            { text: 'Tipos de Contratos', link: '/es/resources/tutorials/basics/types-of-contracts' },
+            { text: 'Comprender el Apalancamiento', link: '/es/resources/tutorials/basics/understanding-leverage' },
+            { text: 'Conceptos de Margen', link: '/es/resources/tutorials/basics/margin-concepts' },
+            { text: 'Terminología de Trading', link: '/es/resources/tutorials/basics/trading-terminology' },
+            { text: 'Elegir Plataforma', link: '/es/resources/tutorials/basics/choosing-platform' }
           ]
         }
       ],
-      '/es/risk-management/': [
+      '/es/resources/personal-finance-tips/risk-management/': [
         {
           text: 'Gestión de Riesgos',
           items: [
-            { text: 'Fundamentos', link: '/es/risk-management/' },
-            { text: 'Estrategias de Stop Loss', link: '/es/risk-management/stop-loss' },
-            { text: 'Dimensionamiento de Posiciones', link: '/es/risk-management/position-sizing' }
+            { text: 'Fundamentos', link: '/es/resources/personal-finance-tips/risk-management/basics' }
           ]
         }
       ],
-      '/es/tools/': [
+      '/es/resources/useful-links/tools/': [
         {
           text: 'Herramientas',
           items: [
-            { text: 'Herramientas Avanzadas', link: '/es/tools/advanced' }
+            { text: 'Herramientas Avanzadas', link: '/es/resources/useful-links/tools/advanced' }
           ]
         }
       ],
-      '/es/faq/': [
+      '/es/resources/tutorials/faq/': [
         {
           text: 'Preguntas Frecuentes',
           items: [
-            { text: 'Preguntas Generales', link: '/es/faq/general' },
-            { text: 'Preguntas Avanzadas', link: '/es/faq/advanced' },
-            { text: 'Plataformas', link: '/es/faq/platforms' },
-            { text: 'Estrategias', link: '/es/faq/strategies' },
-            { text: 'Regulación', link: '/es/faq/regulation' },
-            { text: 'Análisis Técnico', link: '/es/faq/technical' }
+            { text: 'Preguntas Generales', link: '/es/resources/tutorials/faq/general' },
+            { text: 'Preguntas Avanzadas', link: '/es/resources/tutorials/faq/advanced' },
+            { text: 'Plataformas', link: '/es/resources/tutorials/faq/platforms' },
+            { text: 'Estrategias', link: '/es/resources/tutorials/faq/strategies' },
+            { text: 'Regulación', link: '/es/resources/tutorials/faq/regulation' },
+            { text: 'Análisis Técnico', link: '/es/resources/tutorials/faq/technical' },
+            { text: 'Gestión de Riesgos', link: '/es/resources/tutorials/faq/risk-management' }
           ]
         }
       ]
     },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/davioleung-mc/tradingpal' }
-    ],
+    // socialLinks: [
+    //   { icon: 'github', link: 'https://github.com/davioleung-mc/tradingpal' }
+    // ],
 
     search: {
       provider: 'local',
