@@ -63,6 +63,5 @@ Perfect for those new to contract trading:
 
 ## Popular Strategy Resources
 
-- [Strategy Backtesting Tool](/tools/backtesting)
 - [Risk Calculator](/tools/risk-calculator)
-- [Position Size Calculator](/tools/position-calculator)
+- [Position Size Calculator](/tools/calculator)
