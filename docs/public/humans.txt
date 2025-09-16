@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: TradingPal Docs Team
+Site: https://tradingpal.com
+
+/* THANKS */
+Tools: VitePress, Vue, Unsplash
+
+/* META */
+Standards: HTML5, CSS3, ES2022

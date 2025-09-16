@@ -1,51 +1,33 @@
 # Frequently Asked Questions - General
 
----
-**⚠️ Financial Education Disclaimer**: These FAQs are for educational purposes only and do not constitute financial advice. Contract trading involves substantial risk and may not be suitable for all investors. Always consult qualified financial professionals.
-
-**Expert Review**: Answers verified by financial education specialists and regulatory compliance experts.
-
-**Last Updated**: September 2025 | **Risk Level**: All answers include appropriate risk disclosures.
----
-
 ## Getting Started
 
 ### Q: What is contract trading?
 **A:** Contract trading involves trading financial derivatives whose value is derived from underlying assets. Instead of owning the actual asset, you trade contracts that represent the right to buy or sell at specific prices and dates.
 
-**⚠️ Risk Warning**: Contract trading is a high-risk activity that can result in substantial losses exceeding your initial investment.
-
 ### Q: Is contract trading suitable for beginners?
-**A:** **Contract trading is NOT recommended for beginners** due to significant risk from leverage and complexity. If you're determined to learn:
-- **Start with education** and demo accounts (minimum 3-6 months)
-- **Begin with tiny position sizes** (less than 1% of capital)
-- **Focus on risk management** above all else
-- **Consider spot trading first** to understand market basics
-- **Get professional education** before risking real money
-
-**⚠️ Statistics**: 70-80% of retail traders lose money in leveraged products.
+**A:** Contract trading involves significant risk due to leverage and complexity. Beginners should:
+- Start with education and demo accounts
+- Begin with small position sizes
+- Focus on risk management
+- Consider starting with spot trading first
 
 ### Q: How much money do I need to start contract trading?
-**A:** While some platforms allow starting with as little as $100, professional recommendations:
-- **Absolute Minimum**: $1,000 for basic risk management
-- **Recommended**: $5,000-$10,000 for proper position sizing
-- **Reality Check**: Most successful traders start with $25,000+
-- **Golden Rule**: **Never invest more than you can afford to lose completely**
-
-**⚠️ Capital Requirements**: Undercapitalized accounts have higher failure rates due to inability to manage risk properly.
+**A:** While some platforms allow starting with as little as $100, we recommend:
+- **Minimum**: $1,000 for proper risk management
+- **Recommended**: $5,000-$10,000 for flexibility
+- **Never invest more than you can afford to lose**
 
 ### Q: What's the difference between contract trading and stock trading?
-**A:** Critical differences that affect your financial risk:
+**A:** Key differences include:
 
-| Aspect | Contract Trading | Stock Trading | Risk Impact |
-|--------|------------------|---------------|-------------|
-| Ownership | No ownership of underlying asset | Actual ownership of shares | Higher complexity risk |
-| Leverage | High leverage available (up to 500:1) | Limited leverage (2:1 for retail) | **Extreme loss amplification** |
-| Market Direction | Can profit from both up and down moves | Primarily profits from upward moves | Higher strategy complexity |
-| Complexity | More complex due to leverage and derivatives | Simpler buy and hold strategies | Higher learning curve |
-| Risk | **Very High** - can lose more than invested | Moderate - limited to investment amount | **Potential total loss + debt** |
-
-**⚠️ Key Risk Difference**: Contract trading can result in losses exceeding your initial investment, while stock trading losses are typically limited to your investment amount.
+| Aspect | Contract Trading | Stock Trading |
+|--------|------------------|---------------|
+| Ownership | No ownership of underlying asset | Actual ownership of shares |
+| Leverage | High leverage available (up to 500:1) | Limited leverage (2:1 for retail) |
+| Market Direction | Can profit from both up and down moves | Primarily profits from upward moves |
+| Complexity | More complex due to leverage and derivatives | Simpler buy and hold strategies |
+| Risk | Higher risk due to leverage | Lower risk (except in volatile markets) |
 
 ## Platform and Technical Questions
 

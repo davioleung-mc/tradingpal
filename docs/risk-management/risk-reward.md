@@ -1,17 +1,6 @@
 # Risk-Reward Analysis
 
----
-**⚠️ Risk-Reward Analysis Disclaimer**: Risk-reward calculations are theoretical models that do not guarantee trading outcomes. Market conditions can invalidate analysis instantly. Actual results may differ significantly from calculated ratios due to slippage, gaps, and execution issues.
-
-**Professional Analysis**: Content verified by quantitative analysts and professional traders with extensive risk modeling experience.
-
-**Last Updated**: September 2025 | **Reality Check**: Good risk-reward ratios do not guarantee profitable trades.
----
-
 Understanding and calculating risk-reward ratios is fundamental to successful trading. This guide covers everything you need to know about analyzing the risk-reward profile of your trades.
-
-## ⚠️ Risk-Reward Reality Warning
-**Critical Understanding**: Even trades with excellent risk-reward ratios frequently lose money. Market gaps, slippage, and emotional execution can invalidate the best analysis. Risk-reward is a tool, not a guarantee.
 
 ## 🎯 What is Risk-Reward Ratio?
 
@@ -20,26 +9,20 @@ The risk-reward ratio compares the potential loss of a trade to its potential pr
 ### Formula
 ```
 Risk-Reward Ratio = Potential Profit ÷ Potential Loss
-
-⚠️ Important: This assumes perfect execution at exact levels, 
-which rarely occurs in real trading
 ```
 
-### Example (Theoretical)
+### Example
 - Entry Price: $100
 - Stop Loss: $95 (Risk: $5)
 - Take Profit: $110 (Reward: $10)
 - Ratio: $10 ÷ $5 = 2:1 (or 1:2 from risk perspective)
 
-**⚠️ Reality**: Markets may gap past your stop loss, increasing actual risk beyond calculated amounts.
-
 ## 📊 Calculating Risk-Reward
 
 ### Step 1: Identify Key Levels
 - **Entry Point**: Your planned entry price
-- **Stop Loss**: Maximum acceptable loss level (may not be honored in gaps)
-- **Take Profit**: Profit target level (may not be reached)
-- **⚠️ Execution Risk**: Actual execution may differ from planned levels
+- **Stop Loss**: Maximum acceptable loss level
+- **Take Profit**: Profit target level
 
 ### Step 2: Calculate Risk
 ```

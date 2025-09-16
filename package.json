@@ -1,8 +1,8 @@
 {
-  "name": "contract-trading-ultimate-guide",
+  "name": "tradingpal",
   "version": "1.0.0",
   "type": "module",
-  "description": "The Ultimate Guide to Contract Trading - Comprehensive FAQ and Documentation",
+  "description": "TradingPal - Your trusted companion for contract trading and financial education",
   "scripts": {
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
@@ -12,15 +12,14 @@
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [
+    "tradingpal",
     "contract trading",
     "futures",
     "derivatives",
     "trading guide",
-    "FAQ",
     "financial education"
   ],
-  "author": "Contract Trading Team",
-  "license": "MIT",
+  "author": "TradingPal Team",
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
     "vitepress": "^1.6.4",

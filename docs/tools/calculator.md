@@ -4,41 +4,15 @@ layout: page
 
 # Trading Tools & Calculators
 
----
-**🚨 CALCULATOR DISCLAIMER**: These calculators are educational tools only and do NOT guarantee trading success or prevent losses. All calculations are theoretical and may not reflect real market conditions including slippage, gaps, execution delays, and platform failures.
-
-**CRITICAL WARNING**: Do not rely solely on these calculators for trading decisions. Markets can move beyond calculated levels instantly, resulting in losses exceeding calculations.
-
-**Professional Advisory**: Calculators cannot replace professional financial advice or risk management education. Consult qualified professionals before trading.
-
-**Last Updated**: September 2025 | **Use at Your Own Risk**
----
-
 Interactive tools to help you make informed trading decisions and manage risk effectively.
 
-## ⚠️ Important Calculator Limitations
-
-**These tools cannot account for:**
-- Market gaps and slippage
-- Platform execution delays or failures
-- Extreme market volatility
-- Funding costs and overnight charges
-- Psychological factors affecting decision-making
-- Force majeure events and market closures
-- Liquidity issues during volatile periods
-
 ## Position Size Calculator
-
-**⚠️ Position Sizing Warning**: Even with perfect position sizing, most traders lose money. Position sizing helps limit losses but does not guarantee profitability.
 
 Calculate the optimal position size based on your account balance, risk tolerance, and stop loss distance.
 
 <div class="calculator-container">
   <div class="calculator">
     <h3>Position Size Calculator</h3>
-    <div class="warning-box">
-      ⚠️ <strong>Remember</strong>: This calculation assumes perfect execution, which rarely occurs in real trading!
-    </div>
     
     <div class="input-group">
       <label for="account-balance">Account Balance ($)</label>
@@ -46,7 +20,7 @@ Calculate the optimal position size based on your account balance, risk toleranc
     </div>
     
     <div class="input-group">
-      <label for="risk-percentage">Risk Percentage (%) - Recommended: Max 1-2%</label>
+      <label for="risk-percentage">Risk Percentage (%)</label>
       <input type="number" id="risk-percentage" placeholder="1" min="0" max="100" step="0.1">
     </div>
     

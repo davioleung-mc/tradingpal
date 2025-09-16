@@ -1,91 +1,1233 @@
-/* Custom styles for VitePress theme */
+/* Import Google Fonts for better typography (added Cinzel for masthead style) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+
+/* NYT-Inspired Financial Homepage Design */
 :root {
-  --vp-c-brand: #646cff;
-  --vp-c-brand-light: #747bff;
+  /* Design tokens - NYT color palette */
+  --nyt-black: #121212;
+  --nyt-dark-gray: #363636;
+  --nyt-medium-gray: #666;
+  --nyt-light-gray: #e2e2e2;
+  --nyt-off-white: #fafafa;
+  --nyt-white: #ffffff;
+  --nyt-accent-blue: #1a56db;
+  --nyt-accent-green: #006837;
+  --nyt-border: #d4d4d4;
+  
+  /* Typography scale */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+  
+  /* Spacing scale */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Transition variables */
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-base: all 0.25s ease-in-out;
+  --transition-slow: all 0.35s ease-in-out;
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Shadow effects */
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* (quote styles moved out of :root) */
 }
 
-.VPNav {
+/* Investor Quote Section (aligned width with resources section) */
+.content-inner {
+  width: 100%;
+  margin: 0;
+  padding: 0; /* outer sections already provide padding */
+}
+/* Utility: uniform content box styling */
+.content-box-block {
+  background: var(--nyt-off-white);
+  border: 1px solid var(--nyt-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+/* Match Resources section styling for uniform width */
+.investor-quote.quote-band {
+  background: var(--nyt-off-white);
+  border: 1px solid var(--nyt-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.investor-quote .quote-inner { width: 100%; padding: 0; margin: 0; position: relative; }
+
+.investor-quote .quote-label {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--nyt-accent-blue);
+  margin: 0 0 1rem;
+  position: relative;
+  padding-left: 1.6rem;
+}
+
+.investor-quote .quote-label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1.1rem;
+  height: 2px;
+  background: var(--quote-accent);
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+
+.investor-quote blockquote { margin: 0; padding: 0; position: relative; }
+
+.investor-quote blockquote p {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--nyt-black);
+  letter-spacing: -0.5px;
+}
+
+.investor-quote .quote-mark {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  line-height: 0.6;
+  font-weight: 700;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: .25rem;
+  color: var(--nyt-accent-blue);
+}
+
+.investor-quote .quote-mark.end {
+  margin-left: .15rem;
+  margin-right: 0;
+  transform: translateY(0.25rem);
+  font-size: 3rem;
+}
+
+.investor-quote cite {
+  display: block;
+  font-size: 0.95rem;
+  font-style: normal;
+  color: var(--nyt-medium-gray);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@media (max-width: 780px) {
+  .investor-quote.quote-band { padding: var(--space-xl); }
+  .investor-quote blockquote p { font-size: 1.25rem; }
+  .investor-quote .quote-mark { font-size: 2.5rem; }
+  .investor-quote .quote-mark.end { font-size: 2.5rem; }
+}
+
+@media (max-width: 560px) {
+  .investor-quote.quote-band { padding: var(--space-lg); }
+  .investor-quote .quote-label { font-size: .62rem; letter-spacing: .19em; }
+  .investor-quote blockquote p { font-size: 1.125rem; line-height: 1.34; }
+  .investor-quote cite { font-size: .85rem; }
+}
+
+/* Dark mode specific overrides */
+.dark .financial-homepage {
+  background: var(--nyt-black);
+  color: var(--nyt-white);
+}
+
+.dark .hero-section {
+  border-bottom-color: var(--nyt-border);
+}
+
+.dark .secondary-stories {
+  border-left-color: var(--nyt-border);
+}
+
+.dark .section-label {
+  border-bottom-color: var(--nyt-border);
+}
+
+.dark .story-list li {
+  border-bottom-color: var(--nyt-border);
+}
+
+.dark .filter-tab {
+  border-color: var(--nyt-medium-gray);
+  background: var(--nyt-dark-gray);
+  color: var(--nyt-white);
+}
+
+.dark .filter-tab:hover,
+.dark .filter-tab.active {
+  background: var(--nyt-white);
+  color: var(--nyt-black);
+  border-color: var(--nyt-white);
+}
+
+.dark .insight-card {
+  background: var(--nyt-dark-gray);
+  border-color: var(--nyt-medium-gray);
+}
+
+.dark .insight-card .card-image {
+  background: var(--nyt-medium-gray);
+  border-bottom-color: var(--nyt-medium-gray);
+}
+
+.dark .resources-section {
+  background: var(--nyt-dark-gray);
+  border-color: var(--nyt-medium-gray);
+}
+
+.dark .tool-item {
+  background: var(--nyt-dark-gray);
+  border-color: var(--nyt-medium-gray);
+}
+
+.dark .tool-item:hover {
+  border-color: var(--nyt-accent-blue);
+}
+
+/* Additional dark mode text and element styling */
+.dark .lead-story .headline,
+.dark .section-title,
+.dark .category-title,
+.dark .card-headline {
+  color: var(--nyt-white);
+}
+
+.dark .lead-story .summary,
+.dark .card-excerpt {
+  color: var(--nyt-light-gray);
+}
+
+.dark .story-list a,
+.dark .resource-list a,
+.dark .tool-item {
+  color: var(--nyt-white);
+}
+
+.dark .investor-quote.quote-band {
+  background: var(--nyt-dark-gray);
+  border-color: var(--nyt-medium-gray);
+}
+
+.dark .investor-quote blockquote p {
+  color: var(--nyt-white);
+}
+
+.dark .investor-quote .quote-label {
+  color: var(--nyt-accent-blue);
+}
+
+/* Dark mode hover effects */
+.dark .story-list a:hover {
+  color: var(--nyt-accent-blue);
+}
+
+.dark .resource-list a:hover {
+  color: var(--nyt-accent-blue);
+  background: rgba(26, 86, 219, 0.15);
+}
+
+.dark .read-more:hover {
+  background: rgba(26, 86, 219, 0.2);
+}
+
+.dark .tool-item:hover {
+  background: rgba(26, 86, 219, 0.1);
+  border-color: var(--nyt-accent-blue);
+}
+
+/* Reset and base styles */
+.financial-homepage {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--nyt-black);
+  background: var(--nyt-white);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+/* Hero Section - NYT Above the Fold */
+.hero-section {
+  border-bottom: 1px solid var(--nyt-border);
+  padding: var(--space-2xl) 0;
+  margin-bottom: var(--space-2xl);
+}
+
+.hero-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.lead-story .headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 var(--space-md) 0;
+  font-family: var(--font-serif);
+  color: var(--nyt-black);
+  letter-spacing: -0.02em;
+}
+
+.lead-story .summary {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--nyt-dark-gray);
+  margin: 0 0 var(--space-lg) 0;
+  font-weight: 400;
+}
+
+.read-more {
+  display: inline-block;
+  color: var(--nyt-accent-blue);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: var(--transition-base);
+  position: relative;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+}
+
+.read-more:hover {
+  border-bottom-color: var(--nyt-accent-blue);
+  background: rgba(26, 86, 219, 0.1);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.read-more::after {
+  content: '→';
+  margin-left: var(--space-xs);
+  transition: var(--transition-base);
+  display: inline-block;
+}
+
+.read-more:hover::after {
+  transform: translateX(3px);
+}
+
+.secondary-stories {
+  padding-left: var(--space-lg);
+  border-left: 1px solid var(--nyt-light-gray);
+}
+
+.section-label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--nyt-medium-gray);
+  margin: 0 0 var(--space-md) 0;
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--nyt-light-gray);
+}
+
+.story-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.story-list li {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--nyt-light-gray);
+}
+
+.story-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.story-list a {
+  color: var(--nyt-black);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 1rem;
+  transition: var(--transition-base);
+  position: relative;
+}
+
+.story-list a:hover {
+  color: var(--nyt-accent-blue);
+  transform: translateX(4px);
+}
+
+.story-list a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--nyt-accent-blue);
+  transition: var(--transition-base);
+}
+
+.story-list a:hover::after {
   width: 100%;
 }
 
-.VPNavBar .title {
-  font-size: 0.9em;
-  white-space: nowrap;
+/* Insights Section */
+.insights-section {
+  margin-bottom: var(--space-3xl);
 }
 
-@media (max-width: 768px) {
-  .VPNavBar .title {
-    font-size: 0.8em;
+.section-header {
+  margin-bottom: var(--space-xl);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--nyt-black);
+  font-family: var(--font-serif);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  background: none;
+  border: 1px solid var(--nyt-border);
+  color: var(--nyt-medium-gray);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+  background: var(--nyt-black);
+  color: var(--nyt-white);
+  border-color: var(--nyt-black);
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.insight-card {
+  background: var(--nyt-white);
+  border: 1px solid var(--nyt-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.insight-card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-4px);
+  border-color: var(--nyt-accent-blue);
+}
+
+.insight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 86, 219, 0.05), rgba(26, 86, 219, 0.02));
+  opacity: 0;
+  transition: var(--transition-base);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.insight-card:hover::before {
+  opacity: 1;
+}
+
+.card-image {
+  /* Maintain consistent media box ratio to reduce layout shift */
+  aspect-ratio: 5 / 3;
+  height: auto;
+  background: var(--nyt-off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--nyt-light-gray);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1 / 1) {
+  .card-image { height: 180px; }
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+  filter: brightness(1) saturate(1);
+}
+
+.insight-card:hover .card-image img {
+  transform: scale(1.08);
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.placeholder-img {
+  font-size: 3rem;
+  opacity: 0.6;
+}
+
+.card-headline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: var(--space-lg) var(--space-lg) var(--space-sm) var(--space-lg);
+  color: var(--nyt-black);
+}
+
+.card-excerpt {
+  color: var(--nyt-medium-gray);
+  margin: 0 var(--space-lg) var(--space-lg) var(--space-lg);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Resources Section */
+.resources-section {
+  background: var(--nyt-off-white);
+  border: 1px solid var(--nyt-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.resource-categories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-top: var(--space-xl);
+}
+
+.resource-category:last-child {
+  grid-column: 1 / -1;
+}
+
+.category-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--space-lg) 0;
+  color: var(--nyt-black);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--nyt-accent-blue);
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.resource-list li {
+  margin-bottom: var(--space-md);
+}
+
+.resource-list a {
+  color: var(--nyt-black);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: var(--transition-base);
+  display: block;
+  padding: var(--space-sm) 0;
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-list a:hover {
+  color: var(--nyt-accent-blue);
+  transform: translateX(6px);
+  background: rgba(26, 86, 219, 0.05);
+  padding-left: var(--space-sm);
+}
+
+.resource-list a::before {
+  content: "→";
+  margin-right: var(--space-sm);
+  color: var(--nyt-medium-gray);
+  transition: var(--transition-base);
+  display: inline-block;
+}
+
+.resource-list a:hover::before {
+  color: var(--nyt-accent-blue);
+  transform: translateX(4px) scale(1.2);
+}
+
+/* Tools Grid */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--nyt-white);
+  border: 1px solid var(--nyt-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--nyt-black);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.tool-item:hover {
+  box-shadow: var(--shadow-medium);
+  border-color: var(--nyt-accent-blue);
+  transform: translateY(-3px) scale(1.02);
+  background: rgba(26, 86, 219, 0.02);
+}
+
+.tool-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(26, 86, 219, 0.1), transparent);
+  transition: var(--transition-slow);
+}
+
+.tool-item:hover::before {
+  left: 100%;
+}
+
+.tool-icon {
+  font-size: 1.5rem;
+  transition: var(--transition-base);
+  z-index: 2;
+  position: relative;
+}
+
+.tool-item:hover .tool-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.tool-name {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1024px) {
+  .financial-homepage {
+    padding: 0 var(--space-md);
+  }
+  
+  .hero-main {
+    gap: var(--space-xl);
+  }
+  
+  .insights-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
 
-/* Fix for language selector and dropdown styling */
+@media (max-width: 768px) {
+  .financial-homepage {
+    padding: 0 var(--space-md);
+  }
+  
+  .hero-section {
+    padding: var(--space-xl) 0;
+  }
+  
+  .hero-main {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .secondary-stories {
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid var(--nyt-light-gray);
+    padding-top: var(--space-lg);
+    margin-top: var(--space-lg);
+  }
+  
+  .lead-story .headline {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .lead-story .summary {
+    font-size: 1rem;
+  }
+  
+  .insights-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .resource-categories {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .tools-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .filter-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: var(--space-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .filter-tab {
+    flex-shrink: 0;
+    min-width: auto;
+    white-space: nowrap;
+  }
+  
+  /* Better touch targets */
+  .insight-card,
+  .tool-item,
+  .filter-tab {
+    min-height: 44px;
+  }
+  
+  .story-list a,
+  .resource-list a {
+    padding: var(--space-md) 0;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .financial-homepage {
+    padding: 0 var(--space-sm);
+  }
+  
+  .hero-section {
+    padding: var(--space-lg) 0;
+  }
+  
+  .lead-story .headline {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .resources-section {
+    padding: var(--space-lg);
+  }
+  
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .tool-item {
+    justify-content: flex-start;
+    text-align: left;
+  }
+  
+  .filter-tabs {
+    gap: var(--space-xs);
+  }
+  
+  .filter-tab {
+    padding: var(--space-sm) var(--space-sm);
+    font-size: 0.8rem;
+  }
+  
+  .card-headline {
+    font-size: 1.125rem;
+    margin: var(--space-md) var(--space-md) var(--space-xs) var(--space-md);
+  }
+  
+  .card-excerpt {
+    margin: 0 var(--space-md) var(--space-md) var(--space-md);
+    font-size: 0.875rem;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .insight-card:hover .card-image img { transform: none !important; filter: brightness(1) saturate(1); }
+  .tool-item:hover { transform: none !important; }
+  .read-more:hover { transform:none !important; box-shadow:none !important; }
+}
+
+/* Dark mode responsive adjustments */
+.dark .secondary-stories {
+  border-top-color: var(--nyt-border);
+}
+
+/* Hide any "Powered by VitePress" or similar branding */
+[class*="powered-by"],
+[class*="vitepress"],
+[class*="VitePress"] {
+  display: none !important;
+}
+
+/* Hide language selector temporarily */
 .VPNavBarTranslations {
-  background: transparent !important;
+  display: none !important;
 }
 
-.VPNavBarTranslations .VPFlyout {
+/* Fix navigation background and positioning */
+.VPNav {
   background: var(--vp-c-bg) !important;
-  border: 1px solid var(--vp-c-divider) !important;
+  backdrop-filter: none !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
 }
 
-.VPFlyout .items {
+.VPNavBar {
   background: var(--vp-c-bg) !important;
 }
 
-/* Ensure consistent dropdown styling */
-.VPDropdownMenu {
+.VPNavBar .VPNavBarTitle {
+  background: transparent !important;
+}
+
+/* Ensure menu items are left-aligned - higher specificity override */
+.VPNavBar .container .content {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: var(--space-lg) !important;
+}
+
+.VPNavBar .container .content .VPNavBarTitle {
+  order: 0 !important;
+  margin-right: var(--space-xl) !important;
+  flex: none !important;
+}
+
+.VPNavBar .container .content .VPNavBarMenu {
+  order: 1 !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  flex: none !important;
+}
+
+/* Force menu items to be immediately after title with no gap */
+.VPNavBar .container .content .VPNavBarTitle + .VPNavBarMenu,
+.VPNavBar .content .VPNavBarTitle + .VPNavBarMenu {
+  margin-left: var(--space-lg) !important;
+  margin-right: auto !important;
+}
+
+/* Override any center alignment on menu items */
+.VPNavBarMenu,
+.VPNavBarMenu ul,
+.VPNavBarMenu .VPNavBarMenuGroup {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+}
+
+/* Very specific targeting to force left alignment */
+.VPNav .VPNavBar .content .VPNavBarMenu,
+.VPNav .VPNavBar .container .content .VPNavBarMenu,
+body .VPNav .VPNavBar .content .VPNavBarMenu {
+  position: relative !important;
+  left: 0 !important;
+  transform: none !important;
+  text-align: left !important;
+  justify-self: flex-start !important;
+}
+
+/* Ensure menu links are left-aligned */
+.VPNavBarMenu .VPNavBarMenuLink,
+.VPNavBarMenu a {
+  margin-left: 0 !important;
+  margin-right: var(--space-lg) !important;
+}
+
+.VPNavBar .container .content .VPSwitchAppearance {
+  order: 10 !important;
+  margin-left: 0 !important;
+}
+
+.VPNavBar .container .content .VPNavBarSearch {
+  order: 11 !important;
+  margin-left: 0 !important;
+}
+
+/* Dark mode navigation background */
+.dark .VPNav,
+.dark .VPNavBar {
   background: var(--vp-c-bg) !important;
-  border: 1px solid var(--vp-c-divider) !important;
 }
 
-/* Fix any potential z-index issues */
-.VPFlyout, .VPDropdownMenu {
-  z-index: 100 !important;
-}
-
-/* Fix purple background on navigation elements */
-.VPNavBar button,
-.VPNavBarMenuLink,
-.VPFlyout .button,
-.VPNavScreenMenuLink,
-.VPNavScreenMenuGroupLink {
+.dark .VPNavBar .VPNavBarTitle {
   background: transparent !important;
 }
 
-/* Ensure dropdown items don't have brand background */
-.VPMenu .item,
-.VPNavScreenMenuGroup .items .item {
-  background: transparent !important;
+/* Removed previous menu left-indent (Option A) for perfect left alignment */
+
+/* ------------------------------------------------------------------ */
+/* Navigation Ordering & Alignment (restored after CustomNav removal) */
+/* ------------------------------------------------------------------ */
+.VPNavBar .content { display:flex; align-items:center; }
+/* Keep menu on the left */
+/* First right item: language selector, also pushes group to right */
+/* (superseded by later explicit orders; keep margin-left:auto for push) */
+.VPNavBar .content .VPNavBarTranslations { margin-left:auto; }
+
+/* Force explicit ordering & allow right items to compress together at extreme right */
+/* Final explicit order values */
+.VPNavBar .content .VPNavBarTranslations { order: 50; }
+.VPNavBar .content .VPSwitchAppearance { order: 51; }
+.VPNavBar .content .VPNavBarSearch { order: 52; }
+
+/* Let the menu take only needed space and utilities stick to right */
+.VPNavBar .content .VPNavBarMenu { flex: 0 1 auto; }
+.VPNavBar .content { display:flex; align-items:center; }
+
+/* Tidy spacing */
+.VPNavBar .content .VPNavBarTranslations,
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarSearch { gap:.4rem; }
+
+/* Remove stray separators if any */
+.VPNavBar .content .VPNavBarTranslations::before,
+.VPNavBar .content .VPSwitchAppearance::before,
+.VPNavBar .content .VPNavBarSearch::before { display:none !important; content:none !important; }
+
+@media (max-width: 768px) {
+  /* Let default mobile stacking take over; minimal overrides */
+  .VPNavBar .content .VPNavBarTranslations { margin-left:0; }
 }
 
-/* Additional specific navigation fixes */
-.VPNavBar .VPNavBarMenuLink:hover,
-.VPNavBar .VPNavBarMenuLink.active {
-  background: transparent !important;
+/* -------------------------------------------------- */
+/* Utilities cluster refinement (remove divider & align) */
+/* -------------------------------------------------- */
+/* Remove the vertical divider that appears before the appearance toggle */
+.VPNavBar .content .VPNavBarMenu + div[class*="divider"],
+.VPNavBar .content .VPNavBarMenu + span,
+.VPNavBar .content .VPNavBarMenu + *:before {
+  display:none !important;
 }
 
-.VPFlyout .VPMenu .VPMenuLink,
-.VPFlyout .VPMenu .VPMenuGroup .VPMenuLink {
-  background: transparent !important;
+/* Some themes inject a border-left on the first utility (appearance) */
+.VPNavBar .content .VPSwitchAppearance { border-left:none !important; padding-left:0 !important; }
+
+/* Increase spacing between menu and first utility now that divider removed */
+/* Tighten gap on menu's right side */
+.VPNavBar .content .VPNavBarMenu { margin-right:16px; }
+
+/* Right alignment: ensure search ends flush with main content width (1200px container) */
+
+/* Ensure utilities cluster hugs right edge */
+.VPNavBar .content { width:100%; }
+.VPNavBar .content .VPNavBarSearch { margin-right:0 !important; }
+
+/* Extra aggressive removal of any divider element (theme may inject a standalone element) */
+.VPNavBar .content > .divider, 
+.VPNavBar .content [class*='divider'],
+.VPNavBar .content > span[role='separator'] {
+  display:none !important;
+  width:0 !important;
+  border:none !important;
+  padding:0 !important;
+  margin:0 !important;
 }
 
-/* Fix any remaining navigation button backgrounds */
-.VPNavBar .content-body button:hover,
-.VPNavBar .content-body button.active,
-.VPNavBar .content-body .VPButton:hover {
-  background: transparent !important;
+/* Remove potential border-left on utilities */
+.VPNavBar .content .VPNavBarTranslations,
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarSearch { border-left:none !important; }
+
+/* Minor tightening inside cluster */
+.VPNavBar .content .VPNavBarTranslations,
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarSearch { gap:8px; }
+
+/* Fine tune gap inside utilities */
+.VPNavBar .content .VPNavBarTranslations,
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarSearch { gap:10px; }
+
+@media (max-width: 1100px) {
+  .VPNavBar .content .VPNavBarMenu { margin-right:32px; }
+}
+@media (max-width: 960px) {
+  .VPNavBar .content .VPNavBarMenu { margin-right:24px; }
+}
+@media (max-width: 640px) {
+  .VPNavBar .content .VPNavBarMenu { margin-right:12px; }
 }
 
-/* Ensure search button doesn't get purple background */
-.VPNavBarSearch button,
-.DocSearch-Button:hover {
-  background: transparent !important;
+/* ====================================================== */
+/* Two-Column Navbar Layout (Left: Logo+Menu, Right: Utils) */
+/* ====================================================== */
+/* Adjust overall navbar container width & side padding to line up with hero grid */
+/* Unified navbar width to match page body (1200px) */
+.VPNavBar .container { max-width:1200px; padding:0 24px; }
+
+/* Left column spacing: logo to first menu item and consistent gaps */
+.VPNavBarTitle { margin-right:42px; }
+
+/* Match navbar title font size to section titles */
+.VPNavBarTitle .title {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
+  font-family: var(--font-serif) !important;
+}
+.VPNavBar .content .VPNavBarMenu { margin-left:0; margin-right:28px; }
+
+/* Normalize menu item spacing (handle list or direct links) */
+.VPNavBar .content .VPNavBarMenu ul { display:flex; gap:28px; }
+.VPNavBar .content .VPNavBarMenu ul li { margin:0; }
+.VPNavBar .content .VPNavBarMenu > a, 
+.VPNavBar .content .VPNavBarMenu > .VPNavBarMenuLink { margin-right:28px; }
+.VPNavBar .content .VPNavBarMenu > a:last-child { margin-right:0; }
+
+/* Right column ordering: Search (pushes cluster), Language, Night Mode */
+/* Right cluster order (left->right inside cluster): Language, Night Mode, Search */
+.VPNavBar .content .VPNavBarTranslations { order:170; margin-left:auto; }
+/* Night mode wrapper may be .VPSwitchAppearance or .VPNavBarAppearance depending on theme */
+.VPNavBar .content .VPSwitchAppearance, 
+.VPNavBar .content .VPNavBarAppearance { order:171; }
+.VPNavBar .content .VPNavBarSearch { order:172; }
+
+/* Cluster spacing on right */
+/* Shared left padding for items after the first */
+.VPNavBar .content .VPNavBarSearch,
+.VPNavBar .content .VPNavBarTranslations,
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarAppearance { padding-left:24px; }
+/* First item in right cluster (language) has no left pad */
+.VPNavBar .content .VPNavBarTranslations { padding-left:0; }
+
+/* If search uses DocSearch button directly inside content, force its order */
+.VPNavBar .content .DocSearch-Button { order:172; padding-left:24px; }
+
+/* Ensure no earlier order rules override (add high specificity noop referencing body) */
+body body .VPNavBar .content .VPNavBarTranslations { order:170; }
+body body .VPNavBar .content .VPSwitchAppearance, 
+body body .VPNavBar .content .VPNavBarAppearance { order:171; }
+body body .VPNavBar .content .VPNavBarSearch, 
+body body .VPNavBar .content .DocSearch-Button { order:172; }
+
+/* Align night mode toggle to right edge: remove internal padding */
+.VPNavBar .content .VPSwitchAppearance { padding-right:0; margin-right:0; }
+
+/* Universal kill for any residual vertical divider before utilities */
+.VPNavBar .content *[class*='divider'],
+.VPNavBar .content *[class*='Divider'],
+.VPNavBar .content *[role='separator'],
+.VPNavBar .content *::before,
+.VPNavBar .content *::after {
+  border-left: none !important;
+  background: none !important;
+  box-shadow: none !important;
 }
 
-/* Fix language selector and appearance toggle */
-.VPNavBarTranslations button,
-.VPNavBarAppearance button,
-.VPSwitchAppearance button {
-  background: transparent !important;
+/* Restrict the pseudo wipe only to likely utility wrappers to avoid harming other layout inside main page */
+.VPNavBar .content .VPNavBarTranslations::before,
+.VPNavBar .content .VPNavBarTranslations::after,
+.VPNavBar .content .VPSwitchAppearance::before,
+.VPNavBar .content .VPSwitchAppearance::after,
+.VPNavBar .content .VPNavBarSearch::before,
+.VPNavBar .content .VPNavBarSearch::after { content:none !important; }
+
+/* Fine-tune masthead baseline alignment with hero headline */
+.VPNavBarTitle .title { position:relative; top:1px; }
+
+@media (max-width: 1100px) {
+  .VPNavBar .container { padding:0 48px; }
+  .VPNavBar .content .VPNavBarMenu ul { gap:24px; }
+  .VPNavBar .content .VPNavBarMenu > a, 
+  .VPNavBar .content .VPNavBarMenu > .VPNavBarMenuLink { margin-right:24px; }
+  .VPNavBarTitle { margin-right:36px; }
 }
+@media (max-width: 960px) {
+  .VPNavBar .container { padding:0 32px; }
+  .VPNavBar .content .VPNavBarMenu ul { gap:20px; }
+  .VPNavBar .content .VPNavBarMenu > a, 
+  .VPNavBar .content .VPNavBarMenu > .VPNavBarMenuLink { margin-right:20px; }
+  .VPNavBarTitle { margin-right:28px; }
+  .VPNavBar .content .VPNavBarSearch { order:90; }
+  .VPNavBar .content .VPNavBarTranslations { order:91; }
+  .VPNavBar .content .VPSwitchAppearance { order:92; }
+}
+@media (max-width: 640px) {
+  .VPNavBar .container { padding:0 20px; }
+  .VPNavBarTitle { margin-right:20px; }
+  .VPNavBar .content .VPNavBarMenu ul { gap:16px; }
+  .VPNavBar .content .VPNavBarMenu > a, 
+  .VPNavBar .content .VPNavBarMenu > .VPNavBarMenuLink { margin-right:16px; }
+  .VPNavBar .content .VPNavBarSearch,
+  .VPNavBar .content .VPNavBarTranslations,
+  .VPNavBar .content .VPSwitchAppearance { padding-left:16px; }
+  .VPNavBar .content .VPNavBarSearch { padding-left:0; }
+}
+
+/* ------------------------------------------------------ */
+/* Alignment Fine-Tune: Sync logo with hero headline      */
+/* ------------------------------------------------------ */
+/* Hero container uses max-width:1200px; padding: 0 24px (1.5rem). */
+/* We reduce navbar width and padding to match hero, then nudge a few pixels. */
+/* Navbar alignment tuning variables (centralized) */
+:root { --nav-left-nudge: 0px; --nav-right-gap: 0px; }
+/* Final authoritative container rule (after earlier overrides) */
+.VPNavBar .container { max-width:1200px !important; padding-left: calc(24px + var(--nav-left-nudge)) !important; padding-right: calc(24px + var(--nav-right-gap)) !important; }
+
+/* Remove earlier large left spacing now redundant */
+.VPNavBarTitle { margin-right:36px; }
+.VPNavBar .content .VPNavBarMenu ul { gap:24px; }
+.VPNavBar .content .VPNavBarMenu > a,
+.VPNavBar .content .VPNavBarMenu > .VPNavBarMenuLink { margin-right:24px; }
+
+/* --------------------------------------------- */
+/* Documentation Pages Navbar Alignment          */
+/* Shift menu cluster to align with doc content  */
+/* Applies only when body lacks .is-homepage     */
+/* --------------------------------------------- */
+body:not(.is-homepage) .VPNavBar .container { max-width:100% !important; }
+body:not(.is-homepage) .VPNavBar .content { padding-left:1.5rem; }
+@media (min-width:1280px) {
+  body:not(.is-homepage) .VPNavBar .content { padding-left: calc((100vw - 1200px)/2 + 1.5rem); }
+}
+
+/* ------------------------------------------------------ */
+/* Mobile Navbar Layout (refined)                        */
+/* Goal: Title left; menu + search icons on right; clean spacing */
+/* ------------------------------------------------------ */
+@media (max-width: 640px) {
+  /* Match body side padding (16px at this breakpoint) */
+  .VPNavBar .container { padding:0 16px !important; }
+  /* Let title anchor the left and push others right */
+  .VPNavBar .content { display:flex; align-items:center; gap:12px; }
+  .VPNavBar .content .VPNavBarTitle { order:0; margin-right:auto; }
+  /* Menu then Search (feel free to swap if preferred) */
+  .VPNavBar .content .VPNavBarMenu { order:10; }
+  .VPNavBar .content .VPNavBarSearch,
+  .VPNavBar .content .DocSearch-Button { order:11; }
+  /* Hide low-priority utilities on very small screens */
+  .VPNavBar .content .VPNavBarTranslations,
+  .VPNavBar .content .VPSwitchAppearance,
+  .VPNavBar .content .VPNavBarAppearance { display:none !important; }
+  /* Remove inherited large paddings */
+  .VPNavBar .content .VPNavBarMenu,
+  .VPNavBar .content .VPNavBarSearch,
+  .VPNavBar .content .DocSearch-Button { padding-left:0 !important; }
+  /* Tight icon sizing if search shows text */
+  .DocSearch-Button-Placeholder { display:none; }
+}
+
+/* Tighter gap specifically between language and night mode */
+.VPNavBar .content .VPSwitchAppearance,
+.VPNavBar .content .VPNavBarAppearance { padding-left:12px !important; }
+
+/* Investment Disclaimer Footer */
+.investment-disclaimer {
+  border-top: 1px solid var(--nyt-border);
+  padding: var(--space-xl) 0;
+  margin-top: var(--space-3xl);
+}
+
+.disclaimer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  text-align: center;
+}
+
+.disclaimer-text {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0 0 var(--space-md) 0;
+  color: var(--nyt-medium-gray);
+  font-family: var(--font-sans);
+}
+
+.disclaimer-footer {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--nyt-medium-gray);
+}
+
+@media (max-width: 768px) {
+  .disclaimer-content {
+    padding: 0 var(--space-md);
+  }
+
+  .disclaimer-text {
+    font-size: 0.8rem;
+  }
+
+  /* Match navbar title responsive sizing to section titles */
+  .VPNavBarTitle .title {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Match navbar title responsive sizing to section titles */
+  .VPNavBarTitle .title {
+    font-size: 1.25rem !important;
+  }
+}
+
