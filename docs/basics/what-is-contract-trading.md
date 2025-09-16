@@ -1,17 +1,6 @@
 # What is Contract Trading?
 
----
-**⚠️ Important Disclaimer**: This content is for educational purposes only and does not constitute financial advice. Contract trading involves substantial risk of loss and is not suitable for all investors. Please consult with qualified financial professionals before making trading decisions.
-
-**Author Expertise**: Content reviewed by certified financial analysts with 10+ years of derivatives trading experience.
-
-**Last Updated**: September 2025
----
-
 Contract trading, also known as derivatives trading, involves trading financial instruments whose value is derived from underlying assets such as stocks, commodities, currencies, or indices. These contracts allow traders to speculate on price movements without owning the actual underlying asset.
-
-## ⚠️ Risk Warning
-**High Risk Investment**: Contract trading can result in substantial losses that may exceed your initial investment. It involves leverage, which amplifies both potential gains and losses. Only trade with capital you can afford to lose.
 
 ## Key Concepts
 
@@ -25,20 +14,17 @@ A contract is a legally binding agreement between two parties to buy or sell an 
 - **Standardized**: Contract size, expiration dates, and delivery terms are standardized
 - **Margin Requirements**: Require initial margin and maintenance margin
 - **Settlement**: Can be cash-settled or physically delivered
-- **⚠️ Risk**: High leverage can lead to rapid losses
 
 #### 2. Options Contracts
 - **Call Options**: Give the right (not obligation) to buy an asset
 - **Put Options**: Give the right (not obligation) to sell an asset
 - **Premium**: Cost to purchase the option
 - **Exercise Price**: The price at which the option can be exercised
-- **⚠️ Risk**: Options can expire worthless, resulting in total loss of premium
 
 #### 3. Perpetual Contracts
 - **No Expiration**: Unlike futures, these don't have an expiration date
 - **Funding Rate**: Periodic payments between long and short positions
 - **Popular in Crypto**: Widely used in cryptocurrency trading
-- **⚠️ Risk**: Funding costs can accumulate over time
 
 ### How Contract Trading Works
 

@@ -1,39 +1,28 @@
 # Trading Glossary
 
----
-**⚠️ Educational Glossary Disclaimer**: This glossary provides educational definitions only and does not constitute financial advice. Understanding terminology does not guarantee trading success. All trading involves substantial risk regardless of knowledge level.
-
-**Academic Source**: Definitions compiled from financial industry standards and regulatory publications.
-
-**Last Updated**: September 2025 | **Note**: Market terminology evolves; always verify current usage.
----
-
 A comprehensive glossary of terms used in contract trading and derivatives markets.
-
-## ⚠️ Knowledge Limitation Warning
-**Understanding trading terminology does not reduce trading risk or improve success rates. Many knowledgeable traders still lose money consistently.**
 
 ## A
 
 **Arbitrage**
-: The practice of taking advantage of price differences in different markets for the same asset. *Risk Note: Arbitrage opportunities are rare and often require significant capital and speed.*
+: The practice of taking advantage of price differences in different markets for the same asset.
 
 **Ask Price**
-: The lowest price at which a seller is willing to sell an asset. *Also called the "offer price."*
+: The lowest price at which a seller is willing to sell an asset.
 
 **At-the-Money (ATM)**
-: An option whose strike price is equal to the current market price of the underlying asset. *Risk Note: ATM options carry significant time decay risk.*
+: An option whose strike price is equal to the current market price of the underlying asset.
 
 ## B
 
 **Basis**
-: The difference between the spot price and futures price of an asset. *Risk Note: Basis can change unpredictably, affecting hedge effectiveness.*
+: The difference between the spot price and futures price of an asset.
 
 **Bear Market**
-: A market characterized by declining prices and pessimistic sentiment. *Risk Warning: Bear markets can last longer and decline more than expected.*
+: A market characterized by declining prices and pessimistic sentiment.
 
 **Bid Price**
-: The highest price at which a buyer is willing to purchase an asset. *The bid-ask spread represents transaction costs.*
+: The highest price at which a buyer is willing to purchase an asset.
 
 **Bull Market**
 : A market characterized by rising prices and optimistic sentiment.

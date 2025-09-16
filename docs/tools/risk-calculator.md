@@ -1,33 +1,15 @@
 # Risk Calculator
 
----
-**🚨 CRITICAL CALCULATOR DISCLAIMER**: Risk calculators are educational tools only and do not guarantee trading outcomes. All calculations are theoretical. Real trading involves additional risks not captured in calculations. Never rely solely on calculators for trading decisions.
-
-**Professional Warning**: These tools do not constitute financial advice. Results are estimates only. Always consult qualified financial professionals and conduct independent risk assessment.
-
-**Last Updated**: September 2025 | **Use at Your Own Risk**
----
-
 Advanced risk calculation tools for contract trading.
-
-## ⚠️ Important Calculator Limitations
-**These calculators cannot predict:**
-- Market volatility and sudden price gaps
-- Platform execution delays or failures  
-- Funding costs and overnight charges
-- Psychological factors affecting trading decisions
-- Black swan events and market disruptions
 
 ## Coming Soon
 
 This interactive risk calculator is currently under development. It will include:
 
 - **Portfolio Risk Calculator**: Total risk across all positions
-- **Correlation Risk**: Calculate risk when holding correlated assets  
+- **Correlation Risk**: Calculate risk when holding correlated assets
 - **Value at Risk (VaR)**: Statistical risk measurement
 - **Stress Testing**: Scenario analysis tools
-
-**⚠️ Development Note**: All tools will include comprehensive risk warnings and limitations.
 
 ## Current Tools Available
 
@@ -38,8 +20,6 @@ For now, please use our existing calculators:
 - Risk-Reward Calculator  
 - Leverage Calculator
 - Compound Interest Calculator
-
-**⚠️ Usage Warning**: Always verify calculations independently and consider market conditions not captured in theoretical models.
 
 ## Quick Risk Formulas
 

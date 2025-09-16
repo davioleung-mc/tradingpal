@@ -1,42 +1,28 @@
 # Risk Management Basics
 
----
-**🚨 CRITICAL RISK MANAGEMENT DISCLAIMER**: This content is educational only and does not constitute financial advice. Risk management strategies cannot eliminate all risks. Trading can result in substantial losses exceeding your initial investment. Professional risk management consultation is recommended.
-
-**Expert Credentials**: Content developed by Certified Risk Managers (CRM) and Financial Risk Managers (FRM) with extensive derivatives trading experience.
-
-**Last Updated**: September 2025 | **Professional Warning**: Even with perfect risk management, trading losses are common and can be substantial.
----
-
 Risk management is the most critical skill in contract trading. While leverage can amplify profits, it can also lead to devastating losses. Proper risk management ensures you can survive losing streaks and remain profitable long-term.
-
-## ⚠️ Critical Risk Reality
-**Risk management does not guarantee profitability or prevent losses. It only helps limit the severity of losses. Most traders lose money despite following risk management rules.**
 
 ## Why Risk Management is Essential
 
-### The Harsh Reality of Trading
-- **Most Traders Lose**: 70-90% of retail traders lose money regardless of risk management
-- **Emotional Decisions**: Fear and greed override rational risk management
-- **Market Unpredictability**: No strategy or risk management wins consistently
-- **Leverage Amplifies Risk**: Small market moves create devastating account swings
-- **⚠️ Survival Statistics**: Even with risk management, sustained profitability is rare
+### The Reality of Trading
+- **Most Traders Lose**: 80-90% of retail traders lose money
+- **Emotional Decisions**: Fear and greed lead to poor choices
+- **Market Unpredictability**: No strategy wins 100% of the time
+- **Leverage Amplifies Risk**: Small market moves create large account swings
 
 ### The Cost of Poor Risk Management
-- **Account Blowouts**: Complete loss of trading capital (very common)
-- **Emotional Trauma**: Severe stress, anxiety, and depression from large losses
-- **Financial Ruin**: Losses exceeding savings and investment capacity
-- **Career End**: Inability to continue trading due to capital depletion
-- **⚠️ Personal Impact**: Trading losses can affect family finances and relationships
+- **Account Blowouts**: Losing entire trading capital
+- **Emotional Trauma**: Stress and anxiety from large losses
+- **Missed Opportunities**: No capital left for good trades
+- **Career End**: Unable to continue trading
 
 ## Core Risk Management Principles
 
-### 1. Capital Preservation (NON-NEGOTIABLE)
+### 1. Capital Preservation
 **"Rule #1: Don't lose money. Rule #2: Don't forget rule #1." - Warren Buffett**
 
-- **Absolute Priority**: Protect trading capital above profit-seeking
-- **Reality Check**: Small losses compound into large losses quickly
-- **⚠️ Warning**: Even 1-2% daily losses can destroy accounts rapidly
+- Protect your trading capital at all costs
+- Small losses are acceptable; large losses are not
 - Focus on surviving, not just winning
 
 ### 2. Risk-Reward Ratio
