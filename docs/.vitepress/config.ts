@@ -5,8 +5,8 @@ export default defineConfig({
   title: "TradingPal",
   description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives",
   
-  // GitHub Pages base URL - remove for local development
-  // base: '/contract-faq/',
+  // GitHub Pages base URL - uncomment for deployment
+  base: '/tradingpal/',
   
   // SEO and meta configuration
   head: [
