@@ -35,6 +35,5 @@ Daily technical analysis covering:
 
 ## Market Tools
 
-- [Economic Calendar](/tools/economic-calendar)
-- [Market Screener](/tools/market-screener)
-- [Volatility Calculator](/tools/volatility-calculator)
+- [Trading Calculator](/tools/calculator)
+- [Risk Calculator](/tools/risk-calculator)
