@@ -111,17 +111,13 @@ export default defineConfig({
         {
           text: 'Market Analysis',
           items: [
-            { text: 'Overview', link: '/insights/market-analysis/' },
-            { text: 'Weekly Reports', link: '/insights/market-analysis/weekly' },
-            { text: 'Technical Analysis', link: '/insights/market-analysis/technical' }
+            { text: 'Overview', link: '/insights/market-analysis/' }
           ]
         },
         {
           text: 'Trading Strategies',
           items: [
-            { text: 'Overview', link: '/insights/trading-strategies/' },
-            { text: 'Beginner Strategies', link: '/insights/trading-strategies/beginner' },
-            { text: 'Advanced Strategies', link: '/insights/trading-strategies/advanced' }
+            { text: 'Overview', link: '/insights/trading-strategies/' }
           ]
         }
       ],
@@ -141,16 +137,13 @@ export default defineConfig({
           items: [
             { text: 'What is Contract Trading?', link: '/basics/what-is-contract-trading' },
             { text: 'Types of Contracts', link: '/basics/contract-types' },
-            { text: 'Leverage and Margin', link: '/basics/leverage-and-margin' },
-            { text: 'Key Terminology', link: '/basics/terminology' }
+            { text: 'Leverage and Margin', link: '/basics/leverage-and-margin' }
           ]
         },
         {
           text: 'Platform Basics',
           items: [
-            { text: 'Choosing a Platform', link: '/basics/choosing-platform' },
-            { text: 'Account Setup', link: '/basics/account-setup' },
-            { text: 'Interface Overview', link: '/basics/interface' }
+            { text: 'Choosing a Platform', link: '/basics/choosing-platform' }
           ]
         }
       ],
@@ -164,22 +157,12 @@ export default defineConfig({
             { text: 'Risk-Reward Ratio', link: '/risk-management/risk-reward' }
           ]
         },
-        {
-          text: 'Advanced Risk Control',
-          items: [
-            { text: 'Portfolio Diversification', link: '/risk-management/diversification' },
-            { text: 'Hedging Strategies', link: '/risk-management/hedging' },
-            { text: 'Market Risk Assessment', link: '/risk-management/market-risk' }
-          ]
-        }
       ],
       '/advanced-strategies/': [
         {
           text: 'Trading Strategies',
           items: [
-            { text: 'Scalping', link: '/advanced-strategies/scalping' },
-            { text: 'Swing Trading', link: '/advanced-strategies/swing-trading' },
-            { text: 'Arbitrage', link: '/advanced-strategies/arbitrage' }
+            { text: 'Overview', link: '/advanced-strategies/' }
           ]
         }
       ],
@@ -361,7 +344,7 @@ export default defineConfig({
     },
     lineNumbers: true,
     html: true,
-    config: (md) => {
+    config: (_md) => {
       // Add custom markdown plugins if needed
     }
   }

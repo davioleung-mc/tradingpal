@@ -143,17 +143,15 @@ Backtest your ideas:
 - Optimization tools
 - Forward testing
 
-## Download Resources
+## Interactive Tools
 
-### PDF Guides
-- [Complete Trading Checklist](/downloads/trading-checklist.pdf)
-- [Risk Management Workbook](/downloads/risk-management.pdf)
-- [Market Analysis Templates](/downloads/analysis-templates.pdf)
+### Online Calculators
+- [Position Size Calculator](/tools/calculator)
+- [Risk Calculator](/tools/risk-calculator)
 
-### Spreadsheet Tools
-- [Position Size Calculator](/downloads/position-calculator.xlsx)
-- [Trading Journal Template](/downloads/trading-journal.xlsx)
-- [Performance Tracker](/downloads/performance-tracker.xlsx)
+### Educational Resources
+- [Glossary of Terms](/tools/glossary)
+- [Trading FAQ](/faq/trading)
 
 ## Community Learning
 
