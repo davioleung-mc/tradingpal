@@ -5,19 +5,19 @@ export default defineConfig({
   title: "TradingPal",
   description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives",
   
-  // GitHub Pages base URL - uncomment for deployment
-  base: '/tradingpal/',
+  // Custom domain - no base path needed
+  // base: '/tradingpal/', // Commented out for custom domain
   
   // SEO and meta configuration
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     ['link', { rel: 'alternate icon', href: '/favicon.ico' }],
-    // Canonical (will be updated client-side for dynamic paths)
-    ['link', { rel: 'canonical', href: 'https://tradingpal.com' }],
-    // Hreflang alternates for main locales
-    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://tradingpal.com/' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://tradingpal.com/zh/' }],
-    ['link', { rel: 'alternate', hreflang: 'es', href: 'https://tradingpal.com/es/' }],
+    // Canonical URLs for custom domain
+    ['link', { rel: 'canonical', href: 'https://thetradingpal.com' }],
+    // Hreflang alternates for custom domain
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://thetradingpal.com/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://thetradingpal.com/zh/' }],
+    ['link', { rel: 'alternate', hreflang: 'es', href: 'https://thetradingpal.com/es/' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en' }],
