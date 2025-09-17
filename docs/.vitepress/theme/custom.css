@@ -1,0 +1,29 @@
+/* Navbar: remove blue pill backgrounds but keep interactivity */
+.VPNavBar .VPHamburger .button,
+.VPNavBar .VPNavBarSearch .DocSearch-Button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 0 !important;
+}
+.VPNavBar .VPHamburger .button:hover,
+.VPNavBar .VPHamburger .button:focus,
+.VPNavBar .VPHamburger .button[aria-expanded="true"],
+.VPNavBar .VPNavBarSearch .DocSearch-Button:hover,
+.VPNavBar .VPNavBarSearch .DocSearch-Button:focus {
+	background: transparent !important;
+}
+
+/* Doc page mobile toggles (Menu / On this page): de-pill */
+.VPLocalNav .menu .button,
+.VPDocOutlineDropdown .button {
+	background: transparent !important;
+	box-shadow: none !important;
+	border: 1px solid var(--vp-c-divider) !important;
+}
+
+/* Mobile: hide horizontal nav items so links live under hamburger */
+@media (max-width: 959.98px) {
+	.VPNavBar .content .VPNavBarMenu {
+		display: none !important;
+	}
+}

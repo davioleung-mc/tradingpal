@@ -26,17 +26,31 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
           cache: npm
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
       
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       
+      - name: Determine base path
+        id: setbase
+        run: |
+          if [ -f docs/public/CNAME ]; then
+            echo "Using custom domain base '/'"
+            echo "VP_BASE=/" >> $GITHUB_ENV
+          else
+            REPO_NAME=${GITHUB_REPOSITORY#*/}
+            echo "Using project pages base '/${REPO_NAME}/'"
+            echo "VP_BASE=/${REPO_NAME}/" >> $GITHUB_ENV
+          fi
+
       - name: Build with VitePress
         run: npm run docs:build
+        env:
+          VP_BASE: ${{ env.VP_BASE }}
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

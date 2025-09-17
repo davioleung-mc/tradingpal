@@ -1,5 +1,37 @@
 /* VitePress Navigation Purple Background Fix */
 
+/* Production build - targeted blue pill background removal */
+html body .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink,
+html body .VPNavScreen .VPNavScreenMenuLink,
+html body .VPNavScreen .VPNavScreenMenuGroupLink,
+html body .VPNavScreen .VPFlyout .button,
+html body .VPNavScreen .VPFlyout .item {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Override brand colors but preserve functionality */
+html body .VPNavScreen {
+  --vp-c-brand-soft: transparent !important;
+  --vp-button-brand-bg: transparent !important;
+  --vp-button-brand-hover-bg: transparent !important;
+}
+
+/* Ensure mobile menu overlay works properly */
+@media (max-width: 768px) {
+  html body .VPNavScreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 1000 !important;
+    background: var(--vp-c-bg) !important;
+  }
+}
+
 /* High priority navigation element background removal */
 html body .VPNav .VPNavBar .VPNavBarMenuLink {
   background: transparent !important;
