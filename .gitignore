@@ -36,3 +36,8 @@ docs/.vitepress/cache/
 
 # Backup files
 *.backup
+
+# Local tooling (GitHub CLI downloaded locally)
+.ghbin/
+gh.tar.gz
+gh.zip
