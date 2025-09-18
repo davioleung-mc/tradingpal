@@ -4,6 +4,7 @@ import Layout from './Layout.vue'
 import { onMounted } from 'vue'
 import './style.css'
 import './navigation-fix.css'
+import './custom.css'
 
 /**
  * Client enhancement: fade‑in animation for homepage cards.

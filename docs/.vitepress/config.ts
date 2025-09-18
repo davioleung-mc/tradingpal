@@ -1,30 +1,33 @@
 import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
+const base = process.env.VP_BASE || '/'
+
 export default defineConfig({
   title: "TradingPal",
   description: "Comprehensive FAQ and educational resources for contract trading, futures, and derivatives",
   
-  // GitHub Pages base URL - uncomment for deployment
-  base: '/tradingpal/',
+  // Dynamic base: "/" for custom domain, "/<repo>/" for project pages
+  base,
   
   // SEO and meta configuration
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['link', { rel: 'alternate icon', href: '/favicon.ico' }],
+    // Favicon: only .ico and base-aware
+    ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico` }],
+    ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: `${base}favicon.ico` }],
     // Canonical (will be updated client-side for dynamic paths)
-    ['link', { rel: 'canonical', href: 'https://tradingpal.com' }],
+    ['link', { rel: 'canonical', href: 'https://thetradingpal.com' }],
     // Hreflang alternates for main locales
-    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://tradingpal.com/' }],
-    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://tradingpal.com/zh/' }],
-    ['link', { rel: 'alternate', hreflang: 'es', href: 'https://tradingpal.com/es/' }],
+    ['link', { rel: 'alternate', hreflang: 'en', href: 'https://thetradingpal.com/' }],
+    ['link', { rel: 'alternate', hreflang: 'zh-CN', href: 'https://thetradingpal.com/zh/' }],
+    ['link', { rel: 'alternate', hreflang: 'es', href: 'https://thetradingpal.com/es/' }],
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
     ['meta', { name: 'og:type', content: 'website' }],
     ['meta', { name: 'og:locale', content: 'en' }],
     ['meta', { name: 'og:site_name', content: 'TradingPal' }],
-    ['meta', { name: 'og:image', content: 'https://tradingpal.com/hero-image.png' }],
+    ['meta', { name: 'og:image', content: 'https://thetradingpal.com/hero-image.png' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://tradingpal.com/hero-image.png' }],
+    ['meta', { name: 'twitter:image', content: 'https://thetradingpal.com/hero-image.png' }],
     ['meta', { name: 'robots', content: 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }],
     ['meta', { name: 'author', content: 'TradingPal Editorial Team' }],
     ['meta', { name: 'publisher', content: 'TradingPal' }],
@@ -36,10 +39,10 @@ export default defineConfig({
       "@type": "WebSite",
       "name": "TradingPal",
       "description": "Your trusted companion for contract trading and financial education",
-      "url": "https://tradingpal.com",
+      "url": "https://thetradingpal.com",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://tradingpal.com/?q={search_term_string}",
+        "target": "https://thetradingpal.com/?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     })],
@@ -48,7 +51,7 @@ export default defineConfig({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tradingpal.com/" }
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thetradingpal.com/" }
       ]
     })]
   ],
@@ -58,7 +61,7 @@ export default defineConfig({
   
   // Sitemap generation
   sitemap: {
-    hostname: 'https://tradingpal.com'
+    hostname: 'https://thetradingpal.com'
   },
 
   // Internationalization
@@ -326,7 +329,7 @@ export default defineConfig({
     const fmTitle = frontmatter.title || pageData.title || ''
     const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
     const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
-    const url = `https://tradingpal.com${page}`
+    const url = `https://thetradingpal.com${page}`
     return [
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:url', content: url }],

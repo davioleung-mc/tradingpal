@@ -1231,3 +1231,268 @@ body:not(.is-homepage) .VPNavBar .content { padding-left:1.5rem; }
   }
 }
 
+/* ===================================================== */
+/* Mobile Navigation Fixes                               */
+/* ===================================================== */
+
+/* Mobile navbar layout - production build fix */
+@media (max-width: 768px) {
+  /* Force proper mobile menu display */
+  html body .VPNavScreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--vp-c-bg) !important;
+    z-index: 9999 !important;
+    overflow-y: auto !important;
+    padding: 0 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* Ensure hamburger menu is visible and functional */
+  .VPNavBar .VPNavBarHamburger {
+    display: flex !important;
+    order: 10 !important;
+    margin-left: auto !important;
+  }
+
+  .VPNavBar .VPNavBarHamburger .button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border: none !important;
+    background: transparent !important;
+    cursor: pointer !important;
+  }
+
+  /* Hide desktop menu on mobile */
+  .VPNavBar .VPNavBarMenu {
+    display: none !important;
+  }
+
+  /* Mobile navigation screen styling */
+  .VPNavScreen {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--vp-c-bg) !important;
+    z-index: 1000 !important;
+    overflow-y: auto !important;
+    padding: 0 !important;
+  }
+
+  /* Add navbar header to mobile menu */
+  .VPNavScreen::before {
+    content: "" !important;
+    display: block !important;
+    height: 40px !important;
+    width: 100% !important;
+    background: var(--vp-c-bg) !important;
+    border-bottom: none !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1001 !important;
+  }
+
+  /* Ensure hamburger button stays visible when menu is open */
+  .VPNavBar .VPNavBarHamburger {
+    z-index: 1003 !important;
+    position: relative !important;
+  }
+
+  /* Style the hamburger button when menu is open */
+  .VPNavBar .VPNavBarHamburger .button {
+    background: transparent !important;
+    border-radius: 4px !important;
+  }
+
+  /* Clean up hamburger icon - remove extra dash */
+  .VPNavBar .VPNavBarHamburger .button .icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Hide any text/dash that appears next to the X */
+  .VPNavBar .VPNavBarHamburger .button .text,
+  .VPNavBar .VPNavBarHamburger .button::after,
+  .VPNavBar .VPNavBarHamburger .button::before {
+    display: none !important;
+  }
+
+  /* Remove dash from hamburger icon when in mobile menu */
+  .VPNavScreen .VPNavBar .VPNavBarHamburger .button .text,
+  .VPNavScreen .VPNavBar .VPNavBarHamburger .button::after,
+  .VPNavScreen .VPNavBar .VPNavBarHamburger .button::before {
+    display: none !important;
+  }
+
+  /* Clean hamburger button content */
+  .VPNavBar .VPNavBarHamburger .button {
+    font-size: 0 !important;
+  }
+
+  .VPNavBar .VPNavBarHamburger .button * {
+    font-size: 16px !important;
+  }
+
+  /* Mobile menu content */
+  .VPNavScreen .VPNavScreenMenu {
+    padding: 0.5rem 1rem 1rem 1rem !important;
+    margin-top: 40px !important;
+  }
+
+  .VPNavScreen .VPNavScreenMenuGroup {
+    margin-bottom: 1rem !important;
+  }
+
+  .VPNavScreen .VPNavScreenMenuLink,
+  .VPNavScreen .VPNavScreenMenuGroupLink {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0.75rem 0 !important;
+    font-size: 1rem !important;
+    color: var(--vp-c-text-1) !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    min-height: 44px !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  /* Add X buttons to expandable menu sections */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink::after {
+    content: "×" !important;
+    font-size: 1.2rem !important;
+    color: var(--vp-c-text-2) !important;
+    margin-left: auto !important;
+  }
+
+  /* Force ALL menu text to be exactly the same size */
+  .VPNavScreen .VPNavScreenMenuLink,
+  .VPNavScreen .VPNavScreenMenuGroupLink,
+  .VPNavScreen .VPNavScreenMenuGroupSection,
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink,
+  .VPNavScreen .VPNavScreenMenuGroup .text,
+  .VPNavScreen .VPNavScreenMenuGroup a,
+  .VPNavScreen .VPNavScreenMenuGroup button,
+  .VPNavScreen a,
+  .VPNavScreen button,
+  .VPNavScreen .text,
+  .VPNavScreen * {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Override any larger font sizes for menu headers */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+  }
+
+  /* Remove borders from menu items except between groups */
+  .VPNavScreen .VPNavScreenMenuGroup {
+    border-bottom: 1px solid var(--vp-c-divider) !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .VPNavScreen .VPNavScreenMenuGroup:last-child {
+    border-bottom: none !important;
+  }
+
+  .VPNavScreen .VPNavScreenMenuLink:hover,
+  .VPNavScreen .VPNavScreenMenuGroupLink:hover {
+    color: var(--vp-c-brand-1) !important;
+  }
+
+  /* Ensure utilities are properly positioned */
+  .VPNavBar .content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .VPNavBar .VPNavBarSearch {
+    order: 8 !important;
+  }
+
+  .VPNavBar .VPSwitchAppearance {
+    order: 9 !important;
+  }
+
+  /* Hide language selector in mobile menu but keep appearance toggle */
+  .VPNavBar .VPNavBarTranslations,
+  .VPNavScreen .VPNavScreenTranslations {
+    display: none !important;
+  }
+
+  /* Ensure appearance toggle is visible in mobile menu */
+  .VPNavScreen .VPNavScreenAppearance {
+    display: block !important;
+  }
+
+  /* Hide all dropdown indicators/icons that look ugly */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink .icon,
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink::after,
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink::before,
+  .VPNavScreen .VPFlyout .button .icon,
+  .VPNavScreen .VPFlyout .button::after,
+  .VPNavScreen .VPFlyout .button::before {
+    display: none !important;
+  }
+
+  /* Clean menu item styling without icons */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+  }
+
+  /* Style the menu group headers the same as other items */
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink {
+    font-weight: 400 !important;
+    font-size: 1rem !important;
+    color: var(--vp-c-text-1) !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Clean appearance toggle styling */
+  .VPNavScreen .VPNavScreenAppearance {
+    margin-top: 0.5rem !important;
+    padding-top: 0 !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  /* Remove all blue/gray backgrounds from mobile menu */
+  .VPNavScreen .VPNavScreenAppearance .VPSwitchAppearance,
+  .VPNavScreen .VPNavScreenAppearance .VPSwitchAppearance .button,
+  .VPNavScreen .VPNavScreenAppearance button,
+  .VPNavScreen .VPNavScreenMenuGroup,
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupLink,
+  .VPNavScreen .VPNavScreenMenuGroup .VPNavScreenMenuGroupSection,
+  .VPNavScreen .VPNavScreenMenuLink,
+  .VPNavScreen .VPNavScreenMenuGroupLink,
+  .VPNavScreen .VPFlyout,
+  .VPNavScreen .VPFlyout .button,
+  .VPNavScreen .VPFlyout .item,
+  .VPNavScreen button,
+  .VPNavScreen a {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
