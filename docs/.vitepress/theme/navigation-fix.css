@@ -78,17 +78,6 @@ html body [data-v-] button {
   background: transparent !important;
 }
 
-/* Universal VitePress button background removal */
-html body button[data-v-],
-html body .button[data-v-],
-html body [data-v-] button,
-html body [data-v-] .button {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
-
 html body .VPNavBar button:hover {
   background: transparent !important;
 }
