@@ -125,7 +125,8 @@ export default defineConfig({
         {
           text: 'Trading Strategies',
           items: [
-            { text: 'Overview', link: '/insights/trading-strategies/' }
+            { text: 'Overview', link: '/insights/trading-strategies/' },
+            { text: 'Bitcoin Post-Rate Cut Analysis', link: '/insights/trading-strategies/bitcoin-post-rate-cut-analysis' }
           ]
         }
       ],
