@@ -56,6 +56,34 @@ html body .VPNavBarHamburger[data-v-] .button:hover {
 	border: 1px solid var(--vp-c-divider) !important;
 }
 
+/* NUCLEAR OPTION: Target specific data-v attributes from your HTML */
+html body button[data-v-8a42e2b4],
+html body button[data-v-a6f0e41e],
+html body button[data-v-ce626c7c],
+html body button[data-v-6aa21345],
+html body button[data-v-e5dd9c1c],
+html body button[data-v-cf6e7c5e],
+html body button[data-v-510c789e],
+html body *[data-v-] button,
+html body button[data-v-],
+html body [data-v-] {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+
+/* Search modal button icon colors fix */
+.back-button .local-search-icon,
+.toggle-layout-button .local-search-icon,
+.clear-button .local-search-icon,
+html body button[data-v-ce626c7c] .local-search-icon,
+html body [data-v-ce626c7c] .local-search-icon {
+	color: var(--vp-c-text-1) !important;
+	fill: var(--vp-c-text-1) !important;
+}
+
 /* Mobile: hide horizontal nav items so links live under hamburger */
 @media (max-width: 959.98px) {
 	.VPNavBar .content .VPNavBarMenu {
