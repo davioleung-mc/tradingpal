@@ -56,6 +56,73 @@ html body .VPNavBarHamburger[data-v-] .button:hover {
 	border: 1px solid var(--vp-c-divider) !important;
 }
 
+/* Universal button fix: Target all VitePress buttons with scoped CSS */
+html body button[data-v-],
+html body .button[data-v-],
+html body [data-v-] button,
+html body [data-v-] .button,
+html body button[class*="menu"],
+html body .menu button,
+html body [class*="VPLocalNav"] button,
+html body [class*="VPDocOutline"] button {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+}
+
+/* Search interface buttons - transparent background but visible icons */
+html body button[class*="back-button"],
+html body button[class*="toggle-layout-button"],
+html body button[class*="clear-button"],
+html body [class*="local-search"] button,
+html body [class*="search"] button {
+	background: transparent !important;
+	background-color: transparent !important;
+	border: none !important;
+	color: var(--vp-c-text-1) !important;
+	opacity: 0.8;
+}
+
+/* Universal button hover states (excluding search buttons) */
+html body button[data-v-]:hover,
+html body button[data-v-]:focus,
+html body .button[data-v-]:hover,
+html body .button[data-v-]:focus,
+html body [data-v-] button:hover,
+html body [data-v-] button:focus,
+html body [data-v-] .button:hover,
+html body [data-v-] .button:focus,
+html body button[class*="menu"]:hover,
+html body button[class*="menu"]:focus,
+html body .menu button:hover,
+html body .menu button:focus,
+html body [class*="VPLocalNav"] button:hover,
+html body [class*="VPLocalNav"] button:focus,
+html body [class*="VPDocOutline"] button:hover,
+html body [class*="VPDocOutline"] button:focus {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
+/* Search button hover states - subtle opacity change */
+html body button[class*="back-button"]:hover,
+html body button[class*="back-button"]:focus,
+html body button[class*="toggle-layout-button"]:hover,
+html body button[class*="toggle-layout-button"]:focus,
+html body button[class*="clear-button"]:hover,
+html body button[class*="clear-button"]:focus,
+html body [class*="local-search"] button:hover,
+html body [class*="local-search"] button:focus,
+html body [class*="search"] button:hover,
+html body [class*="search"] button:focus {
+	background: transparent !important;
+	background-color: transparent !important;
+	opacity: 1;
+	color: var(--vp-c-brand-1) !important;
+}
+
 /* Mobile: hide horizontal nav items so links live under hamburger */
 @media (max-width: 959.98px) {
 	.VPNavBar .content .VPNavBarMenu {
