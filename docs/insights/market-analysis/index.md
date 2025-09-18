@@ -37,3 +37,7 @@ Daily technical analysis covering:
 
 - [Trading Calculator](/tools/calculator)
 - [Risk Calculator](/tools/risk-calculator)
+
+## Recent Posts
+
+- [Exploring Energy Markets: Short-term Opportunities and Risks](/insights/market-analysis/exploring-energy-markets.md) — *Published: September 18, 2025*

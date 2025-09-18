@@ -118,7 +118,8 @@ export default defineConfig({
         {
           text: 'Market Analysis',
           items: [
-            { text: 'Overview', link: '/insights/market-analysis/' }
+            { text: 'Overview', link: '/insights/market-analysis/' },
+            { text: 'Exploring Energy Markets', link: '/insights/market-analysis/exploring-energy-markets' }
           ]
         },
         {
