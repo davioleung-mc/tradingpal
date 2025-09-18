@@ -15,6 +15,8 @@ export default defineConfig({
     // Favicon: only .ico and base-aware
     ['link', { rel: 'icon', type: 'image/x-icon', href: `${base}favicon.ico` }],
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: `${base}favicon.ico` }],
+    // Enforce HTTPS for any accidental http:// requests in content
+    ['meta', { httpEquiv: 'Content-Security-Policy', content: 'upgrade-insecure-requests' }],
     // Canonical (will be updated client-side for dynamic paths)
     ['link', { rel: 'canonical', href: 'https://thetradingpal.com' }],
     // Hreflang alternates for main locales
