@@ -81,3 +81,66 @@ html body [data-v-] button {
 html body .VPNavBar button:hover {
   background: transparent !important;
 }
+
+/* Aggressive hamburger button fix for production builds */
+html body button[class*="hamburger"],
+html body .hamburger,
+html body .VPNavBarHamburger,
+html body .VPNavBarHamburger button,
+html body .VPNavBarHamburger .button,
+html body [class*="VPNavBarHamburger"],
+html body [class*="VPNavBarHamburger"] button,
+html body [class*="VPNavBarHamburger"] .button,
+html body [data-v-] .hamburger,
+html body [data-v-] button.hamburger,
+html body [data-v-] .VPNavBarHamburger,
+html body [data-v-] .VPNavBarHamburger button,
+html body [data-v-] .VPNavBarHamburger .button,
+html body .VPNavBarHamburger[data-v-],
+html body .VPNavBarHamburger[data-v-] button,
+html body .VPNavBarHamburger[data-v-] .button {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+/* All hover/focus states for hamburger */
+html body button[class*="hamburger"]:hover,
+html body button[class*="hamburger"]:focus,
+html body .hamburger:hover,
+html body .hamburger:focus,
+html body .VPNavBarHamburger:hover,
+html body .VPNavBarHamburger:focus,
+html body .VPNavBarHamburger button:hover,
+html body .VPNavBarHamburger button:focus,
+html body .VPNavBarHamburger .button:hover,
+html body .VPNavBarHamburger .button:focus,
+html body [class*="VPNavBarHamburger"]:hover,
+html body [class*="VPNavBarHamburger"]:focus,
+html body [class*="VPNavBarHamburger"] button:hover,
+html body [class*="VPNavBarHamburger"] button:focus,
+html body [class*="VPNavBarHamburger"] .button:hover,
+html body [class*="VPNavBarHamburger"] .button:focus,
+html body [data-v-] .hamburger:hover,
+html body [data-v-] .hamburger:focus,
+html body [data-v-] button.hamburger:hover,
+html body [data-v-] button.hamburger:focus,
+html body [data-v-] .VPNavBarHamburger:hover,
+html body [data-v-] .VPNavBarHamburger:focus,
+html body [data-v-] .VPNavBarHamburger button:hover,
+html body [data-v-] .VPNavBarHamburger button:focus,
+html body [data-v-] .VPNavBarHamburger .button:hover,
+html body [data-v-] .VPNavBarHamburger .button:focus,
+html body .VPNavBarHamburger[data-v-]:hover,
+html body .VPNavBarHamburger[data-v-]:focus,
+html body .VPNavBarHamburger[data-v-] button:hover,
+html body .VPNavBarHamburger[data-v-] button:focus,
+html body .VPNavBarHamburger[data-v-] .button:hover,
+html body .VPNavBarHamburger[data-v-] .button:focus {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}

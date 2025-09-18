@@ -13,6 +13,41 @@
 	background: transparent !important;
 }
 
+/* Production build fix: Target hamburger with scoped CSS attributes */
+html body .VPNavBar .VPNavBarHamburger button,
+html body .VPNavBar .VPNavBarHamburger .button,
+html body .VPNavBar [class*="VPNavBarHamburger"] button,
+html body .VPNavBar [class*="VPNavBarHamburger"] .button,
+html body button[class*="hamburger"],
+html body .hamburger,
+html body [data-v-] button.hamburger,
+html body [data-v-] .hamburger button,
+html body .VPNavBarHamburger[data-v-] button,
+html body .VPNavBarHamburger[data-v-] .button {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+	box-shadow: none !important;
+	border: none !important;
+	border-radius: 0 !important;
+}
+
+/* Hamburger button states - production build */
+html body .VPNavBar .VPNavBarHamburger button:hover,
+html body .VPNavBar .VPNavBarHamburger .button:hover,
+html body .VPNavBar [class*="VPNavBarHamburger"] button:hover,
+html body .VPNavBar [class*="VPNavBarHamburger"] .button:hover,
+html body button[class*="hamburger"]:hover,
+html body .hamburger:hover,
+html body [data-v-] button.hamburger:hover,
+html body [data-v-] .hamburger button:hover,
+html body .VPNavBarHamburger[data-v-] button:hover,
+html body .VPNavBarHamburger[data-v-] .button:hover {
+	background: transparent !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
 /* Doc page mobile toggles (Menu / On this page): de-pill */
 .VPLocalNav .menu .button,
 .VPDocOutlineDropdown .button {

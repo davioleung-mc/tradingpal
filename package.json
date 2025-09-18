@@ -26,6 +26,7 @@
     "vue": "^3.3.8"
   },
   "dependencies": {
+    "@anthropic-ai/claude-code": "^1.0.117",
     "@vueuse/core": "^10.7.0",
     "medium-zoom": "^1.0.8"
   }
