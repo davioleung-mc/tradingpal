@@ -6,14 +6,14 @@
         <div class="lead-story">
           <h1 class="headline">Federal Reserve Signals Pivotal Rate Decision as Markets Brace for Q4 Volatility</h1>
           <p class="summary">Central bank officials hint at potential policy shift amid growing inflation concerns and market uncertainty heading into the final quarter of 2025.</p>
-          <a href="/insights/market-analysis/fed-policy-shift" class="read-more">Read More</a>
+          <a href="/market-analysis/fed-policy-shift" class="read-more">Read More</a>
         </div>
         <div class="secondary-stories">
           <h3 class="section-label">Also Today</h3>
           <ul class="story-list">
-            <li><a href="/insights/market-analysis/tech-earnings">Tech Earnings Season: What to Expect from Mega-Cap Results</a></li>
-            <li><a href="/insights/economic-trends/inflation-data">September Inflation Data Shows Mixed Signals for Consumer Spending</a></li>
-            <li><a href="/resources/personal-finance/retirement-planning">Why Your 401(k) Strategy Needs a 2025 Update</a></li>
+            <li><a href="/market-analysis/tech-earnings">Tech Earnings Season: What to Expect from Mega-Cap Results</a></li>
+            <li><a href="/market-analysis/inflation-data">September Inflation Data Shows Mixed Signals for Consumer Spending</a></li>
+            <li><a href="/finance-101/personal-finance-basics#retirement-planning">Why Your 401(k) Strategy Needs a 2025 Update</a></li>
           </ul>
         </div>
       </div>
@@ -22,7 +22,7 @@
     <!-- Insights Section -->
     <section class="insights-section">
       <div class="section-header">
-        <h2 class="section-title" id="insights-heading">Insights</h2>
+  <h2 class="section-title" id="insights-heading">Insights</h2>
         <div class="filter-tabs" role="tablist" aria-labelledby="insights-heading">
           <button class="filter-tab active" role="tab" aria-selected="true" tabindex="0" data-filter="all">All</button>
           <button class="filter-tab" role="tab" aria-selected="false" tabindex="-1" data-filter="market-analysis">Market Analysis</button>
@@ -86,44 +86,44 @@
     <!-- Resources Section -->
     <section class="resources-section">
       <div class="content-inner">
-        <h2 class="section-title">Resources</h2>
+  <h2 class="section-title">Finance 101</h2>
         <div class="resource-categories">
         <div class="resource-category">
-          <h3 class="category-title">Personal Finance Tips</h3>
+          <h3 class="category-title">Personal Finance</h3>
           <ul class="resource-list">
-            <li><a href="/resources/personal-finance/first-budget">Building Your First Budget: A Step-by-Step Guide</a></li>
-            <li><a href="/resources/personal-finance/emergency-fund">Emergency Fund Essentials: How Much Do You Really Need?</a></li>
-            <li><a href="/resources/personal-finance/pension-guide">Understanding Your Pension: Maximizing Retirement Benefits</a></li>
-            <li><a href="/resources/personal-finance/debt-strategy">Smart Debt Management Strategies for 2025</a></li>
+            <li><a href="/finance-101/guides-and-tutorials#complete-beginners-guide">Building Your First Budget: A Step-by-Step Guide</a></li>
+            <li><a href="/finance-101/personal-finance-basics#emergency-fund-first">Emergency Fund Essentials: How Much Do You Really Need?</a></li>
+            <li><a href="/finance-101/personal-finance-basics#retirement-planning">Understanding Your Pension: Maximizing Retirement Benefits</a></li>
+            <li><a href="/finance-101/personal-finance-basics#debt-management">Smart Debt Management Strategies for 2025</a></li>
           </ul>
         </div>
         
         <div class="resource-category">
           <h3 class="category-title">Investment Guides</h3>
           <ul class="resource-list">
-            <li><a href="/resources/investing/etf-beginners">A Beginner's Guide to ETFs: Everything You Need to Know</a></li>
-            <li><a href="/resources/investing/balance-sheet">How to Read a Balance Sheet: Key Metrics Explained</a></li>
-            <li><a href="/resources/investing/dividend-investing">Dividend Investing: Building Passive Income Streams</a></li>
-            <li><a href="/resources/investing/portfolio-diversification">Portfolio Diversification Beyond Stocks and Bonds</a></li>
+            <li><a href="/finance-101/guides-and-tutorials#trend-following-system">A Beginner's Guide to ETFs: Everything You Need to Know</a></li>
+            <li><a href="/finance-101/guides-and-tutorials#how-to-read-a-balance-sheet">How to Read a Balance Sheet: Key Metrics Explained</a></li>
+            <li><a href="/finance-101/guides-and-tutorials#dividend-investing">Dividend Investing: Building Passive Income Streams</a></li>
+            <li><a href="/finance-101/guides-and-tutorials#portfolio-diversification">Portfolio Diversification Beyond Stocks and Bonds</a></li>
           </ul>
         </div>
         
         <div class="resource-category">
           <h3 class="category-title">Tools & Calculators</h3>
           <div class="tools-grid">
-            <a href="/tools/compound-calculator" class="tool-item">
+            <a href="/useful-links#tools--calculators" class="tool-item">
               <span class="tool-icon">🧮</span>
               <span class="tool-name">Compound Interest Calculator</span>
             </a>
-            <a href="/tools/retirement-planner" class="tool-item">
+            <a href="/useful-links#mobile-apps" class="tool-item">
               <span class="tool-icon">📊</span>
               <span class="tool-name">Retirement Planner</span>
             </a>
-            <a href="/tools/risk-assessment" class="tool-item">
+            <a href="/useful-links#professional-tools" class="tool-item">
               <span class="tool-icon">⚖️</span>
               <span class="tool-name">Risk Assessment Tool</span>
             </a>
-            <a href="/tools/budget-tracker" class="tool-item">
+            <a href="/useful-links#free-tools" class="tool-item">
               <span class="tool-icon">💰</span>
               <span class="tool-name">Budget Tracker</span>
             </a>
