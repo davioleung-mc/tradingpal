@@ -102,6 +102,8 @@ body.is-post .VPDoc.has-sidebar .content { max-width: 980px; }
 body.is-post .VPDoc .container { justify-content: center; }
 body.is-post .VPDocFooter .pager { display: none !important; }
 body.is-post .VPDocFooter .divider { display: none !important; }
+/* Also hide the prev/next container which draws a top border */
+body.is-post .VPDocFooter .prev-next { display: none !important; border-top: none !important; padding-top: 0 !important; }
 /* Hide any in-body divider the theme may inject */
 body.is-post .VPDoc .content .divider, 
 body.is-post .VPDoc .content [class*="divider"] { display:none !important; }
