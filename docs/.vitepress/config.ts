@@ -204,13 +204,19 @@ export default defineConfig({
     const isPost = inSection && !isIndex
     if (isPost) {
       const authorName = frontmatter.author || 'TradingPal Editorial Team'
+      const authorUrl = frontmatter.authorUrl || undefined
       const datePublished = frontmatter.date || undefined
       const articleSchema: any = {
         '@context': 'https://schema.org',
         '@type': 'Article',
         headline: fmTitle || baseTitle,
         description,
-        author: authorName ? { '@type': 'Person', name: authorName } : undefined,
+        author: authorName ? {
+          '@type': 'Person',
+          name: authorName,
+          url: authorUrl,
+          sameAs: authorUrl ? [authorUrl] : undefined
+        } : undefined,
         publisher: { '@type': 'Organization', name: 'TradingPal' },
         mainEntityOfPage: url,
         url,

@@ -2,6 +2,7 @@
 title: "Exploring Energy Markets: Short-term Opportunities and Risks"
 date: 2025-09-18
 author: "TradingPal Insights"
+authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
 description: "Energy market overview with key drivers, technical levels, and risk considerations for contract traders."
 outline: deep
 further:
