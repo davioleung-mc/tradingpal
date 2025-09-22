@@ -101,5 +101,6 @@ body.is-post .VPSidebar { display: none !important; }
 body.is-post .VPDoc.has-sidebar .content { max-width: 980px; }
 body.is-post .VPDoc .container { justify-content: center; }
 body.is-post .VPDocFooter .pager { display: none !important; }
+body.is-post .VPDocFooter .divider { display: none !important; }
 body.is-post .post-author { margin-top: 2rem; }
 body.is-post .further-reading { margin-top: 2rem; }
