@@ -102,5 +102,15 @@ body.is-post .VPDoc.has-sidebar .content { max-width: 980px; }
 body.is-post .VPDoc .container { justify-content: center; }
 body.is-post .VPDocFooter .pager { display: none !important; }
 body.is-post .VPDocFooter .divider { display: none !important; }
+/* Hide any in-body divider the theme may inject */
+body.is-post .VPDoc .content .divider, 
+body.is-post .VPDoc .content [class*="divider"] { display:none !important; }
 body.is-post .post-author { margin-top: 2rem; }
 body.is-post .further-reading { margin-top: 2rem; }
+
+/* Add a subtle underline to the main title on post pages */
+body.is-post .VPDoc .content > h1:first-of-type {
+	padding-bottom: .5rem;
+	border-bottom: 1px solid var(--vp-c-divider);
+	margin-bottom: 1.25rem;
+}

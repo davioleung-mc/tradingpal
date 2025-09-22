@@ -31,7 +31,11 @@ const avatar = computed(() => frontmatter.value?.authorAvatar || '')
 </template>
 
 <style scoped>
-.post-author { margin-top: 1.5rem; }
+.post-author {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+}
 .author-inner { display:flex; align-items: flex-start; gap: .9rem; }
 .author-avatar {
   width: 48px; height: 48px; border-radius: 50%;
