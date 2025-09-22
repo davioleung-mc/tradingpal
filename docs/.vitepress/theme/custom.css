@@ -105,6 +105,17 @@ body.is-post .VPDocFooter .divider { display: none !important; }
 /* Hide any in-body divider the theme may inject */
 body.is-post .VPDoc .content .divider, 
 body.is-post .VPDoc .content [class*="divider"] { display:none !important; }
+/* Remove default VitePress heading and hr lines inside post body */
+body.is-post .vp-doc h2,
+body.is-post .VPDoc .content h2 {
+	border-top: none !important;
+	padding-top: 0 !important;
+	margin-top: 2rem !important;
+}
+body.is-post .vp-doc hr,
+body.is-post .VPDoc .content hr {
+	display: none !important;
+}
 body.is-post .post-author { margin-top: 2rem; }
 body.is-post .further-reading { margin-top: 2rem; }
 
