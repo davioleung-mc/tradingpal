@@ -58,16 +58,15 @@ const avatar = computed(() => frontmatter.value?.authorAvatar || '')
   object-fit: cover; flex: none; border: 1px solid var(--vp-c-divider);
 }
 .author-meta { line-height: 1.4; }
-.author-name { font-weight: 700; display: inline-flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+.author-name { font-weight: 700; display: inline-flex; align-items: center; gap: .25rem; flex-wrap: wrap; }
 .author-name a { color: var(--vp-c-text-1); text-decoration: none; }
 .author-name a:hover { text-decoration: underline; }
-.author-date { color: var(--vp-c-text-3); font-size: .9rem; margin-top: .2rem; }
+.author-date { color: var(--vp-c-text-3); font-size: .9rem; margin-top: .2rem; display: inline-flex; align-items: center; gap: .25rem; }
 .author-bio { color: var(--vp-c-text-2); margin-top: .35rem; }
 
 .author-icon, .date-icon { display:inline-flex; align-items:center; color: var(--vp-c-text-3); }
 .author-icon svg, .date-icon svg { display:block; }
-.author-icon { margin-right: .25rem; }
-.date-icon { margin-right: .35rem; position: relative; top: 2px; }
+.date-icon { position: relative; top: 1px; }
 
 @media (max-width: 640px) {
   .author-inner { align-items: center; }
