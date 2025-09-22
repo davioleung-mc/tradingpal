@@ -2,16 +2,8 @@
 title: "Exploring Energy Markets: Short-term Opportunities and Risks"
 date: 2025-09-18
 author: "TradingPal Insights"
-tags:
-  - market-analysis
-  - energy
-  - commodities
-summary: "A short overview of current drivers in energy markets and actionable levels for contract traders."
 description: "Energy market overview with key drivers, technical levels, and risk considerations for contract traders."
-sidebar: false
 outline: deep
-prev: false
-next: false
 further:
   - text: "Weekly Market Summary"
     link: "/market-analysis/"
