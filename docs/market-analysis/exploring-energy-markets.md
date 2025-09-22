@@ -13,8 +13,6 @@ further:
 
 # Exploring Energy Markets: Short-term Opportunities and Risks
 
-*Published: September 18, 2025 — TradingPal Insights*
-
 ## Overview
 
 Energy markets have shown renewed activity driven by supply disruptions, inventory reports, and shifting demand forecasts. Contract traders can find short-term opportunities where momentum aligns with macro catalysts, but volatility remains high.
