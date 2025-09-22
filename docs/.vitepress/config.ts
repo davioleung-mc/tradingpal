@@ -10,6 +10,19 @@ export default defineConfig({
   // Dynamic base: "/" for custom domain, "/<repo>/" for project pages
   base,
   
+  // Exclude legacy/unused content from build and sitemap
+  srcExclude: [
+    '**/advanced-strategies/**',
+    '**/basics/**',
+    '**/faq/**',
+    '**/insights/**',
+    '**/resources/**',
+    '**/risk-management/**',
+    '**/tools/**',
+    '**/es/**',
+    '**/zh/**'
+  ],
+  
   // SEO and meta configuration
   head: [
     // Favicon: only .ico and base-aware
@@ -174,13 +187,40 @@ export default defineConfig({
     const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
     const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
     const url = `https://thetradingpal.com${page}`
-    return [
+    const head = [
       ['link', { rel: 'canonical', href: url }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
       ['meta', { name: 'description', content: description }]
-    ]
+    ] as any[]
+
+    // If this is a post page (non-index under our 4 sections), add Article JSON-LD
+    const path: string = (page || '')
+    const segments = path.split('/').filter(Boolean)
+    const top = segments[0] || ''
+    const isIndex = path.endsWith('/') || path.endsWith('/index')
+    const inSection = ['market-analysis','trading-strategies','finance-101','useful-links'].includes(top)
+    const isPost = inSection && !isIndex
+    if (isPost) {
+      const authorName = frontmatter.author || 'TradingPal Editorial Team'
+      const datePublished = frontmatter.date || undefined
+      const articleSchema: any = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: fmTitle || baseTitle,
+        description,
+        author: authorName ? { '@type': 'Person', name: authorName } : undefined,
+        publisher: { '@type': 'Organization', name: 'TradingPal' },
+        mainEntityOfPage: url,
+        url,
+        datePublished,
+        dateModified: datePublished,
+      }
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify(articleSchema)])
+    }
+
+    return head
   },
 
   // Markdown configuration

@@ -2,6 +2,8 @@
 import DefaultTheme from 'vitepress/theme'
 import Layout from './Layout.vue'
 import { onMounted } from 'vue'
+import PostFurtherReading from '../components/PostFurtherReading.vue'
+import PostAuthor from '../components/PostAuthor.vue'
 import './style.css'
 import './navigation-fix.css'
 import './custom.css'
@@ -16,6 +18,10 @@ export default {
 	enhanceApp(ctx) {
 		// Call parent enhanceApp if it exists
 		DefaultTheme.enhanceApp && DefaultTheme.enhanceApp(ctx)
+
+		// Globally register shared components for Markdown usage
+		ctx.app.component('PostFurtherReading', PostFurtherReading)
+		ctx.app.component('PostAuthor', PostAuthor)
 
 		onMounted(() => {
 			const applyReveal = () => {

@@ -90,3 +90,16 @@ html body [data-v-ce626c7c] .local-search-icon {
 		display: none !important;
 	}
 }
+
+/* -------------------------------
+	Post page layout toggles
+	When body has .is-post (set in Layout.vue),
+	hide the left sidebar and the prev/next pager,
+	and center the doc content for comfortable reading.
+--------------------------------*/
+body.is-post .VPSidebar { display: none !important; }
+body.is-post .VPDoc.has-sidebar .content { max-width: 980px; }
+body.is-post .VPDoc .container { justify-content: center; }
+body.is-post .VPDocFooter .pager { display: none !important; }
+body.is-post .post-author { margin-top: 2rem; }
+body.is-post .further-reading { margin-top: 2rem; }

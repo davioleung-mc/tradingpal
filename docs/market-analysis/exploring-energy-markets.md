@@ -8,6 +8,15 @@ tags:
   - commodities
 summary: "A short overview of current drivers in energy markets and actionable levels for contract traders."
 description: "Energy market overview with key drivers, technical levels, and risk considerations for contract traders."
+sidebar: false
+outline: deep
+prev: false
+next: false
+further:
+  - text: "Weekly Market Summary"
+    link: "/market-analysis/"
+  - text: "Risk management basics"
+    link: "/finance-101/personal-finance-basics#risk-management"
 ---
 
 # Exploring Energy Markets: Short-term Opportunities and Risks
@@ -40,7 +49,5 @@ Energy markets have shown renewed activity driven by supply disruptions, invento
 
 Always size positions according to your account risk rules. Energy instruments can gap on news — use stop-losses and consider smaller position sizes during high implied volatility.
 
-## Further Reading
 
-- [Weekly Market Summary](/market-analysis/)
-- [Risk management basics](/finance-101/personal-finance-basics#risk-management)
+
