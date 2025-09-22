@@ -1,16 +1,19 @@
 ---
 title: Market Analysis
 description: In-depth market analysis, trends, and weekly outlooks to inform your trades.
+sidebar: false
+aside: false
+outline: false
+next: false
+prev: false
 ---
 
-# Market Analysis
+<script setup>
+import SectionIndex from '../.vitepress/components/SectionIndex.vue'
+</script>
 
-Comprehensive market analysis to help you make informed trading decisions.
-
-## Latest Market Reports
-
-- [Exploring Energy Markets: Short-term Opportunities and Risks](/market-analysis/exploring-energy-markets)
-
-## Market Tools
-
-- See [Tools & Calculators](/useful-links/#tools--calculators)
+<SectionIndex
+	title="Market Analysis"
+	description="In-depth market analysis, trends, and weekly outlooks to inform your trades."
+	baseDir="/market-analysis"
+/>

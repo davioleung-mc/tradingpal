@@ -1,13 +1,19 @@
 ---
 title: Finance 101
 description: Personal finance fundamentals and step-by-step tutorials to build a strong financial foundation for trading and investing.
+sidebar: false
+aside: false
+outline: false
+next: false
+prev: false
 ---
 
-# Finance 101
+<script setup>
+import SectionIndex from '../.vitepress/components/SectionIndex.vue'
+</script>
 
-Build a solid financial foundation and learn through practical tutorials.
-
-## Start Here
-
-- [Personal Finance Basics](/finance-101/personal-finance-basics)
-- [Guides & Tutorials](/finance-101/guides-and-tutorials)
+<SectionIndex
+	title="Finance 101"
+	description="Personal finance fundamentals and step-by-step tutorials to build a strong financial foundation for trading and investing."
+	baseDir="/finance-101"
+/>
