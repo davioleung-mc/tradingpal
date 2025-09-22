@@ -1,6 +1,6 @@
 /* TEAM */
 Developer: TradingPal Docs Team
-Site: https://tradingpal.com
+Site: https://thetradingpal.com
 
 /* THANKS */
 Tools: VitePress, Vue, Unsplash

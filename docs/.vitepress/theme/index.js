@@ -4,6 +4,7 @@ import Layout from './Layout.vue'
 import { onMounted } from 'vue'
 import PostFurtherReading from '../components/PostFurtherReading.vue'
 import PostAuthor from '../components/PostAuthor.vue'
+import AppImage from '../components/AppImage.vue'
 import './style.css'
 import './navigation-fix.css'
 import './custom.css'
@@ -22,6 +23,7 @@ export default {
 		// Globally register shared components for Markdown usage
 		ctx.app.component('PostFurtherReading', PostFurtherReading)
 		ctx.app.component('PostAuthor', PostAuthor)
+    ctx.app.component('AppImage', AppImage)
 
 		onMounted(() => {
 			const applyReveal = () => {

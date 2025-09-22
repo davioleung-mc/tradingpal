@@ -57,7 +57,7 @@ const avatar = computed(() => frontmatter.value?.authorAvatar || '')
   width: 48px; height: 48px; border-radius: 50%;
   object-fit: cover; flex: none; border: 1px solid var(--vp-c-divider);
 }
-.author-meta { line-height: 1.4; }
+.author-meta { line-height: 1.4; display: flex; flex-direction: column; }
 .author-name { font-weight: 700; display: flex; align-items: center; flex-wrap: wrap; }
 .author-name a { color: var(--vp-c-text-1); text-decoration: none; }
 .author-name a:hover { text-decoration: underline; }

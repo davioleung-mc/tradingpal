@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tradingpal.com/sitemap.xml
+Sitemap: https://thetradingpal.com/sitemap.xml
