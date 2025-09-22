@@ -89,6 +89,8 @@ html body [data-v-ce626c7c] .local-search-icon {
 	.VPNavBar .content .VPNavBarMenu {
 		display: none !important;
 	}
+	/* Hide the local nav 'Menu' button in mobile view */
+	.VPLocalNav .menu { display: none !important; }
 }
 
 /* -------------------------------

@@ -20,7 +20,7 @@ const avatar = computed(() => frontmatter.value?.authorAvatar || '')
       <div class="author-meta">
         <div class="author-name">
           <span class="author-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M20 21a8 8 0 0 0-16 0"/>
               <circle cx="12" cy="7" r="4"/>
             </svg>
@@ -58,10 +58,10 @@ const avatar = computed(() => frontmatter.value?.authorAvatar || '')
   object-fit: cover; flex: none; border: 1px solid var(--vp-c-divider);
 }
 .author-meta { line-height: 1.4; }
-.author-name { font-weight: 700; display: inline-flex; align-items: center; flex-wrap: wrap; }
+.author-name { font-weight: 700; display: flex; align-items: center; flex-wrap: wrap; }
 .author-name a { color: var(--vp-c-text-1); text-decoration: none; }
 .author-name a:hover { text-decoration: underline; }
-.author-date { color: var(--vp-c-text-3); font-size: .9rem; margin-top: .2rem; display: inline-flex; align-items: center; }
+.author-date { color: var(--vp-c-text-3); font-size: .9rem; margin-top: .2rem; display: flex; align-items: center; }
 .author-bio { color: var(--vp-c-text-2); margin-top: .35rem; }
 
 .author-icon, .date-icon { display:inline-flex; align-items:center; color: var(--vp-c-text-3); }
