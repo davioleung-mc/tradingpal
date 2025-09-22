@@ -21,7 +21,9 @@ const posts = computed(() => {
       const fm = (mod && mod.frontmatter) ? mod.frontmatter : {}
       const link = '/' + key.replace(/^(\.\/|\.\.\/)+/, '').replace(/\.md$/, '')
       const last = link.split('/').pop() || ''
-      const title = fm.title || (mod && mod.title) || last.replace(/-/g, ' ')
+      // Prefer frontmatter.title; fallback: explicit exported title or derive from slug
+      const explicitTitle = fm.title || (mod && mod.title)
+      const title = explicitTitle ? String(explicitTitle) : last.replace(/-/g, ' ')
       const date = fm.date ? new Date(fm.date) : undefined
       return { title, link, date }
     })
@@ -46,22 +48,11 @@ const posts = computed(() => {
       </header>
 
       <div class="section-body">
-        <div class="posts">
-          <ul class="post-list">
-            <li v-for="p in posts" :key="p.link">
-              <a :href="withBase(p.link)">{{ p.title }}</a>
-            </li>
-          </ul>
-        </div>
-
-        <aside class="right-panel">
-          <h2 class="aside-title">All Posts</h2>
-          <ul class="aside-list">
-            <li v-for="p in posts" :key="p.link + ':aside'">
-              <a :href="withBase(p.link)">{{ p.title }}</a>
-            </li>
-          </ul>
-        </aside>
+        <ul class="post-list">
+          <li v-for="p in posts" :key="p.link">
+            <a :href="withBase(p.link)">{{ p.title }}</a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -95,28 +86,14 @@ const posts = computed(() => {
   color: var(--vp-c-text-2);
   font-size: 1.05rem;
 }
-.section-body {
-  display: grid;
-  grid-template-columns: 1fr 280px;
-  gap: 2rem;
-}
+.section-body { margin-top: 1rem; }
 .post-list,
 .aside-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.post-list li,
-.aside-list li { margin: .35rem 0; }
-.post-list a, .aside-list a { text-decoration: none; }
-.post-list a:hover, .aside-list a:hover { text-decoration: underline; }
-.right-panel {
-  position: sticky;
-  top: 84px;
-  align-self: start;
-}
-@media (max-width: 960px) {
-  .section-body { grid-template-columns: 1fr; }
-  .right-panel { position: static; }
-}
+.post-list li { margin: .4rem 0; }
+.post-list a { text-decoration: none; }
+.post-list a:hover { text-decoration: underline; }
 </style>
