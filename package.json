@@ -21,7 +21,9 @@
   ],
   "author": "TradingPal Team",
   "devDependencies": {
+    "@types/node": "^24.5.2",
     "@vitejs/plugin-vue": "^6.0.1",
+    "vite-imagetools": "^8.0.0",
     "vitepress": "^1.6.4",
     "vue": "^3.3.8"
   },

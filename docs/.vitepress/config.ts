@@ -1,14 +1,31 @@
 import { defineConfig } from 'vitepress'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+declare const process: any
 
 // https://vitepress.dev/reference/site-config
 const base = process.env.VP_BASE || '/'
 
 export default defineConfig({
+  // HTML language for SEO/i18n
+  lang: 'en-US',
   title: "TradingPal",
   description: "Market analysis, trading strategies, Finance 101, and curated links for traders and investors.",
   
   // Dynamic base: "/" for custom domain, "/<repo>/" for project pages
   base,
+  
+  // Exclude legacy/unused content from build and sitemap
+  srcExclude: [
+    '**/advanced-strategies/**',
+    '**/basics/**',
+    '**/faq/**',
+    '**/insights/**',
+    '**/resources/**',
+    '**/risk-management/**',
+    '**/tools/**',
+    '**/es/**',
+    '**/zh/**'
+  ],
   
   // SEO and meta configuration
   head: [
@@ -19,17 +36,15 @@ export default defineConfig({
     ['meta', { httpEquiv: 'Content-Security-Policy', content: 'upgrade-insecure-requests; block-all-mixed-content' }],
     // Additional HTTPS enforcement
     ['meta', { httpEquiv: 'Strict-Transport-Security', content: 'max-age=31536000; includeSubDomains' }],
-  // Canonical (will be updated per page by transformHead)
-  ['link', { rel: 'canonical', href: 'https://thetradingpal.com' }],
-  // Hreflang alternate for English
-  ['link', { rel: 'alternate', hreflang: 'en', href: 'https://thetradingpal.com/' }],
+  // Language hint
+  ['meta', { httpEquiv: 'content-language', content: 'en-US' }],
+  // (Hreflang links are injected per-page in transformHead)
     ['meta', { name: 'theme-color', content: '#3c82f6' }],
-    ['meta', { name: 'og:type', content: 'website' }],
-    ['meta', { name: 'og:locale', content: 'en' }],
-    ['meta', { name: 'og:site_name', content: 'TradingPal' }],
-    ['meta', { name: 'og:image', content: 'https://thetradingpal.com/hero-image.png' }],
+    // Open Graph defaults (page-specific overrides in transformHead)
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:locale', content: 'en_US' }],
+    ['meta', { property: 'og:site_name', content: 'TradingPal' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:image', content: 'https://thetradingpal.com/hero-image.png' }],
     ['meta', { name: 'robots', content: 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }],
     ['meta', { name: 'author', content: 'TradingPal Editorial Team' }],
     ['meta', { name: 'publisher', content: 'TradingPal' }],
@@ -48,14 +63,18 @@ export default defineConfig({
         "query-input": "required name=search_term_string"
       }
     })],
-    // BreadcrumbList (homepage only; deeper pages can augment in enhanceApp)
+    // Organization schema
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://thetradingpal.com/" }
-      ]
-    })]
+      "@type": "Organization",
+      "name": "TradingPal",
+      "url": "https://thetradingpal.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thetradingpal.com/favicon.ico"
+      }
+    })],
+    // (Breadcrumbs are injected per-page in transformHead)
   ],
 
   // Clean URLs
@@ -65,6 +84,9 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://thetradingpal.com'
   },
+
+  // Include Git timestamps to power dateModified metadata
+  lastUpdated: true,
 
   // Internationalization: consolidate to a single English site
   locales: undefined as any,
@@ -160,7 +182,8 @@ export default defineConfig({
   vite: {
     optimizeDeps: {
       include: ['vue', '@vueuse/core']
-    }
+    },
+    assetsInclude: ['**/*.webp', '**/*.avif']
   },
   // Runtime hook to adjust canonical & meta per page for generative engines
   transformHead: (ctx) => {
@@ -174,13 +197,116 @@ export default defineConfig({
     const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
     const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
     const url = `https://thetradingpal.com${page}`
-    return [
+    // Social image: prefer frontmatter.image, fallback to site favicon
+  const image = frontmatter.image || 'https://thetradingpal.com/favicon.ico'
+    // Determine page type
+    let ogType = 'website'
+    const head = [
       ['link', { rel: 'canonical', href: url }],
+      // Self-referential hreflang for single-locale site
+      ['link', { rel: 'alternate', hreflang: 'en', href: url }],
+      ['link', { rel: 'alternate', hreflang: 'x-default', href: url }],
       ['meta', { property: 'og:url', content: url }],
       ['meta', { property: 'og:title', content: title }],
       ['meta', { property: 'og:description', content: description }],
-      ['meta', { name: 'description', content: description }]
-    ]
+      ['meta', { name: 'description', content: description }],
+      ['meta', { name: 'twitter:title', content: title }],
+      ['meta', { name: 'twitter:description', content: description }],
+      ['meta', { property: 'og:image', content: image }],
+      ['meta', { name: 'twitter:image', content: image }]
+    ] as any[]
+
+    // If this is a post page (non-index under our 4 sections), add Article JSON-LD
+    const path: string = (page || '')
+    const segments = path.split('/').filter(Boolean)
+    const top = segments[0] || ''
+    const isIndex = path.endsWith('/') || path.endsWith('/index')
+    const inSection = ['market-analysis','trading-strategies','finance-101','useful-links'].includes(top)
+    const isPost = inSection && !isIndex
+  if (isPost) {
+      ogType = 'article'
+      const authorName = frontmatter.author || 'TradingPal Editorial Team'
+      const authorUrl = frontmatter.authorUrl || undefined
+      const datePublished = frontmatter.date || undefined
+      const dateModified = (pageData?.lastUpdated && typeof pageData.lastUpdated === 'number')
+        ? new Date(pageData.lastUpdated).toISOString()
+        : datePublished
+      const articleSection = top
+      const articleSchema: any = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: fmTitle || baseTitle,
+        description,
+        inLanguage: 'en-US',
+        articleSection,
+        author: authorName ? {
+          '@type': 'Person',
+          name: authorName,
+          url: authorUrl,
+          sameAs: authorUrl ? [authorUrl] : undefined
+        } : undefined,
+        publisher: { '@type': 'Organization', name: 'TradingPal', logo: { '@type': 'ImageObject', url: 'https://thetradingpal.com/favicon.ico' } },
+        mainEntityOfPage: url,
+        url,
+        datePublished,
+        dateModified,
+        image
+      }
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify(articleSchema)])
+      // Article Open Graph extensions
+      if (datePublished) head.push(['meta', { property: 'article:published_time', content: datePublished }])
+      if (dateModified) head.push(['meta', { property: 'article:modified_time', content: dateModified }])
+      head.push(['meta', { property: 'article:section', content: articleSection }])
+      if (authorUrl) {
+        head.push(['meta', { property: 'article:author', content: authorUrl }])
+      } else if (authorName) {
+        head.push(['meta', { property: 'article:author', content: authorName }])
+      }
+
+      // Breadcrumbs: Home > Section > Post
+      const crumbs = [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thetradingpal.com/' },
+        { '@type': 'ListItem', position: 2, name: top.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase()), item: `https://thetradingpal.com/${top}/` },
+        { '@type': 'ListItem', position: 3, name: fmTitle || baseTitle, item: url }
+      ]
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: crumbs
+      })])
+    }
+    // Optionally preload a hero image when explicitly requested
+    if (frontmatter.image && frontmatter.preloadImage === true) {
+      head.push(['link', { rel: 'preload', as: 'image', href: image, fetchpriority: 'high' }])
+    }
+    // Section index breadcrumb (Home > Section)
+    else if (inSection && isIndex) {
+      const crumbs = [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://thetradingpal.com/' },
+        { '@type': 'ListItem', position: 2, name: top.replace('-', ' ').replace(/\b\w/g, c => c.toUpperCase()), item: url }
+      ]
+      head.push(['script', { type: 'application/ld+json' }, JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: crumbs
+      })])
+    }
+
+    // Generic WebPage schema for all pages
+    const webPageSchema: any = {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      inLanguage: 'en-US',
+      name: fmTitle || baseTitle,
+      description,
+      url
+    }
+    head.push(['script', { type: 'application/ld+json' }, JSON.stringify(webPageSchema)])
+
+    // Ensure og:type is set appropriately
+    head.push(['meta', { property: 'og:type', content: ogType }])
+
+    return head
   },
 
   // Markdown configuration
@@ -191,8 +317,24 @@ export default defineConfig({
     },
     lineNumbers: true,
     html: true,
-    config: (_md) => {
-      // Add custom markdown plugins if needed
+    config: (md) => {
+      // Add lazy-loading and async decoding to all Markdown images
+      const defaultImageRule = md.renderer.rules.image || function(tokens, idx, options, _env, self) {
+        return self.renderToken(tokens, idx, options)
+      }
+      md.renderer.rules.image = (tokens, idx, options, env, self) => {
+        const token = tokens[idx]
+        token.attrs = token.attrs ?? []
+        const setAttr = (name: string, value: string) => {
+          const attrs = token.attrs as [string, string][]
+          const i = attrs.findIndex(([n]) => n === name)
+          if (i > -1) attrs[i][1] = value
+          else attrs.push([name, value])
+        }
+        setAttr('loading', 'lazy')
+        setAttr('decoding', 'async')
+        return defaultImageRule(tokens, idx, options, env, self)
+      }
     }
   }
 })
