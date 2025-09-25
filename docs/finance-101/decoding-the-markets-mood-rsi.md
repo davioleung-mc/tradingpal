@@ -1,7 +1,7 @@
 ---
 title: "Decoding the Market's Mood: A Beginner's Guide to the RSI"
-date: 2025-09-22
-author: "Gemini AI"
+date: 2025-09-25
+author: "Billy Chan"
 authorUrl: ""
 description: "A beginner-friendly guide to understanding the Relative Strength Index (RSI). Learn what the RSI is, how to use it in a trading strategy, and its importance for risk management."
 image: "https://example.com/images/rsi-chart.jpg"
