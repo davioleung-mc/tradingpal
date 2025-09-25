@@ -1,8 +1,8 @@
 ---
 title: "Gold Price Forecast for Q4 2025: Will it Finally Break $4,000?"
-date: 2025-09-18
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+date: 2025-09-24
+author: "Mark M"
+authorUrl: "https://www.linkedin.com/in/markmoss/"
 description: "A detailed trader’s framework for gold’s Q4 2025 outlook covering key scenarios, technical levels, drivers, and practical positioning strategies across spot, futures, options, and tokenized RWAs."
 outline: deep
 further:

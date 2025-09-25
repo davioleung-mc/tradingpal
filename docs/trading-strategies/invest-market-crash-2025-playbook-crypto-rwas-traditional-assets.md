@@ -1,8 +1,8 @@
 ---
 title: "What to Invest If the Market Crashes in 2025? A Practical Playbook for Crypto, RWAs, and Traditional Assets"
 date: 2025-09-22
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+author: "George M"
+authorUrl: "https://www.linkedin.com/in/manolovgeorge/"
 description: "A tactical guide for navigating potential 2025 market crashes with tailored asset strategies, hedging approaches, and rules-based capital deployment across crypto, traditional markets, and real-world assets (RWAs)."
 outline: deep
 further:
