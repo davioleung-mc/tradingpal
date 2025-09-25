@@ -17,10 +17,3 @@ import SectionIndex from '../.vitepress/components/SectionIndex.vue'
 	description="In-depth market analysis, trends, and weekly outlooks to inform your trades."
 	baseDir="/market-analysis"
 />
-
-## Featured
-
-Check out our latest market commentary:
-
-- [What If CZ Returned to Binance? Analyzing the Potential Impact on BNB's Crypto-Price](/market-analysis/cz-return-bnb)
-- [The Binance Alpha Effect: Can an On-Chain Whisper Boost Meme Coins?](/market-analysis/binance-alpha-effect-meme-coins)

@@ -129,3 +129,17 @@ body.is-post .VPDoc .content > h1:first-of-type {
 	border-bottom: 1px solid var(--vp-c-divider);
 	margin-bottom: 1.25rem;
 }
+
+/* Hide default footer metadata since we surface it below the title */
+body.is-post .VPDocFooter,
+body.is-post .page-info,
+body.is-post .page-meta {
+	display: none !important;
+}
+
+/* Section index pages: hide default doc footer metadata */
+body.section-index-page .VPDocFooter,
+body.section-index-page .page-info,
+body.section-index-page .page-meta {
+	display: none !important;
+}

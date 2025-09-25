@@ -2,7 +2,8 @@
 <script setup>
 import DefaultTheme from 'vitepress/theme'
 import { useData, useRoute } from 'vitepress'
-import { computed, onMounted, onBeforeUnmount } from 'vue'
+import { computed, onMounted, onBeforeUnmount, watch } from 'vue'
+import PostMeta from '../components/PostMeta.vue'
 
 const { Layout } = DefaultTheme
 const route = useRoute()
@@ -18,19 +19,33 @@ const isPost = computed(() => {
   return inSection && !isIndex
 })
 
+const toggleBodyClass = (active) => {
+  const cls = 'is-post'
+  if (active) {
+    document.body.classList.add(cls)
+  } else {
+    document.body.classList.remove(cls)
+  }
+}
+
 onMounted(() => {
-  if (isPost.value) document.body.classList.add('is-post')
+  toggleBodyClass(isPost.value)
+  watch(isPost, (value) => toggleBodyClass(value), { immediate: false })
 })
+
 onBeforeUnmount(() => {
-  document.body.classList.remove('is-post')
+  toggleBodyClass(false)
 })
 </script>
 
 <template>
   <Layout>
+    <template #doc-before>
+      <PostMeta v-if="isPost" />
+    </template>
     <template #doc-after>
       <PostAuthor v-if="isPost" />
-      <PostFurtherReading v-if="isPost" />
+      <PostFurtherReading v-if="isPost" title="Other Charts You Might Be Interested In" />
     </template>
   </Layout>
 </template>
