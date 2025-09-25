@@ -1,8 +1,8 @@
 ---
 title: "What Causes Inflation? Key Drivers, Data Insights, and Strategies for Traders"
-date: 2025-09-25
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+date: 2025-09-20
+author: "Joe B."
+authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "A detailed analysis of inflation causes, measurement approaches, core drivers, and tactical positioning ideas for traders across crypto, commodities, bonds, and equities."
 outline: deep
 further:

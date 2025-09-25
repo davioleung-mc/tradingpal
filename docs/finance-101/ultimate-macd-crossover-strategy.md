@@ -1,8 +1,8 @@
 ---
 title: "The Ultimate MACD Crossover Strategy: A Step‑by‑Step Guide with Example"
-date: 2025-09-22
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+date: 2025-09-26
+author: "Joe B."
+authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "Comprehensive overview of the MACD indicator, step-by-step crossover strategy, setup tips, trade management, and pitfalls to avoid for crypto, stocks, and commodities traders."
 outline: deep
 further:

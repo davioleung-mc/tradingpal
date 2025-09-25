@@ -1,8 +1,8 @@
 ---
 title: "The 3 Best Technical Indicators for Beginner Forex Traders: Simple Strategies to Start"
-date: 2025-09-22
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+date: 2025-09-23
+author: "George M"
+authorUrl: "https://www.linkedin.com/in/manolovgeorge/"
 description: "An easy-to-follow guide introducing EMAs, RSI, and MACD for Forex beginners, including setup tips, trading rules, common mistakes, and a worked example."
 outline: deep
 further:

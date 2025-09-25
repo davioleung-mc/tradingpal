@@ -1,8 +1,8 @@
 ---
 title: "Bitcoin Halving Explained: Impact, History, and Trading Strategies"
-date: 2025-09-23
-author: "TradingPal Insights"
-authorUrl: "https://www.linkedin.com/in/tradingpal-insights/"
+date: 2025-09-21
+author: "Joe B."
+authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "An in-depth guide to Bitcoin halving, covering its mechanics, historical schedule, market impact, key metrics, and practical trading approaches for crypto investors and traders."
 outline: deep
 further:
