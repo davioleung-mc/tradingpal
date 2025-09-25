@@ -30,7 +30,7 @@ This guide will break down everything you need to know. We’ll go from the basi
 - Bearish crossover: MACD line crosses below Signal → momentum turning down.
 - Zero‑line cross (MACD crossing 0) often confirms trend strength.
 
-![MACD Crossover Strategy Visualization](/img/macd-crossover.png)
+![MACD crossover strategy chart showing bullish crossover signal when MACD line crosses above signal line with corresponding price action and histogram](/img/macd-crossover.png)
 *Figure: MACD crossover signals showing bullish crossover when MACD line (orange) crosses above Signal line (blue), with corresponding price action and histogram changes.*
 
 ## Recommended chart setup
