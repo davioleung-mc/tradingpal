@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
     </template>
     <template #doc-after>
       <PostAuthor v-if="isPost" />
-      <PostFurtherReading v-if="isPost" title="Other Charts You Might Be Interested In" />
+      <PostFurtherReading v-if="isPost" title="You Might Be Also Interested" />
     </template>
   </Layout>
 </template>
