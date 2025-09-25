@@ -227,10 +227,13 @@ export default defineConfig({
       ogType = 'article'
       const authorName = frontmatter.author || 'TradingPal Editorial Team'
       const authorUrl = frontmatter.authorUrl || undefined
-      const datePublished = frontmatter.date || undefined
+      // Normalize dates: allow frontmatter.date as string or Date, convert to ISO when present
+      const datePublished = frontmatter.date ? (new Date(frontmatter.date)).toISOString() : undefined
       const dateModified = (pageData?.lastUpdated && typeof pageData.lastUpdated === 'number')
         ? new Date(pageData.lastUpdated).toISOString()
         : datePublished
+      // Keywords: allow frontmatter.keywords as string or array
+      const keywords = frontmatter.keywords ? (Array.isArray(frontmatter.keywords) ? frontmatter.keywords.join(', ') : String(frontmatter.keywords)) : undefined
       const articleSection = top
       const articleSchema: any = {
         '@context': 'https://schema.org',
@@ -252,8 +255,11 @@ export default defineConfig({
         dateModified,
         image
       }
+  // Inject keywords into Article schema when provided
+  if (keywords) articleSchema.keywords = keywords
       head.push(['script', { type: 'application/ld+json' }, JSON.stringify(articleSchema)])
       // Article Open Graph extensions
+  if (keywords) head.push(['meta', { name: 'keywords', content: keywords }])
       if (datePublished) head.push(['meta', { property: 'article:published_time', content: datePublished }])
       if (dateModified) head.push(['meta', { property: 'article:modified_time', content: dateModified }])
       head.push(['meta', { property: 'article:section', content: articleSection }])
