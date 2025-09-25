@@ -165,6 +165,6 @@ Remember: Fibonacci levels are guides, not guarantees. Always use them as part o
 
 ## Related Resources
 
-- [MACD Crossover Strategy](/finance-101/ultimate-macd-crossover-strategy)
+- [Bitcoin Halving Explained](/finance-101/bitcoin-halving-explained-impact-history-trading-strategies)
 - [Personal Finance Basics](/finance-101/personal-finance-basics)
 - [Guides and Tutorials](/finance-101/guides-and-tutorials)
