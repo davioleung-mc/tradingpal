@@ -1,8 +1,8 @@
 ---
 title: "Decoding the Market's Mood: A Beginner's Guide to the RSI"
-date: 2025-09-25
-author: "Billy Chan"
-authorUrl: ""
+date: 2025-09-23
+author: "Caca Lam"
+authorUrl: "https://www.linkedin.com/in/caca-lam-436780338"
 description: "A beginner-friendly guide to understanding the Relative Strength Index (RSI). Learn what the RSI is, how to use it in a trading strategy, and its importance for risk management."
 image: "https://example.com/images/rsi-chart.jpg"
 keywords: "RSI, trading strategy, risk management, overbought, oversold, divergence, technical indicator, trading, investing, stock market"
@@ -12,13 +12,11 @@ keywords: "RSI, trading strategy, risk management, overbought, oversold, diverge
 
 Have you ever wondered how traders try to predict whether a stock's price will go up or down? They use special tools called indicators, and one of the most popular is the **RSI** (Relative Strength Index). This guide will break down what the **RSI** is, how it can be used to build a **trading strategy**, and why it's a crucial part of **risk management**. Understanding the **RSI** is a great first step into the world of market analysis. A solid **trading strategy** often incorporates the **RSI**, and effective **risk management** is key to success.
 
----
 
 ## What is the RSI?
 
 The **RSI**, or Relative Strength Index, is a technical indicator that helps traders measure how quickly and by how much an asset's price is changing. Think of it like a speedometer for a stock's price. It tells you if the price movement is speeding up or slowing down. Developed by J. Welles Wilder Jr., the **RSI** is a momentum oscillator that measures the speed and change of price movements. The **RSI** is displayed as a single line that moves between 0 and 100. For any **trading strategy** involving the **RSI**, understanding this scale is fundamental. Good **risk management** dictates that you shouldn't rely on the **RSI** alone, but it's a powerful tool in your **trading strategy** toolbox.
 
----
 
 ## How Does the RSI Work?
 
@@ -29,7 +27,6 @@ The **RSI** calculates the average gains and losses over a specific period, usua
 
 This simple 0-100 scale makes the **RSI** a popular tool for developing a clear **trading strategy**. Incorporating these **RSI** levels is a form of **risk management**, helping you avoid buying at the peak or selling at the bottom. A successful **trading strategy** often defines specific **RSI** levels for entry and exit points as part of its **risk management** plan.
 
----
 
 ## What Do "Overbought" and "Oversold" Mean in RSI Trading?
 
@@ -41,7 +38,6 @@ These are two of the most important concepts when using the **RSI** in your **tr
 
 Using these levels in your **trading strategy** is a fundamental aspect of **risk management** with the **RSI**.
 
----
 
 ## How Can the RSI Be Part of a Trading Strategy?
 
@@ -54,7 +50,6 @@ The **RSI** is not a magic crystal ball, but it can be a vital component of a we
 
 This basic **trading strategy** shows how the **RSI** can provide entry signals, but always remember that **risk management** is the most important part of trading.
 
----
 
 ## What is RSI Divergence and Why Is It Important?
 

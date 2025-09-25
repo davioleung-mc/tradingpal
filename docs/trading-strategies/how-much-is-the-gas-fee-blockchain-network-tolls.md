@@ -1,19 +1,17 @@
 ---
 title: "How Much is the Gas Fee? A Guide to Blockchain Network Tolls"
 date: 2025-09-25
-author: "Gemini"
-authorUrl: ""
+author: "Caca Lam"
+authorUrl: "https://www.linkedin.com/in/caca-lam-436780338"
 description: "A beginner's guide to understanding the gas fee on a blockchain network. Learn what a gas fee is, how it's calculated, and why you need to pay it to use a blockchain network."
 image: "https://example.com/images/gas-fee-icon.jpg"
 keywords: "gas fee, blockchain network"
 ---
 
-> Published: 2025-09-25  •  Tags: gas fee, blockchain network
 # How Much is the Gas Fee? A Guide to Blockchain Network Tolls
 
 If you've ever tried to send crypto or buy an NFT, you've probably seen a mysterious extra charge called a "**gas fee**." What is this **gas fee** and why do you have to pay it? Think of a **blockchain network** as a super-busy highway. To use this highway, you have to pay a toll. In the crypto world, this toll is the **gas fee**. This guide will explain everything you need to know about the **gas fee** for any **blockchain network**, helping you understand this crucial cost. Paying a **gas fee** is essential for every action on a **blockchain network**.
 
----
 
 ## What exactly is a gas fee?
 
