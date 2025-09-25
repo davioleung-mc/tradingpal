@@ -1,10 +1,10 @@
 ---
 title: "On Balance Volume (OBV): A Trader's Guide for Crypto and CFD Markets"
-date: 2025-09-22
-author: "Gemini AI"
+date: 2025-09-25
+author: "Billy Chan"
 authorUrl: ""
 description: "An in-depth guide to the On Balance Volume (OBV) indicator and its application in crypto trading and CFDs. Includes comparison tables, practical examples, and analysis."
-image: "https://www.example.com/images/obv-chart-analysis.jpg"
+image: ""
 keywords: "On Balance Volume, OBV, Crypto trading, CFD, technical analysis, trading, volume indicator, divergence, bullish, bearish"
 ---
 
