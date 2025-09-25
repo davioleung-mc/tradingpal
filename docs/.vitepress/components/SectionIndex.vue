@@ -1,5 +1,5 @@
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted, onBeforeUnmount } from 'vue'
 import { withBase } from 'vitepress'
 
 const props = defineProps({
@@ -67,6 +67,33 @@ const posts = computed(() => {
     .sort((a, b) => a.title.localeCompare(b.title))
   return list
 })
+
+const lastUpdatedDisplay = computed(() => {
+  const dated = posts.value.filter(p => p.date instanceof Date)
+  if (!dated.length) return null
+  const latest = dated.reduce((acc, cur) => {
+    if (!acc.date) return cur
+    if (!cur.date) return acc
+    return cur.date > acc.date ? cur : acc
+  })
+  try {
+    return new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(latest.date)
+  } catch (err) {
+    return latest.date.toLocaleDateString()
+  }
+})
+
+const toggleSectionClass = (active) => {
+  const cls = 'section-index-page'
+  if (active) {
+    document.body.classList.add(cls)
+  } else {
+    document.body.classList.remove(cls)
+  }
+}
+
+onMounted(() => toggleSectionClass(true))
+onBeforeUnmount(() => toggleSectionClass(false))
 </script>
 
 <template>
@@ -74,6 +101,7 @@ const posts = computed(() => {
     <div class="content">
       <header class="section-hero">
         <h1 class="section-title">{{ title }}</h1>
+        <p class="section-updated" v-if="lastUpdatedDisplay">Last updated {{ lastUpdatedDisplay }}</p>
         <p class="section-desc">{{ description }}</p>
       </header>
 
@@ -108,12 +136,17 @@ const posts = computed(() => {
   padding: 2rem 1rem 3rem;
 }
 .section-hero {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 .section-title {
   font-size: 2rem;
   line-height: 1.25;
   margin: 0 0 .5rem 0;
+}
+.section-updated {
+  margin: 0 0 .75rem 0;
+  font-size: 0.95rem;
+  color: var(--vp-c-text-3);
 }
 .section-desc {
   color: var(--vp-c-text-2);

@@ -5,6 +5,10 @@ import { onMounted } from 'vue'
 import PostFurtherReading from '../components/PostFurtherReading.vue'
 import PostAuthor from '../components/PostAuthor.vue'
 import AppImage from '../components/AppImage.vue'
+import TradingViewCryptoHeatmap from '../components/TradingViewCryptoHeatmap.vue'
+import TradingViewForexHeatmap from '../components/TradingViewForexHeatmap.vue'
+import TradingViewEconomicCalendar from '../components/TradingViewEconomicCalendar.vue'
+import TradingViewStockHeatmap from '../components/TradingViewStockHeatmap.vue'
 import './style.css'
 import './navigation-fix.css'
 import './custom.css'
@@ -24,6 +28,10 @@ export default {
 		ctx.app.component('PostFurtherReading', PostFurtherReading)
 		ctx.app.component('PostAuthor', PostAuthor)
     ctx.app.component('AppImage', AppImage)
+    ctx.app.component('TradingViewCryptoHeatmap', TradingViewCryptoHeatmap)
+    ctx.app.component('TradingViewForexHeatmap', TradingViewForexHeatmap)
+    ctx.app.component('TradingViewEconomicCalendar', TradingViewEconomicCalendar)
+    ctx.app.component('TradingViewStockHeatmap', TradingViewStockHeatmap)
 
 		onMounted(() => {
 			const applyReveal = () => {
