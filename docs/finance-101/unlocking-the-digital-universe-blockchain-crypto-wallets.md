@@ -4,13 +4,13 @@ date: 2025-09-25
 author: "Caca Lam"
 authorUrl: "https://www.linkedin.com/in/caca-lam-436780338"
 description: "A beginner-friendly guide to understanding blockchain technology, cryptocurrencies, and crypto wallets. Learn what they are, how they work, and how to keep your crypto safe."
-image: "/img/blockchain-and-crypto.png"
+image: "/img/bitcoin-trading.jpeg"
 keywords: "blockchain, crypto, crypto wallet, cryptocurrency, bitcoin"
 ---
 
 # Unlocking the Digital Universe: A Beginner's Guide to Blockchain, Crypto, and Crypto Wallets
 
-![Blockchain and Crypto](/img/blockchain-and-crypto.png)
+![Bitcoin Trading](/img/bitcoin-trading.jpeg)
 
 In today's digital age, you've likely heard the buzz around terms like **blockchain**, **crypto**, and **crypto wallet**. But what do they actually mean? This article will break down these concepts in a simple and easy-to-understand way. Get ready to explore the exciting world of **blockchain** technology, the revolutionary potential of **crypto**, and the essential role of a **crypto wallet**.
 
