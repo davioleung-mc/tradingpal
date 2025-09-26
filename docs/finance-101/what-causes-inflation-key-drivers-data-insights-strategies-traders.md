@@ -13,6 +13,8 @@ further:
 ---
 # What Causes Inflation? Drivers, Data, and How Traders Can Position
 
+![Inflation economic analysis showing key drivers including demand-pull, cost-push factors, money supply effects, and trading strategies across crypto, commodities, and traditional assets](/img/inflation-causes-drivers-data-trading-strategies.png)
+
 ## Overview
 Inflation is a sustained rise in the general price level. It usually emerges from a mix of strong demand, constrained supply, easy money/credit, and rising inflation expectations. For traders, inflation shifts central-bank policy, real yields, and cross-asset correlations—moving crypto, gold, oil, bonds, and equities.
 
