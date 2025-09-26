@@ -11,10 +11,10 @@ further:
   - text: "Risk management basics"
     link: "/finance-101/personal-finance-basics#risk-management"
 ---
-
-![Professional forex trading setup showing secure vault with gold bars, technical analysis charts, and trading indicators for beginner forex traders](/img/forex-technical-indicators-cover.png)
-
 # The 3 Best Technical Indicators for Beginner Forex Traders
+
+
+![Professional forex trading setup showing secure vault with gold bars, technical analysis charts, and trading indicators for beginner forex traders](/img/forex-technical-indicators-cover.jpeg)
 
 ## Overview
 New to FX? Start with a clean, rules-based chart. These three indicators are simple, widely used, and pair well together:
