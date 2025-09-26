@@ -8,10 +8,10 @@ image: "/img/market-crash-2025-investment-playbook-crypto-rwas.png"
 
 outline: deep
 further:
-  - text: "Weekly Market Summary"
-    link: "/market-analysis/"
-  - text: "Risk management basics"
-    link: "/finance-101/personal-finance-basics#risk-management"
+  - text: "Gold Price Forecast for Q4 2025: Will it Finally Break $4,000?"
+    link: "/market-analysis/gold-price-forecast-q4-2025-break-4000"
+  - text: "Mastering Dollar-Cost Averaging (DCA): A Step-by-Step Guide for Beginners"
+    link: "/trading-strategies/mastering-dollar-cost-averaging-dca-beginners-guide"
 ---
 
 # What to Invest If the Market Crashes in 2025? A Practical Playbook for Crypto, RWAs, and Traditional Assets

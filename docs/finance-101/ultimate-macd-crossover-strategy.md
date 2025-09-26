@@ -7,10 +7,10 @@ description: "Comprehensive overview of the MACD indicator, step-by-step crossov
 image: "/img/macd-crossover.png"
 outline: deep
 further:
-  - text: "Weekly Market Summary"
-    link: "/market-analysis/"
-  - text: "Risk management basics"
-    link: "/finance-101/personal-finance-basics#risk-management"
+  - text: "Mastering Dollar-Cost Averaging (DCA): A Step-by-Step Guide for Beginners"
+    link: "/trading-strategies/mastering-dollar-cost-averaging-dca-beginners-guide"
+  - text: "What to Invest If the Market Crashes in 2025? A Practical Playbook for Crypto, RWAs, and Traditional Assets"
+    link: "/trading-strategies/invest-market-crash-2025-playbook-crypto-rwas-traditional-assets"
 ---
 
 
@@ -117,6 +117,9 @@ Pro tip: For 24/7 crypto, slightly slower MACD can reduce whipsaws (e.g., 24/52/
 - Daily: MACD(12, 26, 9) or slightly faster (8, 21, 5) for earlier signals
 
 ## Performance tips and variations
+
+![MACD divergence pattern analysis showing bullish and bearish divergence signals where price action contradicts MACD momentum, indicating potential trend reversal opportunities for advanced trading strategies](/img/macd-divergence.png)
+
 - Zero‑line confirmation: Favor signals that cross the zero line soon after the crossover.
 - Divergence add‑on: Look for bullish divergence (price lower low, MACD higher low) for longs; bearish divergence for shorts.
 - EMA pullback entry: After the crossover, buy the first pullback to the 20–50 EMA.
