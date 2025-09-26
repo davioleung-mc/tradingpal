@@ -7,10 +7,10 @@ description: "Comprehensive overview of the MACD indicator, step-by-step crossov
 image: "/img/macd-crossover.png"
 outline: deep
 further:
-  - text: "Weekly Market Summary"
-    link: "/market-analysis/"
-  - text: "Risk management basics"
-    link: "/finance-101/personal-finance-basics#risk-management"
+  - text: "Mastering Dollar-Cost Averaging (DCA): A Step-by-Step Guide for Beginners"
+    link: "/trading-strategies/mastering-dollar-cost-averaging-dca-beginners-guide"
+  - text: "What to Invest If the Market Crashes in 2025? A Practical Playbook for Crypto, RWAs, and Traditional Assets"
+    link: "/trading-strategies/invest-market-crash-2025-playbook-crypto-rwas-traditional-assets"
 ---
 
 
