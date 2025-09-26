@@ -4,13 +4,13 @@ date: 2025-09-25
 author: "Caca Lam"
 authorUrl: "https://www.linkedin.com/in/caca-lam-436780338"
 description: "A beginner's guide comparing a DEX (Decentralized Exchange) and a CEX (Centralized Exchange). Understand the key differences for crypto trading and how each uses the blockchain."
-image: "/img/dex-vs-cex-differences-crypto-trading.png"
+image: "/img/cex-vs-dex-exchange-1.jpg"
 keywords: "DEX, CEX, blockchain, crypto trading"
 ---
 
 # DEX vs CEX: What's the Difference in Crypto Trading?
 
-![DEX vs CEX Differences in Crypto Trading](/img/dex-vs-cex-differences-crypto-trading.png)
+![CEX vs DEX Trading Comparison](/img/cex-vs-dex-exchange-1.jpg)
 
 When you decide to start crypto trading, one of the first questions you'll face is where to do it. The two main options are a CEX (Centralized Exchange) and a DEX (Decentralized Exchange). While both allow for crypto trading, they work in fundamentally different ways. A CEX operates like a traditional company, whereas a DEX is built directly on a blockchain. Understanding the difference between a DEX and a CEX is crucial for anyone involved in crypto trading on the blockchain.
 
