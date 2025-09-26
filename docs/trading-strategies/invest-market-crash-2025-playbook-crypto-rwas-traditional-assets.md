@@ -14,6 +14,8 @@ further:
 
 # What to Invest If the Market Crashes in 2025? A Practical Playbook for Crypto, RWAs, and Traditional Assets
 
+![Market crash investment strategy visualization showing diversified portfolio allocation across crypto, RWAs, traditional assets, and hedging instruments for 2025 market scenarios](/img/market-crash-2025-investment-playbook-crypto-rwas.png)
+
 ## Overview
 Market crashes aren’t one-size-fits-all. Outcomes depend on what triggers the drawdown: recession/deflation, inflation shock, or a liquidity/credit event. This guide maps each scenario to assets that historically hold up best, how to hedge with crypto and RWAs, and a rules-based plan to deploy capital before, during, and after a selloff.
 
