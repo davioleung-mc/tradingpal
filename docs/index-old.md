@@ -53,6 +53,7 @@ features:
     details: Interactive calculators and analytical tools to help you make informed trading decisions.
     link: /tools/
 
+---
 <a href="#main-content" class="skip-link">Skip to content</a>
 
 ## Explore Key Areas
@@ -140,4 +141,7 @@ features:
     <p class="nl-disclaimer">By subscribing you agree to brief periodic emails. Unsubscribe anytime.</p>
   </div>
 </div>
+
+---
+
 *Disclaimer: Contract trading involves substantial risk of loss and is not suitable for all investors. Please ensure you fully understand the risks involved before trading.*
