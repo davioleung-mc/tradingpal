@@ -4,6 +4,8 @@ date: 2025-09-21
 author: "Joe B."
 authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "An in-depth guide to Bitcoin halving, covering its mechanics, historical schedule, market impact, key metrics, and practical trading approaches for crypto investors and traders."
+image: "/img/bitcoin-halving-impact-history-trading-strategies.jpeg"
+
 outline: deep
 further:
   - text: "Weekly Market Summary"

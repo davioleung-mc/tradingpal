@@ -4,6 +4,8 @@ date: 2025-09-20
 author: "Joe B."
 authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "A detailed analysis of inflation causes, measurement approaches, core drivers, and tactical positioning ideas for traders across crypto, commodities, bonds, and equities."
+image: "/img/inflation-causes-drivers-data-trading-strategies.png"
+
 outline: deep
 further:
   - text: "Weekly Market Summary"
