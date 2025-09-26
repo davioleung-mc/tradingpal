@@ -7,10 +7,10 @@ description: "An easy-to-follow guide introducing EMAs, RSI, and MACD for Forex 
 image: "/img/forex-technical-indicators-cover.jpeg"
 outline: deep
 further:
-  - text: "Weekly Market Summary"
-    link: "/market-analysis/"
-  - text: "Risk management basics"
-    link: "/finance-101/personal-finance-basics#risk-management"
+  - text: "The Ultimate MACD Crossover Strategy: A Step‑by‑Step Guide with Example"
+    link: "/finance-101/ultimate-macd-crossover-strategy"
+  - text: "Decoding the Market's Mood: A Beginner's Guide to the RSI"
+    link: "/finance-101/pdecoding-the-markets-mood-rsi"
 ---
 # The 3 Best Technical Indicators for Beginner Forex Traders
 
