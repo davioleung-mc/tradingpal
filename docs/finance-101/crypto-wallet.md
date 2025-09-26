@@ -11,6 +11,8 @@ outline: deep
 
 # Hot Wallet vs Cold Wallet vs Warm Wallet: A Complete Guide to Securing Your Crypto
 
+![Crypto Wallet](/img/crypto-wallet.png)
+
 Navigating the world of cryptocurrency can feel like learning a new language, with terms like "blockchain," "DeFi," and "HODL" becoming part of the regular lexicon. Among the most critical concepts to grasp is digital asset storage. How you store your cryptocurrency can mean the difference between seamless trading and catastrophic loss. This is where the debate of **Hot Wallet vs Cold Wallet vs Warm Wallet** comes into play. Each type offers a unique balance of security, accessibility, and functionality. Understanding these differences is not just technical jargon—it's fundamental to protecting your investments. This guide will break down each wallet type, compare them directly, and provide a clear example to help you decide which storage solution is right for your needs.
 
 ## What Is a Hot Wallet?
