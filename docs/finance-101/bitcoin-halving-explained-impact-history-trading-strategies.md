@@ -15,6 +15,8 @@ further:
 
 # What Is Bitcoin Halving? How It Works, Why It Matters, and How to Trade It
 
+![Bitcoin halving mechanism illustration showing block reward reduction timeline, mining economics, and historical price impact cycles for cryptocurrency trading strategies](/img/bitcoin-halving-impact-history-trading-strategies.jpeg)
+
 ## Overview
 Bitcoin halving is a scheduled event in Bitcoin’s code that cuts the block reward miners earn by 50% roughly every four years (every 210,000 blocks). It slows new BTC issuance, pushes Bitcoin’s inflation rate lower, and has historically coincided with multi‑month market cycles that traders watch closely.
 
