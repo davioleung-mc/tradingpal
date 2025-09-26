@@ -4,6 +4,25 @@ declare const process: any
 
 // https://vitepress.dev/reference/site-config
 const base = process.env.VP_BASE || '/'
+const SITE_URL = 'https://thetradingpal.com'
+
+const absoluteUrl = (path?: string) => {
+  if (!path) return undefined
+  try {
+    return new URL(path, SITE_URL).toString()
+  } catch {
+    return undefined
+  }
+}
+
+const findFirstImageSrc = (source?: string) => {
+  if (!source) return undefined
+  const htmlImg = source.match(/<img[^>]+src=["']([^"']+)["']/i)
+  if (htmlImg) return htmlImg[1]
+  const markdownImg = source.match(/!\[[^\]]*\]\(([^)]+)\)/)
+  if (markdownImg) return markdownImg[1]
+  return undefined
+}
 
 export default defineConfig({
   // HTML language for SEO/i18n
@@ -54,9 +73,10 @@ export default defineConfig({
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "WebSite",
+      "@id": "https://thetradingpal.com#website",
       "name": "TradingPal",
       "description": "Your trusted companion for contract trading and financial education",
-      "url": "https://thetradingpal.com",
+      "url": SITE_URL,
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://thetradingpal.com/?q={search_term_string}",
@@ -67,11 +87,12 @@ export default defineConfig({
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://thetradingpal.com#organization",
       "name": "TradingPal",
-      "url": "https://thetradingpal.com",
+      "url": SITE_URL,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://thetradingpal.com/favicon.ico"
+        "url": `${SITE_URL}/favicon.ico`
       }
     })],
     // (Breadcrumbs are injected per-page in transformHead)
@@ -196,9 +217,15 @@ export default defineConfig({
     const fmTitle = frontmatter.title || pageData.title || ''
     const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
     const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
-    const url = `https://thetradingpal.com${page}`
-    // Social image: prefer frontmatter.image, fallback to site favicon
-  const image = frontmatter.image || 'https://thetradingpal.com/favicon.ico'
+    const canonicalPath = page.startsWith('/') ? page : `/${page}`
+    const url = `${SITE_URL}${canonicalPath}`
+    const rawContent: string = (ctx as any).content || pageData.content || ''
+    const imageCandidates = [frontmatter.image, findFirstImageSrc(rawContent)]
+    const imageUrls = Array.from(new Set(imageCandidates
+      .map((candidate) => absoluteUrl(candidate))
+      .filter((value): value is string => Boolean(value))
+    ))
+    const primaryOgImage = imageUrls[0] || `${SITE_URL}/favicon.ico`
     // Determine page type
     let ogType = 'website'
     const head = [
@@ -212,8 +239,8 @@ export default defineConfig({
       ['meta', { name: 'description', content: description }],
       ['meta', { name: 'twitter:title', content: title }],
       ['meta', { name: 'twitter:description', content: description }],
-      ['meta', { property: 'og:image', content: image }],
-      ['meta', { name: 'twitter:image', content: image }]
+      ['meta', { property: 'og:image', content: primaryOgImage }],
+      ['meta', { name: 'twitter:image', content: primaryOgImage }]
     ] as any[]
 
     // If this is a post page (non-index under our 4 sections), add Article JSON-LD
@@ -223,7 +250,7 @@ export default defineConfig({
     const isIndex = path.endsWith('/') || path.endsWith('/index')
     const inSection = ['market-analysis','trading-strategies','finance-101','useful-links'].includes(top)
     const isPost = inSection && !isIndex
-  if (isPost) {
+    if (isPost) {
       ogType = 'article'
       const authorName = frontmatter.author || 'TradingPal Editorial Team'
       const authorUrl = frontmatter.authorUrl || undefined
@@ -245,12 +272,12 @@ export default defineConfig({
           url: authorUrl,
           sameAs: authorUrl ? [authorUrl] : undefined
         } : undefined,
-        publisher: { '@type': 'Organization', name: 'TradingPal', logo: { '@type': 'ImageObject', url: 'https://thetradingpal.com/favicon.ico' } },
+        publisher: { '@type': 'Organization', name: 'TradingPal', logo: { '@type': 'ImageObject', url: `${SITE_URL}/favicon.ico` } },
         mainEntityOfPage: url,
         url,
         datePublished,
         dateModified,
-        image
+        ...(imageUrls.length ? { image: imageUrls } : {})
       }
       head.push(['script', { type: 'application/ld+json' }, JSON.stringify(articleSchema)])
       // Article Open Graph extensions
@@ -276,8 +303,8 @@ export default defineConfig({
       })])
     }
     // Optionally preload a hero image when explicitly requested
-    if (frontmatter.image && frontmatter.preloadImage === true) {
-      head.push(['link', { rel: 'preload', as: 'image', href: image, fetchpriority: 'high' }])
+    if (frontmatter.image && frontmatter.preloadImage === true && imageUrls.length) {
+      head.push(['link', { rel: 'preload', as: 'image', href: imageUrls[0], fetchpriority: 'high' }])
     }
     // Section index breadcrumb (Home > Section)
     else if (inSection && isIndex) {
@@ -299,7 +326,8 @@ export default defineConfig({
       inLanguage: 'en-US',
       name: fmTitle || baseTitle,
       description,
-      url
+      url,
+      ...(imageUrls.length ? { image: imageUrls } : {})
     }
     head.push(['script', { type: 'application/ld+json' }, JSON.stringify(webPageSchema)])
 

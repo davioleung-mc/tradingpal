@@ -2,8 +2,8 @@
   <div class="financial-homepage">
     <!-- Hero Section: NYT-inspired above-the-fold -->
     <section class="hero-section">
-      <div class="hero-main">
-        <div class="lead-story">
+      <div class="hero-main" itemprop="mainEntity" itemscope itemtype="https://schema.org/CreativeWork">
+        <div class="lead-story" itemprop="mainEntityOfPage">
           <h1 class="headline">{{ heroLead.title }}</h1>
           <p v-if="heroLead.description" class="summary">{{ heroLead.description }}</p>
           <a :href="withBase(heroLead.link)" class="read-more">Read More</a>
@@ -64,7 +64,7 @@
     <section class="tools-section">
       <div class="content-inner tools-inner">
         <h2 class="section-title tools-title">Useful Links</h2>
-        <div class="tools-grid tools-list four-up">
+        <div class="tools-grid tools-list four-up" itemscope itemtype="https://schema.org/ItemList">
           <a href="/useful-links/forex-heatmap" class="tool-item">
             <span class="tool-icon">💱</span>
             <span class="tool-name">Forex Heatmap</span>
