@@ -4,6 +4,7 @@ date: 2025-09-26
 author: "Joe B."
 authorUrl: "https://www.linkedin.com/in/joe-bryan-/"
 description: "Comprehensive overview of the MACD indicator, step-by-step crossover strategy, setup tips, trade management, and pitfalls to avoid for crypto, stocks, and commodities traders."
+image: "/img/macd-crossover.png"
 outline: deep
 further:
   - text: "Weekly Market Summary"
