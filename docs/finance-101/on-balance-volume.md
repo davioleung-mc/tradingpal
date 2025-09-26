@@ -4,7 +4,7 @@ date: 2025-09-24
 author: "Caca Lam"
 authorUrl: "https://www.linkedin.com/in/caca-lam-436780338"
 description: "An in-depth guide to the On Balance Volume (OBV) indicator and its application in crypto trading and CFDs. Includes comparison tables, practical examples, and analysis."
-image: ""
+image: "/img/on-balance-volume.png"
 keywords: "On Balance Volume, OBV, Crypto trading, CFD, technical analysis, trading, volume indicator, divergence, bullish, bearish"
 outline: deep
 ---
@@ -52,8 +52,6 @@ When using the **On Balance Volume** indicator for **CFD** trading, it's crucial
 
 For an accurate OBV reading, it is always preferable to use the volume from the underlying market, as it reflects the full picture of buying and selling pressure. If the OBV for the underlying asset shows strong accumulation, it's a bullish signal for the corresponding CFD. Divergences between the CFD's price and the underlying asset's OBV can be powerful signals for CFD traders, who often use leverage and need precise entry and exit points.
 
----
-
 ## How Do These Trading Instruments Compare?
 
 While OBV can be applied to both spot crypto trading and CFD trading, the nature of these instruments creates important differences for a trader to consider.
@@ -66,8 +64,6 @@ While OBV can be applied to both spot crypto trading and CFD trading, the nature
 | **Regulation** | Varies widely by jurisdiction; can be less regulated. | Generally more regulated, with brokers licensed by financial authorities. |
 | **OBV Interpretation** | Volume data is direct from exchange order books and blockchain, reflecting genuine asset transfers. | Volume data source is critical. Must confirm if it's broker-specific volume or underlying market volume. |
 | **Best Use Case** | Long-term investing (HODLing) and direct use of the crypto asset (DeFi, payments). | Short-term speculation on price movements (both up and down) without the complexity of asset ownership. |
-
----
 
 ## What Is a Real-World Example of Using OBV?
 
@@ -91,8 +87,6 @@ The choice between spot **crypto trading** and **CFD** trading, and how you use 
 * **For the Speculator:** If you are focused on short-to-medium-term price action and want to use leverage to capitalize on volatility, trading CFDs while using OBV to time your entries and exits is a powerful strategy.
 
 Regardless of the instrument, OBV serves the same fundamental purpose: to measure the flow of money and provide a glimpse into the market's true intentions. By adding it to your analytical toolkit, you can make more informed decisions in the dynamic worlds of crypto and CFDs.
-
----
 
 #### **Reference**
 
