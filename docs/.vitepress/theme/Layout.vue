@@ -7,7 +7,24 @@ import PostMeta from '../components/PostMeta.vue'
 
 const { Layout } = DefaultTheme
 const route = useRoute()
-const { frontmatter } = useData()
+const { frontmatter, page, site } = useData()
+
+const SITE_ORIGIN = 'https://thetradingpal.com'
+
+const toIsoString = (value) => {
+  if (!value) return undefined
+  const date = new Date(value)
+  return Number.isNaN(date.getTime()) ? undefined : date.toISOString()
+}
+
+const absoluteUrl = (path) => {
+  if (!path) return undefined
+  try {
+    return new URL(path, SITE_ORIGIN).toString()
+  } catch (err) {
+    return undefined
+  }
+}
 
 const isPost = computed(() => {
   const fm = frontmatter.value || {}
@@ -17,6 +34,78 @@ const isPost = computed(() => {
   const isIndex = /\/$/.test(path) || /\/index$/.test(path)
   const inSection = ['market-analysis','trading-strategies','finance-101','useful-links'].includes(top)
   return inSection && !isIndex
+})
+
+const articleJsonLd = computed(() => {
+  if (!isPost.value) return null
+
+  const fm = frontmatter.value || {}
+  const pg = page.value || {}
+  const siteData = site.value || {}
+
+  const basePath = (siteData.base || '/').replace(/\/$/, '')
+  const canonicalPath = `${basePath}${route.path || ''}`
+  const url = absoluteUrl(canonicalPath)
+
+  const datePublished = toIsoString(fm.date)
+  const dateModified = toIsoString(pg.lastUpdated || fm.lastUpdated || fm.last_update || fm.date)
+
+  const authorName = fm.author || 'TradingPal Editorial Team'
+  const author = authorName ? {
+    "@type": 'Person',
+    name: authorName,
+    ...(fm.authorUrl ? { url: fm.authorUrl } : {}),
+    ...(fm.authorAvatar ? { image: absoluteUrl(fm.authorAvatar) } : {})
+  } : undefined
+
+  const image = fm.image || fm.cover || fm.heroImage
+  const images = Array.isArray(image) ? image : (image ? [image] : [])
+  const imageUrls = images
+    .map((item) => absoluteUrl(item))
+    .filter(Boolean)
+
+  return {
+    "@context": 'https://schema.org',
+    "@type": 'Article',
+    mainEntityOfPage: url,
+    headline: fm.title || pg.title || '',
+    description: fm.description || siteData.description || '',
+    url,
+    ...(imageUrls.length ? { image: imageUrls } : {}),
+    author,
+    publisher: {
+      "@type": 'Organization',
+      name: 'TradingPal',
+      logo: {
+        "@type": 'ImageObject',
+        url: absoluteUrl('/favicon.ico')
+      }
+    },
+    ...(datePublished ? { datePublished } : {}),
+    ...(dateModified ? { dateModified } : {})
+  }
+})
+
+let structuredDataEl = null
+let stopStructuredDataWatch = null
+
+const removeStructuredData = () => {
+  if (structuredDataEl?.parentNode) {
+    structuredDataEl.parentNode.removeChild(structuredDataEl)
+  }
+  structuredDataEl = null
+}
+
+onMounted(() => {
+  stopStructuredDataWatch = watch(articleJsonLd, (schema) => {
+    if (typeof document === 'undefined') return
+    removeStructuredData()
+    if (!schema) return
+    structuredDataEl = document.createElement('script')
+    structuredDataEl.type = 'application/ld+json'
+    structuredDataEl.textContent = JSON.stringify(schema)
+    document.head.appendChild(structuredDataEl)
+  }, { immediate: true })
 })
 
 const toggleBodyClass = (active) => {
@@ -35,6 +124,11 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   toggleBodyClass(false)
+  if (stopStructuredDataWatch) {
+    stopStructuredDataWatch()
+    stopStructuredDataWatch = null
+  }
+  removeStructuredData()
 })
 </script>
 
