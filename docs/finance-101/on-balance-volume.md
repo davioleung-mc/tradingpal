@@ -90,8 +90,22 @@ The choice between spot **crypto trading** and **CFD** trading, and how you use 
 
 Regardless of the instrument, OBV serves the same fundamental purpose: to measure the flow of money and provide a glimpse into the market's true intentions. By adding it to your analytical toolkit, you can make more informed decisions in the dynamic worlds of crypto and CFDs.
 
+
+## Frequently Asked Questions (FAQ)
+
+### What is the On Balance Volume (OBV) indicator?
+On Balance Volume (OBV) is a momentum indicator that uses trading volume to predict price changes. It keeps a running total of volume, adding it on days when the price closes up and subtracting it on days when the price closes down. The core idea is that significant volume changes precede significant price moves.
+
+### How does OBV help in trading?
+Traders use OBV to confirm price trends and spot potential reversals. A rising OBV confirms an uptrend, indicating strong buying pressure, while a falling OBV confirms a downtrend. When the OBV moves in a different direction than the price, it signals a potential trend change.
+
+### What is a divergence in OBV?
+A divergence occurs when the price and the OBV line move in opposite directions, signaling that the current trend is losing momentum.
+-   **Bearish Divergence:** The price makes a new high, but the OBV does not. This warns of a potential price drop.
+-   **Bullish Divergence:** The price makes a new low, but the OBV does not. This suggests a potential price rally.
+
 #### **Reference**
 
 For a deeper dive into the mechanics and strategies associated with the On Balance Volume indicator, Investopedia offers a comprehensive and reliable explanation.
 
-**Link:** [https://www.investopedia.com/terms/o/onbalancevolume.asp](https://www.investopedia.com/terms/o/onbalancevolume.asp)
+**Link:** [investopedia.com](https://www.investopedia.com/terms/o/onbalancevolume.asp)
