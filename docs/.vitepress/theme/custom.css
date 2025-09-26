@@ -143,3 +143,20 @@ body.section-index-page .page-info,
 body.section-index-page .page-meta {
 	display: none !important;
 }
+
+/* Custom link styling: gray links without underlines - POST PAGES ONLY */
+body.is-post .vp-doc a,
+body.is-post .VPDoc a,
+body.is-post .content a {
+	color: var(--nyt-medium-gray, #666) !important;
+	text-decoration: none !important;
+	border-bottom: none !important;
+}
+
+body.is-post .vp-doc a:hover,
+body.is-post .VPDoc a:hover,
+body.is-post .content a:hover {
+	color: var(--nyt-dark-gray, #363636) !important;
+	text-decoration: none !important;
+	border-bottom: none !important;
+}

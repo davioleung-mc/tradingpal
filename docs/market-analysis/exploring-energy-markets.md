@@ -40,5 +40,7 @@ Energy markets have shown renewed activity driven by supply disruptions, invento
 
 Always size positions according to your account risk rules. Energy instruments can gap on news — use stop-losses and consider smaller position sizes during high implied volatility.
 
+### Reference
 
-
+- [this is a link](https://www.google.com)
+- [this is the second link](https://www.google.com)
