@@ -11,6 +11,8 @@ outline: deep
 
 # On Balance Volume (OBV): A Trader's Guide for Crypto and CFD Markets
 
+![On Balance Volume](/img/on-balance-volume.png)
+
 In the fast-paced worlds of **crypto trading** and **CFD** (Contract for Difference) trading, gaining an edge requires more than just looking at price charts. Traders need tools that can peek behind the curtain of price movements to gauge the real conviction of buyers and sellers. This is where volume indicators become indispensable, and one of the most powerful and enduring of these is the **On Balance Volume** (OBV) indicator. Developed by Joseph Granville in the 1960s, OBV is a momentum indicator that uses volume flow to predict changes in stock prices—or, in our case, the prices of cryptocurrencies and CFDs. This article will demystify the OBV, explain its application in modern digital markets, and compare its use across different trading instruments.
 
 
