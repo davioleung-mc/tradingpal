@@ -4,6 +4,8 @@ date: 2025-09-22
 author: "George M"
 authorUrl: "https://www.linkedin.com/in/manolovgeorge/"
 description: "A tactical guide for navigating potential 2025 market crashes with tailored asset strategies, hedging approaches, and rules-based capital deployment across crypto, traditional markets, and real-world assets (RWAs)."
+image: "/img/market-crash-2025-investment-playbook-crypto-rwas.png"
+
 outline: deep
 further:
   - text: "Weekly Market Summary"

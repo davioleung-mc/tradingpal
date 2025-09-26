@@ -4,6 +4,7 @@ date: 2025-09-23
 author: "George M"
 authorUrl: "https://www.linkedin.com/in/manolovgeorge/"
 description: "An easy-to-follow guide introducing EMAs, RSI, and MACD for Forex beginners, including setup tips, trading rules, common mistakes, and a worked example."
+image: "/img/forex-technical-indicators-cover.jpeg"
 outline: deep
 further:
   - text: "Weekly Market Summary"
