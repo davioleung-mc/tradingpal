@@ -55,16 +55,17 @@ const posts = computed(() => {
       }
       if (!title) title = last.replace(/-/g, ' ')
       const date = fm && fm.date ? new Date(fm.date) : undefined
-      return { title, link, date }
+      const time = date instanceof Date && !Number.isNaN(date.getTime()) ? date.getTime() : undefined
+      return { title, link, date, time }
     })
-    // Optional: newest first if dates exist; otherwise stable order
     .sort((a, b) => {
-      if (a.date && b.date) return b.date.getTime() - a.date.getTime()
-      if (a.date) return -1
-      if (b.date) return 1
+      const aHas = typeof a.time === 'number'
+      const bHas = typeof b.time === 'number'
+      if (aHas && bHas && a.time !== b.time) return b.time - a.time
+      if (aHas && !bHas) return -1
+      if (!aHas && bHas) return 1
       return a.title.localeCompare(b.title)
     })
-    .sort((a, b) => a.title.localeCompare(b.title))
   return list
 })
 
