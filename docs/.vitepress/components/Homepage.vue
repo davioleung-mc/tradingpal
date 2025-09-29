@@ -26,16 +26,27 @@
       </div>
 
       <div class="insights-grid">
-        <article v-for="post in insightPosts" :key="post.link" class="insight-card">
-          <div class="card-image">
-            <img :src="resolveInsightImage(post)" :alt="post.title" loading="lazy" decoding="async" @error="usePlaceholder" />
-          </div>
-          <h3 class="card-headline">
-            <a :href="withBase(post.link)">
+        <a
+          v-for="post in insightPosts"
+          :key="post.link"
+          :href="withBase(post.link)"
+          class="insight-card"
+        >
+          <article class="insight-card-inner">
+            <div class="card-image">
+              <img
+                :src="resolveInsightImage(post)"
+                :alt="post.title"
+                loading="lazy"
+                decoding="async"
+                @error="usePlaceholder"
+              />
+            </div>
+            <h3 class="card-headline">
               <span class="card-title">{{ post.title }}</span>
-            </a>
-          </h3>
-        </article>
+            </h3>
+          </article>
+        </a>
       </div>
     </section>
 

@@ -153,6 +153,23 @@ body.is-post .content a {
 	border-bottom: none !important;
 }
 
+/* Exception: preserve borders for further reading cards */
+body.is-post .further-reading .fr-card {
+	border: 1px solid #d1d5db !important;
+	border-radius: 12px !important;
+	background: var(--vp-c-bg-soft) !important;
+	color: var(--vp-c-text-1) !important;
+	transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease !important;
+}
+
+body.is-post .further-reading .fr-card:hover,
+body.is-post .further-reading .fr-card:focus-visible {
+	border-color: var(--vp-c-brand-1) !important;
+	border-bottom: 1px solid var(--vp-c-brand-1) !important;
+	box-shadow: 0 4px 14px rgba(15, 23, 42, 0.12) !important;
+	transform: translateY(-1px) !important;
+}
+
 body.is-post .vp-doc a:hover,
 body.is-post .VPDoc a:hover,
 body.is-post .content a:hover {
