@@ -64,11 +64,12 @@ export default defineConfig({
     ['meta', { property: 'og:locale', content: 'en_US' }],
     ['meta', { property: 'og:site_name', content: 'TradingPal' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'robots', content: 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1' }],
     ['meta', { name: 'author', content: 'TradingPal Editorial Team' }],
     ['meta', { name: 'publisher', content: 'TradingPal' }],
     // Preconnects
     ['link', { rel: 'preconnect', href: 'https://images.unsplash.com' }],
+    // Google Tag Manager
+    ['script', {}, `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TCQZS4TS')`],
     // Base WebSite schema
     ['script', { type: 'application/ld+json' }, JSON.stringify({
       "@context": "https://schema.org",
