@@ -76,10 +76,10 @@ const entries = computed(() => {
 
   // If not enough candidates, pad with some helpful defaults
   while (candidates.length < 2) {
-    if (!candidates.find(c => c.link === '/market-analysis/')) {
-      candidates.push({ text: 'Weekly Market Summary', link: '/market-analysis/' })
-    } else if (!candidates.find(c => c.link.includes('/finance-101/personal-finance-basics'))) {
-      candidates.push({ text: 'Risk management basics', link: '/finance-101/personal-finance-basics#risk-management' })
+    if (!candidates.find(c => c.link === '/market-analysis/binance-alpha-effect-meme-coins')) {
+      candidates.push({ text: 'Market Analysis: Binance Alpha Effect', link: '/market-analysis/binance-alpha-effect-meme-coins' })
+    } else if (!candidates.find(c => c.link === '/finance-101/bitcoin-halving-explained-impact-history-trading-strategies')) {
+      candidates.push({ text: 'Finance 101: Bitcoin Halving Explained', link: '/finance-101/bitcoin-halving-explained-impact-history-trading-strategies' })
     } else {
       break
     }

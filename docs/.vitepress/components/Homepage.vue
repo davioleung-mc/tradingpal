@@ -203,23 +203,23 @@ function normalizePost(key, raw) {
 }
 
 const fallbackLead = {
-  title: 'Federal Reserve Signals Pivotal Rate Decision as Markets Brace for Q4 Volatility',
-  link: '/market-analysis/fed-policy-shift',
-  description: 'Central bank officials hint at potential policy shift amid growing inflation concerns and market uncertainty heading into the final quarter of 2025.'
+  title: 'Bitcoin Halving Explained: Impact, History, and Trading Strategies',
+  link: '/finance-101/bitcoin-halving-explained-impact-history-trading-strategies',
+  description: 'An in-depth guide to Bitcoin halving, covering its mechanics, historical schedule, market impact, key metrics, and practical trading approaches for crypto investors and traders.'
 }
 
 const fallbackAlsoToday = [
   {
-    title: 'Tech Earnings Season: What to Expect from Mega-Cap Results',
-    link: '/market-analysis/tech-earnings'
+    title: 'The Binance Alpha Effect: Can an On-Chain Whisper Boost Meme Coins?',
+    link: '/market-analysis/binance-alpha-effect-meme-coins'
   },
   {
-    title: 'September Inflation Data Shows Mixed Signals for Consumer Spending',
-    link: '/market-analysis/inflation-data'
+    title: 'Gold Price Forecast Q4 2025: Can $4,000 Break?',
+    link: '/market-analysis/gold-price-forecast-q4-2025-break-4000'
   },
   {
-    title: 'Why Your 401(k) Strategy Needs a 2025 Update',
-    link: '/finance-101/personal-finance-basics#retirement-planning'
+    title: 'Mastering Dollar-Cost Averaging (DCA)',
+    link: '/trading-strategies/mastering-dollar-cost-averaging-dca-beginners-guide'
   }
 ]
 
@@ -238,14 +238,14 @@ const fallbackInsights = [
   },
   {
     title: 'Ultimate MACD Crossover Strategy',
-    link: '/finance-101/guides-and-tutorials#trend-following-system',
+    link: '/finance-101/ultimate-macd-crossover-strategy',
     excerpt: 'Time entries using classic momentum crossovers and risk controls.',
     image: ''
   },
   {
-    title: 'Position Sizing Templates for Swing Traders',
-    link: '/finance-101/personal-finance-basics#risk-management',
-    excerpt: 'Frameworks for sizing trades based on volatility and conviction.',
+    title: 'Combining MACD and RSI for More Powerful Signals',
+    link: '/trading-strategies/combining-macd-rsi-powerful-trading-signals',
+    excerpt: 'Frameworks for pairing momentum oscillators to confirm trades.',
     image: ''
   },
   {
@@ -264,44 +264,44 @@ const fallbackInsights = [
 
 const fallbackFinance = [
   {
-    title: 'Building Your First Budget: A Step-by-Step Guide',
-    link: '/finance-101/guides-and-tutorials#complete-beginners-guide',
-    excerpt: 'Lay the groundwork for cash-flow awareness with a simple budgeting workflow.'
+    title: 'Bitcoin Halving Explained: Impact, History, and Trading Strategies',
+    link: '/finance-101/bitcoin-halving-explained-impact-history-trading-strategies',
+    excerpt: 'Understand halving mechanics, market impact, and trading tactics.'
   },
   {
-    title: 'Emergency Fund Essentials: How Much Do You Really Need?',
-    link: '/finance-101/personal-finance-basics#emergency-fund-first',
-    excerpt: 'Set a resilient safety net with tiered savings goals.'
+    title: 'Crypto Wallet Types Explained',
+    link: '/finance-101/crypto-wallet',
+    excerpt: 'Compare hot, cold, and warm wallets to keep digital assets secure.'
   },
   {
-    title: 'Understanding Your Pension: Maximizing Retirement Benefits',
-    link: '/finance-101/personal-finance-basics#retirement-planning',
-    excerpt: 'Decode employer plans and boost long-term compounding.'
+    title: 'Decoding the Market’s Mood with RSI',
+    link: '/finance-101/decoding-the-markets-mood-rsi',
+    excerpt: 'Read relative strength signals to gauge momentum extremes.'
   },
   {
-    title: 'Smart Debt Management Strategies for 2025',
-    link: '/finance-101/personal-finance-basics#debt-management',
-    excerpt: 'Prioritize repayments while keeping credit usage in check.'
+    title: 'DEX vs CEX: Crypto Trading Guide',
+    link: '/finance-101/dex-vs-cex-crypto-trading-guide',
+    excerpt: 'Break down centralized versus decentralized exchange workflows.'
   },
   {
-    title: "A Beginner's Guide to ETFs: Everything You Need to Know",
-    link: '/finance-101/guides-and-tutorials#trend-following-system',
-    excerpt: 'Compare ETF structures, costs, and portfolio roles.'
+    title: 'On-Balance Volume (OBV): A Trader’s Guide',
+    link: '/finance-101/on-balance-volume',
+    excerpt: 'Pair volume flow with price to confirm trend strength.'
   },
   {
-    title: 'How to Read a Balance Sheet: Key Metrics Explained',
-    link: '/finance-101/guides-and-tutorials#how-to-read-a-balance-sheet',
-    excerpt: 'Spot financial health signals across assets, liabilities, and equity.'
+    title: 'Ultimate MACD Crossover Strategy',
+    link: '/finance-101/ultimate-macd-crossover-strategy',
+    excerpt: 'Time entries with proven momentum crossover techniques.'
   },
   {
-    title: 'Dividend Investing: Building Passive Income Streams',
-    link: '/finance-101/guides-and-tutorials#dividend-investing',
-    excerpt: 'Align yield targets with payout quality and sector trends.'
+    title: 'Unlocking the Digital Universe: Blockchain & Wallets',
+    link: '/finance-101/unlocking-the-digital-universe-blockchain-crypto-wallets',
+    excerpt: 'Demystify blockchain foundations and the role of crypto wallets.'
   },
   {
-    title: 'Portfolio Diversification Beyond Stocks and Bonds',
-    link: '/finance-101/guides-and-tutorials#portfolio-diversification',
-    excerpt: 'Expand into alternatives to smooth portfolio drawdowns.'
+    title: 'What Causes Inflation? Drivers and Strategies',
+    link: '/finance-101/what-causes-inflation-key-drivers-data-insights-strategies-traders',
+    excerpt: 'Track inflation catalysts and position portfolios accordingly.'
   }
 ]
 

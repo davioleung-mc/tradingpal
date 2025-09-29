@@ -24,6 +24,30 @@ const findFirstImageSrc = (source?: string) => {
   return undefined
 }
 
+const toRoutePath = (page?: string, pageData?: { relativePath?: string }) => {
+  const rawCandidate = (pageData?.relativePath ?? page ?? '').replace(/\\/g, '/')
+  if (!rawCandidate) return '/'
+
+  const trimmed = rawCandidate.replace(/^\/+/, '')
+  const isRootIndex = /^(index(?:\.(md|html))?)$/i.test(trimmed)
+  const isDirectoryIndex = /\/index(?:\.(md|html))?$/i.test(trimmed)
+
+  let path = trimmed.replace(/\.(md|html)$/i, '')
+  if (path === 'index') path = ''
+  else if (path.endsWith('/index')) path = path.slice(0, -'/index'.length)
+
+  if (!path.startsWith('/')) path = `/${path}`
+  path = path.replace(/\/{2,}/g, '/')
+
+  if ((isRootIndex || isDirectoryIndex) && path !== '/') {
+    if (!path.endsWith('/')) path = `${path}/`
+  } else if (path.length > 1 && path.endsWith('/')) {
+    path = path.replace(/\/+$/, '')
+  }
+
+  return path || '/'
+}
+
 export default defineConfig({
   // HTML language for SEO/i18n
   lang: 'en-US',
@@ -130,7 +154,9 @@ export default defineConfig({
           text: 'Market Analysis',
           items: [
             { text: 'Overview', link: '/market-analysis/' },
-            { text: 'Exploring Energy Markets', link: '/market-analysis/exploring-energy-markets' }
+            { text: 'Binance Alpha Effect: Meme Coins', link: '/market-analysis/binance-alpha-effect-meme-coins' },
+            { text: 'CZ Returns: What It Means for BNB', link: '/market-analysis/cz-return-bnb' },
+            { text: 'Gold Price Forecast Q4 2025', link: '/market-analysis/gold-price-forecast-q4-2025-break-4000' }
           ]
         }
       ],
@@ -138,7 +164,12 @@ export default defineConfig({
         {
           text: 'Trading Strategies',
           items: [
-            { text: 'Overview', link: '/trading-strategies/' }
+            { text: 'Overview', link: '/trading-strategies/' },
+            { text: 'Combining MACD and RSI', link: '/trading-strategies/combining-macd-rsi-powerful-trading-signals' },
+            { text: 'How Much Are Blockchain Gas Fees?', link: '/trading-strategies/how-much-is-the-gas-fee-blockchain-network-tolls' },
+            { text: 'Invest Before a Market Crash', link: '/trading-strategies/invest-market-crash-2025-playbook-crypto-rwas-traditional-assets' },
+            { text: 'Mastering Dollar-Cost Averaging', link: '/trading-strategies/mastering-dollar-cost-averaging-dca-beginners-guide' },
+            { text: 'Top Technical Indicators for Beginners', link: '/trading-strategies/the-3-best-technical-indicators-for-beginner-forex-traders' }
           ]
         }
       ],
@@ -147,8 +178,14 @@ export default defineConfig({
           text: 'Finance 101',
           items: [
             { text: 'Overview', link: '/finance-101/' },
-            { text: 'Personal Finance Basics', link: '/finance-101/personal-finance-basics' },
-            { text: 'Guides & Tutorials', link: '/finance-101/guides-and-tutorials' }
+            { text: 'Bitcoin Halving Explained', link: '/finance-101/bitcoin-halving-explained-impact-history-trading-strategies' },
+            { text: 'Crypto Wallet Types Explained', link: '/finance-101/crypto-wallet' },
+            { text: 'Decoding the Market’s Mood with RSI', link: '/finance-101/decoding-the-markets-mood-rsi' },
+            { text: 'DEX vs CEX Crypto Trading Guide', link: '/finance-101/dex-vs-cex-crypto-trading-guide' },
+            { text: 'On-Balance Volume Indicator', link: '/finance-101/on-balance-volume' },
+            { text: 'Ultimate MACD Crossover Strategy', link: '/finance-101/ultimate-macd-crossover-strategy' },
+            { text: 'Unlocking Blockchain & Crypto Wallets', link: '/finance-101/unlocking-the-digital-universe-blockchain-crypto-wallets' },
+            { text: 'What Causes Inflation?', link: '/finance-101/what-causes-inflation-key-drivers-data-insights-strategies-traders' }
           ]
         }
       ],
@@ -156,7 +193,11 @@ export default defineConfig({
         {
           text: 'Useful Links',
           items: [
-            { text: 'Curated Resources', link: '/useful-links/' }
+            { text: 'Curated Resources', link: '/useful-links/' },
+            { text: 'Crypto Coins Heatmap', link: '/useful-links/crypto-coins-heatmap' },
+            { text: 'Economic Calendar', link: '/useful-links/economic-calendar' },
+            { text: 'Forex Heatmap', link: '/useful-links/forex-heatmap' },
+            { text: 'Stock Heatmap', link: '/useful-links/stock-heatmap' }
           ]
         }
       ]
@@ -219,7 +260,7 @@ export default defineConfig({
     const fmTitle = frontmatter.title || pageData.title || ''
     const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
     const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
-    const canonicalPath = page.startsWith('/') ? page : `/${page}`
+    const canonicalPath = toRoutePath(page, pageData)
     const url = `${SITE_URL}${canonicalPath}`
     const rawContent: string = (ctx as any).content || pageData.content || ''
     const imageCandidates = [frontmatter.image, findFirstImageSrc(rawContent)]
@@ -246,10 +287,9 @@ export default defineConfig({
     ] as any[]
 
     // If this is a post page (non-index under our 4 sections), add Article JSON-LD
-    const path: string = (page || '')
-    const segments = path.split('/').filter(Boolean)
+    const segments = canonicalPath.split('/').filter(Boolean)
     const top = segments[0] || ''
-    const isIndex = path.endsWith('/') || path.endsWith('/index')
+    const isIndex = canonicalPath === '/' || canonicalPath.endsWith('/')
     const inSection = ['market-analysis','trading-strategies','finance-101','useful-links'].includes(top)
     const isPost = inSection && !isIndex
     if (isPost) {
