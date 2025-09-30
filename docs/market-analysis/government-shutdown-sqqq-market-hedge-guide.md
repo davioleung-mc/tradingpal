@@ -14,7 +14,7 @@ further:
 ---
 # Government Shutdown: Is SQQQ Your Market Hedge?
 
-![A long-term price chart of SQQQ, showing a clear and dramatic downtrend over several years, visually demonstrating its value erosion and making it obvious it's not a buy-and-hold asset.](//img/sqqq-longterm.png)
+![A long-term price chart of SQQQ, showing a clear and dramatic downtrend over several years, visually demonstrating its value erosion and making it obvious it's not a buy-and-hold asset.](/img/sqqq-longterm.png)
 
 ## Overview
 SQQQ is a 3x inverse ETF designed to deliver approximately −3 times the DAILY return of the Nasdaq-100 (QQQ). It’s a short-term trading or hedging tool—not a buy-and-hold investment—because it resets daily and is subject to volatility decay. Use it when expecting near-term downside or for tactical hedging on tech-heavy risk.
