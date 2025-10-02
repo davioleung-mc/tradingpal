@@ -4,6 +4,13 @@ set -e
 # IndexNow submission script
 # Extracts URLs from sitemap and submits them to IndexNow API
 
+# Check for required tools
+if ! command -v jq &> /dev/null; then
+    echo "Error: jq is required but not installed."
+    echo "Install with: apt-get install jq (Ubuntu) or brew install jq (macOS)"
+    exit 1
+fi
+
 SITEMAP_URL="https://thetradingpal.com/sitemap.xml"
 API_KEY="808a8e0f85704699a6d532f0c2fb5a4a"
 KEY_LOCATION="https://thetradingpal.com/808a8e0f85704699a6d532f0c2fb5a4a.txt"
@@ -13,7 +20,8 @@ echo "Fetching sitemap from $SITEMAP_URL..."
 SITEMAP_CONTENT=$(curl -s "$SITEMAP_URL")
 
 # Extract URLs from sitemap (handles both <loc> tags)
-URLS=$(echo "$SITEMAP_CONTENT" | grep -oP '(?<=<loc>)[^<]+' || true)
+# Using sed for better portability across systems
+URLS=$(echo "$SITEMAP_CONTENT" | sed -n 's/.*<loc>\(.*\)<\/loc>.*/\1/p' || true)
 
 if [ -z "$URLS" ]; then
   echo "No URLs found in sitemap. Submitting homepage only."
