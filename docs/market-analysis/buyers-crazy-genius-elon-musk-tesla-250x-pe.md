@@ -14,6 +14,8 @@ further:
 ---
 # Are Buyers Crazy or Genius? Elon Musk’s Net Worth “$500B” vs. Tesla at 250x P/E
 
+![Tesla 250x P/E ratio analysis visualization showing extreme valuation metrics comparison with traditional automotive and tech companies, highlighting market expectations for massive growth acceleration and business model transformation beyond traditional automaker metrics](/img/what-250x-pe-implies.jpeg)
+
 ## Overview
 A triple-digit P/E screams “bubble” to value investors, yet growth investors argue Tesla is no longer just an automaker: it’s autos + energy storage + software (FSD/robotaxi) + AI/robotics. Whether buyers are crazy or genius depends on which cash-flow path you think is most plausible—and how quickly earnings can grow to justify today’s multiple.
 
