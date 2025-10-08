@@ -53,7 +53,7 @@ export default defineConfig({
   lang: 'en-US',
   title: "TradingPal",
   description: "Market analysis, trading strategies, Finance 101, and curated links for traders and investors.",
-  
+  titleTemplate: false,
   // Dynamic base: "/" for custom domain, "/<repo>/" for project pages
   base,
   
@@ -67,7 +67,8 @@ export default defineConfig({
     '**/risk-management/**',
     '**/tools/**',
     '**/es/**',
-    '**/zh/**'
+    '**/zh/**',
+    '**/index-old.md'
   ],
   
   // SEO and meta configuration
@@ -145,7 +146,8 @@ export default defineConfig({
       { text: 'Market Analysis', link: '/market-analysis/' },
       { text: 'Trading Strategies', link: '/trading-strategies/' },
       { text: 'Finance 101', link: '/finance-101/' },
-      { text: 'Useful Links', link: '/useful-links/' }
+      { text: 'Useful Links', link: '/useful-links/' },
+      { text: 'Contact Us', link: 'mailto:contact@thetradingpal.com' }
     ],
 
     sidebar: {
@@ -258,9 +260,11 @@ export default defineConfig({
     const frontmatter = pageData.frontmatter || {}
     const baseTitle = siteConfig.title || 'TradingPal'
     const fmTitle = frontmatter.title || pageData.title || ''
-    const title = fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle
-    const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
     const canonicalPath = toRoutePath(page, pageData)
+    const relativePath = (pageData.relativePath || '').replace(/\\/g, '/').replace(/^\//, '')
+    const isHomePage = canonicalPath === '/' || relativePath === '' || relativePath === 'index.md'
+    const title = isHomePage ? (fmTitle || baseTitle) : (fmTitle ? `${fmTitle} | ${baseTitle}` : baseTitle)
+    const description = frontmatter.description || pageData.description || siteConfig.description || 'Contract trading education and insights.'
     const url = `${SITE_URL}${canonicalPath}`
     const rawContent: string = (ctx as any).content || pageData.content || ''
     const imageCandidates = [frontmatter.image, findFirstImageSrc(rawContent)]
@@ -271,7 +275,11 @@ export default defineConfig({
     const primaryOgImage = imageUrls[0] || `${SITE_URL}/favicon.ico`
     // Determine page type
     let ogType = 'website'
+    if (Array.isArray((ctx as any).head)) {
+      (ctx as any).head = (ctx as any).head.filter((entry: any) => entry?.[0] !== 'title')
+    }
     const head = [
+      ['title', {}, title],
       ['link', { rel: 'canonical', href: url }],
       // Self-referential hreflang for single-locale site
       ['link', { rel: 'alternate', hreflang: 'en', href: url }],

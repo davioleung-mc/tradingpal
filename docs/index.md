@@ -1,6 +1,7 @@
 ---
 layout: page
 title: TradingPal - Financial Markets & Personal Finance
+titleTemplate: false
 ---
 
 <script setup>
