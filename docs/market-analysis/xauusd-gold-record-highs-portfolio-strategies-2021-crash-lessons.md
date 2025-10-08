@@ -14,6 +14,8 @@ further:
 ---
 # XAUUSD – Gold Hits Record Highs: Portfolio Strategies and 2021 Crash Lessons
 
+![Gold price analysis showing record highs with portfolio strategy framework and lessons from 2021 flash crash for XAUUSD trading](/img/xauusd-gold-record-highs-portfolio-strategies-2021-crash-lessons.jpeg)
+
 ## Key takeaways
 - XAUUSD is at record highs. Momentum is real, but so is gap/liquidity risk—remember the August 2021 “flash crash.”
 - Build around a core-satellite gold allocation, then add rules-based trading and options for asymmetric upside.
