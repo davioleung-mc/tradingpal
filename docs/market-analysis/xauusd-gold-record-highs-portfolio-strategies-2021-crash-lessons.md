@@ -4,7 +4,7 @@ date: 2025-10-08
 author: "Mark M"
 authorUrl: "https://www.linkedin.com/in/markmoss/"
 description: "A comprehensive guide to managing record-high gold prices, incorporating lessons from the 2021 flash crash, core-satellite allocations, tactical trading rules, risk management, and macro drivers shaping XAUUSD’s next moves."
-image: "/img/Downloads/xauusd-gold-record-highs-portfolio-strategies-2021-crash-lessons.jpeg"
+image: "/img/xauusd-gold-record-highs-portfolio-strategies-2021-crash-lessons.jpeg"
 outline: deep
 further:
   - text: "Government Shutdown: Is SQQQ Your Market Hedge?"
