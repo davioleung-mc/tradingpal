@@ -69,3 +69,15 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    name: Submit to IndexNow
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+      - name: Submit sitemap to IndexNow
+        run: bash .github/scripts/submit-indexnow.sh
